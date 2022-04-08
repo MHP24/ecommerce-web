@@ -1,0 +1,130 @@
+
+.history__container {
+    margin: 2em;
+    height: 650px;
+    overflow: auto;
+    border-radius: 10px;
+}
+
+/* Desktop table */
+
+.table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 1px 7px 15px -16px #000000;
+    border-left: 4px #00BFA6 solid;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    color: #00BFA6;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+tr, th {
+    cursor: pointer;
+    padding: 1em .5em;
+    text-align: center;
+    border-bottom: .5px #afb0bd5a solid;
+    font-style: italic;
+    transform: scale(.98);
+    transition: .5s;
+    color: #24252A;
+}
+
+.tr--g {
+    background-color: #c9c9ce27;
+}
+
+tr:hover {
+    transform: scale(1);
+    transition: .5s;
+}
+
+.table__action {
+    text-decoration: none;
+    color: #00BFA6;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+
+@media (max-width: 885px) {
+    .recents {
+        display: none;
+    }
+}
+
+/* Mobile table */
+
+.table--mobile {
+    display: none;
+    width: 100%;
+}
+
+.recents--mobile {
+    background-color: #fff;
+    border-left: 4px #00BFA6 solid;
+    box-shadow: 1px 7px 15px -16px #000000;
+}
+
+.mobile__row {
+    cursor: pointer;
+    padding: 1em 0em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    border-bottom: .5px #8587965a solid;
+    transition: .5s;
+}
+
+.mobile__row:hover {
+    transform: scale(1.02);
+    transition: .5s;
+}
+
+.col__one,
+.col__two {
+    text-align: left;
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
+    width: 90%;
+}
+
+.col__date {
+    align-self: flex-end;
+}
+
+.col__content {
+    text-align: center;
+    font-style: italic;
+    color: #858796;
+}
+
+.col__title {
+    color: #00BFA6;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.mobile__row--gray{
+    background-color: #c9c9ce27;
+    color: #fff;
+}
+
+.col {
+    width: 30%;
+}
+
+@media (max-width: 885px) {
+    .table--mobile {
+        display: contents;
+    }
+}

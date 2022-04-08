@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/dashboard-handler-products.css">
+    <title>Agregar Productos</title>
+</head>
+<body>
+
+    <header class="dashboard-navigation">
+        <h2 class="title">ShoPets</h2>
+        <hr>
+       <nav class="nav">
+            <a class="nav__item" href="#">
+                <img class="nav__img" src="../../imgs/icons/home.svg" alt="Home">
+                <p class="nav__name">Inicio</p>
+            </a>
+
+            <a class="nav__item" href="#">
+                <img class="nav__img" src="../../imgs/icons/package.svg" alt="Products">
+                <p class="nav__name">Productos</p>
+            </a>
+
+            <a class="nav__item" href="#">
+                <img class="nav__img" src="../../imgs/icons/clip.svg" alt="Facts">
+                <p class="nav__name">Facturas</p>
+            </a>
+
+            <a class="nav__item" href="#">
+                <img class="nav__img" src="../../imgs/icons/stock.svg" alt="Stock">
+                <p class="nav__name">Stock</p>
+            </a>
+
+            <a class="nav__item" href="#">
+                <img class="nav__img" src="../../imgs/icons/user.svg" alt="Users">
+                <p class="nav__name">Usuarios</p>
+            </a>
+
+            <a class="nav__item" href="#">
+                <img class="nav__img" src="../../imgs/icons/history.svg" alt="History">
+                <p class="nav__name">Historial</p>
+            </a>
+        </nav>
+        <hr>
+        <button class="logout-btn">Cerrar Sesi&oacute;n</button>
+    </header>
+
+
+    <!--  -->
+    <main >
+        <section class="panel">
+            <section class="searcher">
+                <img id="searcher__burger" src="../../imgs/icons/menu-dashboard.svg" alt="">
+                <div class="searcher__item searcher__item--search">
+                    <input class="searcher__input" name="search" id="search" type="text" placeholder="Search...">
+                    <button class="searcher__btn"><img class="searcher__btn-img"src="../../imgs/icons/search.svg" alt="S"></button>
+                </div>
+
+                <div class="searcher__item searcher__item--actions">
+                    <div class="searcher__item searcher__item--options">
+                        <img class="searcher__option" src="../../imgs/icons/notification.svg" alt="Notifications">
+                        <img class="searcher__option" src="../../imgs/icons/email.svg" alt="Messages">
+                    </div>
+    
+                    <div class="searcher__item searcher__item--profile">
+                        <p class="searcher__user">Don Miguelo</p>
+                        <img class="searcher__picture"src="../../imgs/msc/profile-picture.jpg" alt="You">
+                    </div>
+                </div>
+            </section>
+            
+            <div class="summary">
+                    <div class="summary__item summary__item--t">
+                        <h2 class="summary__title">Agregar Productos</h2>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form">
+                <h3 class="form__title">Formulario De Productos</h3>
+                <form class="form__product" action="#" method="post">
+                    <div class="form__inputs">
+                        <div class="form__input">
+                            <label class="input__label">Nombre Producto</label>
+                            <input class="input__input" type="text" placeholder="Ingresar nombre" required>
+                        </div>
+
+                        <div class="form__input">
+                            <label class="input__label">Identificador</label>
+                            <input class="input__input" type="text" placeholder="Ingresar ID" required>
+                        </div>
+
+                        <div class="form__input">
+                            <label class="input__label">Cantidad</label>
+                            <input class="input__input" type="number" placeholder="Cantidad del Producto" required>
+                        </div>
+
+                        <div class="form__input">
+                            <label class="input__label">Descuento <span class="input__label--optional">*</span></label>
+                            <input class="input__input" type="number" placeholder="%">
+                        </div>
+
+                        <div class="form__input">
+                            <label class="input__label">Descripci&oacute;n</label>
+                            <input class="input__input" type="text" placeholder="Describa el Producto" required  minlength="10"maxlength="40" required>
+                        </div>
+
+                        <div class="form__input">
+                            <label class="input__label">Im&aacute;gen</label>
+                            <input class="input__input input__input--img" type="file" required>
+                        </div>
+                    </div>
+
+                    <div class="form__btns">
+                        <button class="form__btn" type="submit">Guardar</button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+<!--  -->
+
+    </main>
+    <script src="../../js/dashboardNavigation.js"></script>
+</body>
+</html>
