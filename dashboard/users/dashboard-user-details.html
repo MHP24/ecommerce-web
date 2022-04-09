@@ -10,14 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/dashboard.css">
     <link rel="stylesheet" href="../../css/dashboard-input-handler.css">
-    <title>Men&uacute; De Edici&oacute;n</title>
+    <title>Editar Usuario</title>
 </head>
 <body>
 
     <header class="dashboard-navigation">
         <h2 class="title">ShoPets</h2>
         <hr>
-       <nav class="nav">
+        <nav class="nav">
             <a class="nav__item" href="../dashboard.html">
                 <img class="nav__img" src="../../imgs/icons/home.svg" alt="Home">
                 <p class="nav__name">Inicio</p>
@@ -75,52 +75,59 @@
                     </div>
                 </div>
             </section>
-
-            
             
             <div class="summary">
                     <div class="summary__item summary__item--t">
-                        <h2 class="summary__title">Editar Stock</h2>
+                        <h2 class="summary__title">Editar Usuario</h2>
                     </div>
                 </div>
 
             </div>
 
-
             <div class="form">
-                <h3 class="form__title">Formulario de Stock de Productos</h3>
+                <h3 class="form__title">Datos De Don Miguelo</h3>
                 <form class="form__product" action="#" method="post">
                     <div class="form__inputs">
-
                         <div class="form__input">
-                            <label class="input__label">Cantidad</label>
-                            <input class="input__input" type="number" placeholder="Cantidad del Producto" required>
+                            <label class="input__label">Nombre</label>
+                            <input class="input__input" type="text" placeholder="Ingresar nombre" required>
                         </div>
 
                         <div class="form__input">
-                            <label class="input__label">Descuento <span class="input__label--optional">*</span></label>
-                            <input class="input__input" type="number" placeholder="%">
+                            <label class="input__label">Email</label>
+                            <input class="input__input" type="email" placeholder="Ingresar Email" required>
                         </div>
 
                         <div class="form__input">
-                            <label class="input__label">Descripci&oacute;n</label>
-                            <input class="input__input" type="text" placeholder="Describa el Producto" required  minlength="10"maxlength="40" required>
+                            <label class="input__label">Contrase&nacute;a</label>
+                            <input class="input__input" type="password" placeholder="***" required>
                         </div>
 
                         <div class="form__input">
-                            <label class="input__label">Im&aacute;gen</label>
+                            <label class="input__label">Im&aacute;gen de perfil</label>
                             <input class="input__input input__input--img" type="file" required>
                         </div>
 
-                        <div class="form__input--available">
-                            <label class="input__label--available">Descontinuado</label>
-                            <input class="input__input--available" type="radio">
+                        <div class="form__input a">
+                            <label class="input__label">Miembro</label>
+                            <input class="input__radio" name="membertype" type="radio" required>
+                            <label class="input__label">Usuario</label>
+                            <input class="input__radio" name="membertype" type="radio" required>
                         </div>
 
+                        <div class="form__input">
+                            <label class="input__label" >Tipo de usuario</label>
+                            <select class="input__select">
+                              <option value="Usuario">Usuario</option>
+                              <option value="Miembro">Miembro</option>
+                              <option value="Administrador">Administrador</option>
+                            </select>
+                        </div>
+ 
                     </div>
 
                     <div class="form__btns">
-                        <button class="form__btn" type="submit">Guardar Cambios</button>
+                        <button class="form__btn" type="submit">Guardar</button>
                     </div>
                 </form>
             </div>

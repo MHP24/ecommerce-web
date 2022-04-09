@@ -1,0 +1,49 @@
+.details {
+    width: 100%;
+    padding: 0 2em;
+}
+
+.details__container {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    background-color: #fff;
+    width: 700px;
+    max-width: 100%;
+    box-shadow: 1px 7px 15px -16px #000000;
+    border-radius: 10px;
+    border-left: 4px #00BFA6 solid;
+    gap: 2em;
+}
+
+.detail__title {
+    font-family: 'Lavishly Yours', cursive;
+    font-size: 2rem;
+}
+
+.detail__item {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    gap: 1em;
+    justify-content: space-around;
+}
+
+.detail__subitem {
+    color: #6b6d77;
+}
+
+.detail,
+.detail--important {
+    color: #00BFA6;
+    font-weight: 500;
+}
+
+.table {
+    border: none;
+    box-shadow: none;
+}
+

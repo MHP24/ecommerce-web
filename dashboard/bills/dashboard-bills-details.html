@@ -9,15 +9,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/dashboard.css">
-    <link rel="stylesheet" href="../../css/dashboard-input-handler.css">
-    <title>Men&uacute; De Edici&oacute;n</title>
+    <link rel="stylesheet" href="../../css/dashboard-table-layout.css">
+    <link rel="stylesheet" href="../../css/dashboard-bills-details.css">
+    <title>Detalles 123456789</title>
 </head>
 <body>
 
     <header class="dashboard-navigation">
         <h2 class="title">ShoPets</h2>
         <hr>
-       <nav class="nav">
+        <nav class="nav">
             <a class="nav__item" href="../dashboard.html">
                 <img class="nav__img" src="../../imgs/icons/home.svg" alt="Home">
                 <p class="nav__name">Inicio</p>
@@ -28,7 +29,7 @@
                 <p class="nav__name">Productos</p>
             </a>
 
-            <a class="nav__item" href="../bills/dashboard-bills.html">
+            <a class="nav__item" href="./dashboard-bills.html">
                 <img class="nav__img" src="../../imgs/icons/clip.svg" alt="Facts">
                 <p class="nav__name">Facturas</p>
             </a>
@@ -75,58 +76,90 @@
                     </div>
                 </div>
             </section>
-
-            
             
             <div class="summary">
                     <div class="summary__item summary__item--t">
-                        <h2 class="summary__title">Editar Stock</h2>
+                        <h2 class="summary__title">Detalles Facturaci&oacute;n</h2>
+                        <a class="summary__btn" href="./dashboard-products-add.html"> <img class="summary__btn--img" src="../../imgs/icons/download.svg">Descargar</a>
                     </div>
                 </div>
 
             </div>
 
-
-            <div class="form">
-                <h3 class="form__title">Formulario de Stock de Productos</h3>
-                <form class="form__product" action="#" method="post">
-                    <div class="form__inputs">
-
-                        <div class="form__input">
-                            <label class="input__label">Cantidad</label>
-                            <input class="input__input" type="number" placeholder="Cantidad del Producto" required>
-                        </div>
-
-                        <div class="form__input">
-                            <label class="input__label">Descuento <span class="input__label--optional">*</span></label>
-                            <input class="input__input" type="number" placeholder="%">
-                        </div>
-
-                        <div class="form__input">
-                            <label class="input__label">Descripci&oacute;n</label>
-                            <input class="input__input" type="text" placeholder="Describa el Producto" required  minlength="10"maxlength="40" required>
-                        </div>
-
-                        <div class="form__input">
-                            <label class="input__label">Im&aacute;gen</label>
-                            <input class="input__input input__input--img" type="file" required>
-                        </div>
-
-                        <div class="form__input--available">
-                            <label class="input__label--available">Descontinuado</label>
-                            <input class="input__input--available" type="radio">
-                        </div>
-
+            <section class="details">
+                <div class="details__container">
+                    <div class="detail__item">
+                        <h2 class="detail__title">ShoPets</h2>
                     </div>
 
-                    <div class="form__btns">
-                        <button class="form__btn" type="submit">Guardar Cambios</button>
+                    <div class="detail__item">
+                        <div class="detail__subitem">
+                            <div class="detail__idem">
+                                <p>Facturar A: <span class="detail">123456789</span></p>
+                                
+                                <p>Nombre: <span>Don Miguelo</span></p>
+                            </div>
+
+                        </div>
+
+                        <div class="detail__subitem">
+                                <p>N Factura: <span class="detail">987654321</span></p>
+                                <p>Fecha: <span>7/4/21 - 10:38PM</span></p>
+                        </div>
                     </div>
-                </form>
-            </div>
+
+                    <ul class="detail__products">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Cantidad</th>
+                                    <th>Precio Unitario</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tr--g">
+                                    <th>Master Dog</th>
+                                    <th>10</th>
+                                    <th>10,000</th>
+                                </tr>
+
+                                <tr>
+                                    <th>Dog Chow</th>
+                                    <th>6</th>
+                                    <th>15,000</th>
+                                </tr>
+
+                                <tr class="tr--g">
+                                    <th>Whiskas</th>
+                                    <th>5</th>
+                                    <th>9,000</th>
+                                </tr>
+
+                                <tr>
+                                    <th class="detail--important">Medio de pago</th>
+                                    <th></th>
+                                    <th class="detail--important">Credito</th>
+                                </tr>
+
+                                <tr class="tr--g">
+                                    <th class="detail--important">Cuotas</th>
+                                    <th></th>
+                                    <th class="detail--important">2</th>
+                                </tr>
+
+                                <tr>
+                                    <th></th>
+                                    <th>Total</th>
+                                    <th class="detail--important">235,000</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </ul>
+                </div>
+            </section>
 
         </section>
-<!--  -->
 
     </main>
     <script src="../../js/dashboardNavigation.js"></script>

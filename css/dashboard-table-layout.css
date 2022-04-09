@@ -52,9 +52,20 @@ tr:hover {
     font-size: 1rem;
 }
 
+.table__action__img {
+    width: 30px;
+    height: 30px;
+    margin-left: 1em;
+}
 
 @media (max-width: 885px) {
     .recents {
+        display: none;
+    }
+}
+
+@media (max-width: 1160px) {
+    .users {
         display: none;
     }
 }
@@ -66,13 +77,20 @@ tr:hover {
     width: 100%;
 }
 
+.table--umobile {
+    display: none;
+    width: 100%;
+}
+
 .recents--mobile {
     background-color: #fff;
     border-left: 4px #00BFA6 solid;
+    flex-wrap: wrap;
     box-shadow: 1px 7px 15px -16px #000000;
 }
 
 .mobile__row {
+    text-decoration: none;
     cursor: pointer;
     padding: 1em 0em;
     display: flex;
@@ -80,11 +98,12 @@ tr:hover {
     align-items: center;
     gap: 2em;
     border-bottom: .5px #8587965a solid;
+    transform: scale(.98);
     transition: .5s;
 }
 
 .mobile__row:hover {
-    transform: scale(1.02);
+    transform: scale(1);
     transition: .5s;
 }
 
@@ -92,6 +111,7 @@ tr:hover {
 .col__two {
     text-align: left;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     gap: 1em;
     width: 90%;
@@ -120,11 +140,25 @@ tr:hover {
 }
 
 .col {
-    width: 30%;
+    /* width: 30%; */
+    text-align: left;
 }
 
 @media (max-width: 885px) {
     .table--mobile {
         display: contents;
     }
+}
+
+@media (max-width: 1160px) {
+    .table--umobile {
+        display: contents;
+    }
+}
+
+.table__action {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    border: none;
 }

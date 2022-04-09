@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/dashboard-table-layout.css">
+    <title>Usuarios</title>
+</head>
+<body>
+
+    <header class="dashboard-navigation">
+        <h2 class="title">ShoPets</h2>
+        <hr>
+       <nav class="nav">
+            <a class="nav__item" href="../dashboard.html">
+                <img class="nav__img" src="../../imgs/icons/home.svg" alt="Home">
+                <p class="nav__name">Inicio</p>
+            </a>
+
+            <a class="nav__item" href="../products/dashboard-products.html">
+                <img class="nav__img" src="../../imgs/icons/package.svg" alt="Products">
+                <p class="nav__name">Productos</p>
+            </a>
+
+            <a class="nav__item" href="../bills/dashboard-bills.html">
+                <img class="nav__img" src="../../imgs/icons/clip.svg" alt="Facts">
+                <p class="nav__name">Facturas</p>
+            </a>
+
+            <a class="nav__item" href="../stock/dashboard-product-stock.html">
+                <img class="nav__img" src="../../imgs/icons/stock.svg" alt="Stock">
+                <p class="nav__name">Stock</p>
+            </a>
+
+            <a class="nav__item" href="../users/dashboard-users.html">
+                <img class="nav__img" src="../../imgs/icons/user.svg" alt="Users">
+                <p class="nav__name">Usuarios</p>
+            </a>
+
+            <a class="nav__item" href="../history/dashboard-sales-history.html">
+                <img class="nav__img" src="../../imgs/icons/history.svg" alt="History">
+                <p class="nav__name">Historial</p>
+            </a>
+        </nav>
+        <hr>
+        <button class="logout-btn">Cerrar Sesi&oacute;n</button>
+    </header>
+
+
+    <main >
+<!--  -->
+        <section class="panel">
+            <section class="searcher">
+                <img id="searcher__burger" src="../../imgs/icons/menu-dashboard.svg" alt="">
+                <div class="searcher__item searcher__item--search">
+                    <input class="searcher__input" name="search" id="search" type="text" placeholder="Buscar...">
+                    <button class="searcher__btn"><img class="searcher__btn-img"src="../../imgs/icons/search.svg" alt="Search"></button>
+                </div>
+
+                <div class="searcher__item searcher__item--actions">
+                    <div class="searcher__item searcher__item--options">
+                        <img class="searcher__option" src="../../imgs/icons/notification.svg" alt="Notifications">
+                        <img class="searcher__option" src="../../imgs/icons/email.svg" alt="Messages">
+                    </div>
+    
+                    <div class="searcher__item searcher__item--profile">
+                        <p class="searcher__user">Don Miguelo</p>
+                        <img class="searcher__picture"src="../../imgs/msc/profile-picture.jpg" alt="You">
+                    </div>
+                </div>
+            </section>
+
+            <div class="summary">
+                <div class="summary__item summary__item--t">
+                    <h2 class="summary__title">Usuarios</h2>
+                    <button class="summary__btn"> <img class="summary__btn--img" src="../../imgs/icons/download.svg"> Generar Reporte</button>
+                </div>
+            </div>
+
+            <div class="searcher__item searcher__item--search searcher__item--search-mobile">
+                <input class="searcher__input" name="search" id="search" type="text" placeholder="Buscar...">
+                <button class="searcher__btn"><img class="searcher__btn-img"src="../../imgs/icons/search.svg" alt="Search"></button>
+            </div>
+
+            <section class="history__container">
+                <table class="table users">
+                    <thead>
+                        <tr>
+                            <th>ID Usuario</th>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Miembro</th>
+                            <th>Tipo Usuario</th>
+                            <th class="table__action"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tr--g">
+                            <th>123456789</th>
+                            <th>Homero Chino</th>
+                            <th>homer.chinese@mail.ch</th>
+                            <th>Si</th>
+                            <th>Administrador</th>
+                            <th class="table__action"> 
+                                <a href="./dashboard-user-details.html"> <img class= "table__action__img" src="../../imgs/icons/edit.svg" alt="edit"></a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>123456789</th>
+                            <th>Homero Chino</th>
+                            <th>homer.chinese@mail.ch</th>
+                            <th>Si</th>
+                            <th>Administrador</th>
+                            <th class="table__action"> 
+                                <a href="./dashboard-user-details.html"> <img class= "table__action__img" src="../../imgs/icons/edit.svg" alt="edit"></a>
+                            </th>
+                        </tr>
+                        <tr class="tr--g">
+                            <th>123456789</th>
+                            <th>Homero Chino</th>
+                            <th>homer.chinese@mail.ch</th>
+                            <th>Si</th>
+                            <th>Administrador</th>
+                            <th class="table__action"> 
+                                <a href="./dashboard-user-details.html"> <img class= "table__action__img" src="../../imgs/icons/edit.svg" alt="edit"></a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>123456789</th>
+                            <th>Homero Chino</th>
+                            <th>homer.chinese@mail.ch</th>
+                            <th>Si</th>
+                            <th>Administrador</th>
+                            <th class="table__action"> 
+                                <a href="./dashboard-user-details.html"> <img class= "table__action__img" src="../../imgs/icons/edit.svg" alt="edit"></a>
+                            </th>
+                        </tr>
+                        <tr class="tr--g">  
+                            <th>123456789</th>
+                            <th>Homero Chino</th>
+                            <th>homer.chinese@mail.ch</th>
+                            <th>Si</th>
+                            <th>Administrador</th>
+                            <th class="table__action"> 
+                                <a href="./dashboard-user-details.html"> <img class= "table__action__img" src="../../imgs/icons/edit.svg" alt="edit"></a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>123456789</th>
+                            <th>Homero Chino</th>
+                            <th>homer.chinese@mail.ch</th>
+                            <th>Si</th>
+                            <th>Administrador</th>
+                            <th class="table__action"> 
+                                <a href="./dashboard-user-details.html"> <img class= "table__action__img" src="../../imgs/icons/edit.svg" alt="edit"></a>
+                            </th>
+                        </tr>
+                        <tr class="tr--g">
+                            <th>123456789</th>
+                            <th>Homero Chino</th>
+                            <th>homer.chinese@mail.ch</th>
+                            <th>Si</th>
+                            <th>Administrador</th>
+                            <th class="table__action"> 
+                                <a href="./dashboard-user-details.html"> <img class= "table__action__img" src="../../imgs/icons/edit.svg" alt="edit"></a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>123456789</th>
+                            <th>Homero Chino</th>
+                            <th>homer.chinese@mail.ch</th>
+                            <th>Si</th>
+                            <th>Administrador</th>
+                            <th class="table__action"> 
+                                <a href="./dashboard-user-details.html"> <img class= "table__action__img" src="../../imgs/icons/edit.svg" alt="edit"></a>
+                            </th>
+                        </tr>
+                        <tr class="tr--g">
+                            <th>123456789</th>
+                            <th>Homero Chino</th>
+                            <th>homer.chinese@mail.ch</th>
+                            <th>Si</th>
+                            <th>Administrador</th>
+                            <th class="table__action"> 
+                                <a href="./dashboard-user-details.html"> <img class= "table__action__img" src="../../imgs/icons/edit.svg" alt="edit"></a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>123456789</th>
+                            <th>Homero Chino</th>
+                            <th>homer.chinese@mail.ch</th>
+                            <th>Si</th>
+                            <th>Administrador</th>
+                            <th class="table__action"> 
+                                <a href="./dashboard-user-details.html"> <img class= "table__action__img" src="../../imgs/icons/edit.svg" alt="edit"></a>
+                            </th>
+                        </tr>
+                        <tr class="tr--g">
+                            <th>123456789</th>
+                            <th>Homero Chino</th>
+                            <th>homer.chinese@mail.ch</th>
+                            <th>Si</th>
+                            <th>Administrador</th>
+                            <th class="table__action"> 
+                                <a href="./dashboard-user-details.html"> <img class= "table__action__img" src="../../imgs/icons/edit.svg" alt="edit"></a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>123456789</th>
+                            <th>Homero Chino</th>
+                            <th>homer.chinese@mail.ch</th>
+                            <th>Si</th>
+                            <th>Administrador</th>
+                            <th class="table__action"> 
+                                <a href="./dashboard-user-details.html"> <img class= "table__action__img" src="../../imgs/icons/edit.svg" alt="edit"></a>
+                        </tr>
+                    </tbody>
+
+                </table> 
+
+                <div class="table--umobile">
+                    <div class="recents--mobile">
+                        <a href="./dashboard-user-details.html" class="mobile__row">
+                            <div class="col__one">
+                                <div class="col__userid col ">
+                                    <p class="col__title">ID Usuario</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__username col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Homero Chino</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Email</p>
+                                    <p class="col__content">homer.chinese@mail.ch</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__price col ">
+                                    <p class="col__title">Miembro</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Administrador</p>
+                                </div>
+                            </div>
+                        </a >
+
+                       
+                        <a href="./dashboard-user-details.html" class="mobile__row mobile__row--gray">
+                            <div class="col__one">
+                                <div class="col__userid col ">
+                                    <p class="col__title">ID Usuario</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__username col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Homero Chino</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Email</p>
+                                    <p class="col__content">homer.chinese@mail.ch</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__price col ">
+                                    <p class="col__title">Miembro</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Administrador</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="./dashboard-user-details.html" class="mobile__row">
+                            <div class="col__one">
+                                <div class="col__userid col ">
+                                    <p class="col__title">ID Usuario</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__username col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Homero Chino</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Email</p>
+                                    <p class="col__content">homer.chinese@mail.ch</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__price col ">
+                                    <p class="col__title">Miembro</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Administrador</p>
+                                </div>
+                            </div>
+                        </a >
+
+                       
+                        <a href="./dashboard-user-details.html" class="mobile__row mobile__row--gray">
+                            <div class="col__one">
+                                <div class="col__userid col ">
+                                    <p class="col__title">ID Usuario</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__username col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Homero Chino</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Email</p>
+                                    <p class="col__content">homer.chinese@mail.ch</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__price col ">
+                                    <p class="col__title">Miembro</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Administrador</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="./dashboard-user-details.html" class="mobile__row">
+                            <div class="col__one">
+                                <div class="col__userid col ">
+                                    <p class="col__title">ID Usuario</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__username col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Homero Chino</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Email</p>
+                                    <p class="col__content">homer.chinese@mail.ch</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__price col ">
+                                    <p class="col__title">Miembro</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Administrador</p>
+                                </div>
+                            </div>
+                        </a >
+
+                       
+                        <a href="./dashboard-user-details.html" class="mobile__row mobile__row--gray">
+                            <div class="col__one">
+                                <div class="col__userid col ">
+                                    <p class="col__title">ID Usuario</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__username col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Homero Chino</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Email</p>
+                                    <p class="col__content">homer.chinese@mail.ch</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__price col ">
+                                    <p class="col__title">Miembro</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Administrador</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="./dashboard-user-details.html" class="mobile__row">
+                            <div class="col__one">
+                                <div class="col__userid col ">
+                                    <p class="col__title">ID Usuario</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__username col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Homero Chino</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Email</p>
+                                    <p class="col__content">homer.chinese@mail.ch</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__price col ">
+                                    <p class="col__title">Miembro</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Administrador</p>
+                                </div>
+                            </div>
+                        </a >
+
+                       
+                        <a href="./dashboard-user-details.html" class="mobile__row mobile__row--gray">
+                            <div class="col__one">
+                                <div class="col__userid col ">
+                                    <p class="col__title">ID Usuario</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__username col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Homero Chino</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Email</p>
+                                    <p class="col__content">homer.chinese@mail.ch</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__price col ">
+                                    <p class="col__title">Miembro</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Administrador</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="./dashboard-user-details.html" class="mobile__row">
+                            <div class="col__one">
+                                <div class="col__userid col ">
+                                    <p class="col__title">ID Usuario</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__username col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Homero Chino</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Email</p>
+                                    <p class="col__content">homer.chinese@mail.ch</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__price col ">
+                                    <p class="col__title">Miembro</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Administrador</p>
+                                </div>
+                            </div>
+                        </a >
+
+                       
+                        <a href="./dashboard-user-details.html" class="mobile__row mobile__row--gray">
+                            <div class="col__one">
+                                <div class="col__userid col ">
+                                    <p class="col__title">ID Usuario</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__username col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Homero Chino</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Email</p>
+                                    <p class="col__content">homer.chinese@mail.ch</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__price col ">
+                                    <p class="col__title">Miembro</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Administrador</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="./dashboard-user-details.html" class="mobile__row">
+                            <div class="col__one">
+                                <div class="col__userid col ">
+                                    <p class="col__title">ID Usuario</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__username col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Homero Chino</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Email</p>
+                                    <p class="col__content">homer.chinese@mail.ch</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__price col ">
+                                    <p class="col__title">Miembro</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Administrador</p>
+                                </div>
+                            </div>
+                        </a >
+
+                       
+                        <a href="./dashboard-user-details.html" class="mobile__row mobile__row--gray">
+                            <div class="col__one">
+                                <div class="col__userid col ">
+                                    <p class="col__title">ID Usuario</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__username col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Homero Chino</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Email</p>
+                                    <p class="col__content">homer.chinese@mail.ch</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__price col ">
+                                    <p class="col__title">Miembro</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Administrador</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+
+        </section>
+<!--  -->
+            
+
+
+
+    </main>
+    <script src="../../js/dashboardNavigation.js"></script>
+</body>
+</hta

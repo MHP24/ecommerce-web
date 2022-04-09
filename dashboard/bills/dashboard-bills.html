@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/dashboard.css">
     <link rel="stylesheet" href="../../css/dashboard-table-layout.css">
-    <title>Historial De Ventas</title>
+    <title>Facturas Emitidas</title>
 </head>
 <body>
 
@@ -28,7 +28,7 @@
                 <p class="nav__name">Productos</p>
             </a>
 
-            <a class="nav__item" href="../bills/dashboard-bills.html">
+            <a class="nav__item" href="./dashboard-bills.html">
                 <img class="nav__img" src="../../imgs/icons/clip.svg" alt="Facts">
                 <p class="nav__name">Facturas</p>
             </a>
@@ -43,7 +43,7 @@
                 <p class="nav__name">Usuarios</p>
             </a>
 
-            <a class="nav__item" href="./dashboard-sales-history.html">
+            <a class="nav__item" href="../history/dashboard-sales-history.html">
                 <img class="nav__img" src="../../imgs/icons/history.svg" alt="History">
                 <p class="nav__name">Historial</p>
             </a>
@@ -78,7 +78,7 @@
 
             <div class="summary">
                 <div class="summary__item summary__item--t">
-                    <h2 class="summary__title">Historial De Ventas</h2>
+                    <h2 class="summary__title">Facturas Emitidas</h2>
                     <button class="summary__btn"> <img class="summary__btn--img" src="../../imgs/icons/download.svg"> Generar Reporte</button>
                 </div>
             </div>
@@ -93,122 +93,145 @@
                     <thead>
                         <tr>
                             <th>ID Compra</th>
-                            <th>ID Cliente</th>
-                            <th>Producto</th>
-                            <th>Cantidad</th>
+                            <th>ID Factura</th>
+                            <th>Medio De Pago</th>
                             <th>Monto</th>
                             <th>Fecha y Hora</th>
                             <th class="table__action"></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr  class="tr--g">
+                        <tr class="tr--g">
                             <th>123456789</th>
                             <th>987654321</th>
-                            <th>Dog Chow</th>
-                            <th>10</th>
+                            <th>D-512</th>
                             <th>$150,000</th>
                             <th>7/4/21 - 10:38PM</th>
-                            <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/download2.svg"></th>
+                            <th class="table__action"> 
+                                <img class= "table__action__img" src="../../imgs/icons/download2.svg">
+                                <a href="./dashboard-bills-details.html"> <img class= "table__action__img" src="../../imgs/icons/check.svg" alt="check"></a>
+                            </th>
                         </tr>
                         <tr>
                             <th>123456789</th>
                             <th>987654321</th>
-                            <th>Dog Chow</th>
-                            <th>10</th>
+                            <th>D-512</th>
                             <th>$150,000</th>
                             <th>7/4/21 - 10:38PM</th>
-                            <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/download2.svg"></th>
+                            <th class="table__action"> 
+                                <img class= "table__action__img" src="../../imgs/icons/download2.svg">
+                                <a href="./dashboard-bills-details.html"> <img class= "table__action__img" src="../../imgs/icons/check.svg" alt="check"></a>
+                            </th>
                         </tr>
                         <tr class="tr--g">
                             <th>123456789</th>
                             <th>987654321</th>
-                            <th>Dog Chow</th>
-                            <th>10</th>
+                            <th>D-512</th>
                             <th>$150,000</th>
                             <th>7/4/21 - 10:38PM</th>
-                            <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/download2.svg"></th>
+                            <th class="table__action"> 
+                                <img class= "table__action__img" src="../../imgs/icons/download2.svg">
+                                <a href="./dashboard-bills-details.html"> <img class= "table__action__img" src="../../imgs/icons/check.svg" alt="check"></a>
+                            </th>
                         </tr>
                         <tr>
                             <th>123456789</th>
                             <th>987654321</th>
-                            <th>Dog Chow</th>
-                            <th>10</th>
+                            <th>D-512</th>
                             <th>$150,000</th>
                             <th>7/4/21 - 10:38PM</th>
-                            <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/download2.svg"></th>
+                            <th class="table__action"> 
+                                <img class= "table__action__img" src="../../imgs/icons/download2.svg">
+                                <a href="./dashboard-bills-details.html"> <img class= "table__action__img" src="../../imgs/icons/check.svg" alt="check"></a>
+                            </th>
                         </tr>
                         <tr class="tr--g">  
                             <th>123456789</th>
                             <th>987654321</th>
-                            <th>Dog Chow</th>
-                            <th>10</th>
+                            <th>D-512</th>
                             <th>$150,000</th>
                             <th>7/4/21 - 10:38PM</th>
-                            <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/download2.svg"></th>
+                            <th class="table__action"> 
+                                <img class= "table__action__img" src="../../imgs/icons/download2.svg">
+                                <a href="./dashboard-bills-details.html"> <img class= "table__action__img" src="../../imgs/icons/check.svg" alt="check"></a>
+                            </th>
                         </tr>
                         <tr>
                             <th>123456789</th>
                             <th>987654321</th>
-                            <th>Dog Chow</th>
-                            <th>10</th>
+                            <th>D-512</th>
                             <th>$150,000</th>
                             <th>7/4/21 - 10:38PM</th>
-                            <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/download2.svg"></th>
+                            <th class="table__action"> 
+                                <img class= "table__action__img" src="../../imgs/icons/download2.svg">
+                                <a href="./dashboard-bills-details.html"> <img class= "table__action__img" src="../../imgs/icons/check.svg" alt="check"></a>
+                            </th>
                         </tr>
                         <tr class="tr--g">
                             <th>123456789</th>
                             <th>987654321</th>
-                            <th>Dog Chow</th>
-                            <th>10</th>
+                            <th>D-512</th>
                             <th>$150,000</th>
                             <th>7/4/21 - 10:38PM</th>
-                            <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/download2.svg"></th>
+                            <th class="table__action"> 
+                                <img class= "table__action__img" src="../../imgs/icons/download2.svg">
+                                <a href="./dashboard-bills-details.html"> <img class= "table__action__img" src="../../imgs/icons/check.svg" alt="check"></a>
+                            </th>
                         </tr>
                         <tr>
                             <th>123456789</th>
                             <th>987654321</th>
-                            <th>Dog Chow</th>
-                            <th>10</th>
+                            <th>D-512</th>
                             <th>$150,000</th>
                             <th>7/4/21 - 10:38PM</th>
-                            <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/download2.svg"></th>
+                            <th class="table__action"> 
+                                <img class= "table__action__img" src="../../imgs/icons/download2.svg">
+                                <a href="./dashboard-bills-details.html"> <img class= "table__action__img" src="../../imgs/icons/check.svg" alt="check"></a>
+                            </th>
                         </tr>
                         <tr class="tr--g">
                             <th>123456789</th>
                             <th>987654321</th>
-                            <th>Dog Chow</th>
-                            <th>10</th>
+                            <th>D-512</th>
                             <th>$150,000</th>
                             <th>7/4/21 - 10:38PM</th>
-                            <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/download2.svg"></th>
+                            <th class="table__action"> 
+                                <img class= "table__action__img" src="../../imgs/icons/download2.svg">
+                                <a href="./dashboard-bills-details.html"> <img class= "table__action__img" src="../../imgs/icons/check.svg" alt="check"></a>
+                            </th>
                         </tr>
                         <tr>
                             <th>123456789</th>
                             <th>987654321</th>
-                            <th>Dog Chow</th>
-                            <th>10</th>
+                            <th>D-512</th>
                             <th>$150,000</th>
                             <th>7/4/21 - 10:38PM</th>
-                            <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/download2.svg"></th>
+                            <th class="table__action"> 
+                                <img class= "table__action__img" src="../../imgs/icons/download2.svg">
+                                <a href="./dashboard-bills-details.html"> <img class= "table__action__img" src="../../imgs/icons/check.svg" alt="check"></a>
+                            </th>
                         </tr>
                         <tr class="tr--g">
                             <th>123456789</th>
                             <th>987654321</th>
-                            <th>Dog Chow</th>
-                            <th>10</th>
+                            <th>D-512</th>
                             <th>$150,000</th>
                             <th>7/4/21 - 10:38PM</th>
-                            <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/download2.svg"></th>
+                            <th class="table__action"> 
+                                <img class= "table__action__img" src="../../imgs/icons/download2.svg">
+                                <a href="./dashboard-bills-details.html"> <img class= "table__action__img" src="../../imgs/icons/check.svg" alt="check"></a>
+                            </th>
                         </tr>
                         <tr>
                             <th>123456789</th>
                             <th>987654321</th>
-                            <th>Dog Chow</th>
-                            <th>10</th>
+                            <th>D-512</th>
                             <th>$150,000</th>
                             <th>7/4/21 - 10:38PM</th>
-                            <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/download2.svg"></th>
+                            <th class="table__action"> 
+                                <img class= "table__action__img" src="../../imgs/icons/download2.svg">
+                                <a href="./dashboard-bills-details.html"> <img class= "table__action__img" src="../../imgs/icons/check.svg" alt="check"></a>
+                            </th>
                         </tr>
                     </tbody>
 
@@ -216,7 +239,7 @@
 
                 <div class="table--mobile">
                     <div class="recents--mobile">
-                        <div class="mobile__row">
+                        <a href="./dashboard-bills-details.html" class="mobile__row">
                             <div class="col__one">
                                 <div class="col__userid col ">
                                     <p class="col__title">ID Compra</p>
@@ -224,22 +247,17 @@
                                 </div>
 
                                 <div class="col__username col ">
-                                    <p class="col__title">ID Cliente</p>
+                                    <p class="col__title">ID Factura</p>
                                     <p class="col__content">987654321</p>
                                 </div>
 
                                 <div class="col__product col ">
-                                    <p class="col__title">Producto</p>
-                                    <p class="col__content">Dog Chow</p>
+                                    <p class="col__title">Medio De Pago</p>
+                                    <p class="col__content">D-512</p>
                                 </div>
                             </div>
 
                             <div class="col__two">
-                                <div class="col__quantity col ">
-                                    <p class="col__title">Cantidad</p>
-                                    <p class="col__content">10</p>
-                                </div>
-
                                 <div class="col__price col ">
                                     <p class="col__title">Monto</p>
                                     <p class="col__content">$150,000</p>
@@ -250,10 +268,10 @@
                                     <p class="col__content">7/4/21 - 10:38PM</p>
                                 </div>
                             </div>
-                        </div>
+                        </a >
 
                        
-                        <div class="mobile__row mobile__row--gray">
+                        <a href="./dashboard-bills-details.html" class="mobile__row mobile__row--gray">
                             <div class="col__one">
                                 <div class="col__userid col ">
                                     <p class="col__title">ID Compra</p>
@@ -261,22 +279,17 @@
                                 </div>
 
                                 <div class="col__username col ">
-                                    <p class="col__title">ID Cliente</p>
+                                    <p class="col__title">ID Factura</p>
                                     <p class="col__content">987654321</p>
                                 </div>
 
                                 <div class="col__product col ">
-                                    <p class="col__title">Producto</p>
-                                    <p class="col__content">Dog Chow</p>
+                                    <p class="col__title">Medio De Pago</p>
+                                    <p class="col__content">D-512</p>
                                 </div>
                             </div>
 
                             <div class="col__two">
-                                <div class="col__quantity col ">
-                                    <p class="col__title">Cantidad</p>
-                                    <p class="col__content">10</p>
-                                </div>
-
                                 <div class="col__price col ">
                                     <p class="col__title">Monto</p>
                                     <p class="col__content">$150,000</p>
@@ -287,9 +300,9 @@
                                     <p class="col__content">7/4/21 - 10:38PM</p>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="mobile__row">
+                        <a href="./dashboard-bills-details.html" class="mobile__row">
                             <div class="col__one">
                                 <div class="col__userid col ">
                                     <p class="col__title">ID Compra</p>
@@ -297,22 +310,17 @@
                                 </div>
 
                                 <div class="col__username col ">
-                                    <p class="col__title">ID Cliente</p>
+                                    <p class="col__title">ID Factura</p>
                                     <p class="col__content">987654321</p>
                                 </div>
 
                                 <div class="col__product col ">
-                                    <p class="col__title">Producto</p>
-                                    <p class="col__content">Dog Chow</p>
+                                    <p class="col__title">Medio De Pago</p>
+                                    <p class="col__content">D-512</p>
                                 </div>
                             </div>
 
                             <div class="col__two">
-                                <div class="col__quantity col ">
-                                    <p class="col__title">Cantidad</p>
-                                    <p class="col__content">10</p>
-                                </div>
-
                                 <div class="col__price col ">
                                     <p class="col__title">Monto</p>
                                     <p class="col__content">$150,000</p>
@@ -323,10 +331,10 @@
                                     <p class="col__content">7/4/21 - 10:38PM</p>
                                 </div>
                             </div>
-                        </div>
+                        </a >
 
                        
-                        <div class="mobile__row mobile__row--gray">
+                        <a href="./dashboard-bills-details.html" class="mobile__row mobile__row--gray">
                             <div class="col__one">
                                 <div class="col__userid col ">
                                     <p class="col__title">ID Compra</p>
@@ -334,22 +342,17 @@
                                 </div>
 
                                 <div class="col__username col ">
-                                    <p class="col__title">ID Cliente</p>
+                                    <p class="col__title">ID Factura</p>
                                     <p class="col__content">987654321</p>
                                 </div>
 
                                 <div class="col__product col ">
-                                    <p class="col__title">Producto</p>
-                                    <p class="col__content">Dog Chow</p>
+                                    <p class="col__title">Medio De Pago</p>
+                                    <p class="col__content">D-512</p>
                                 </div>
                             </div>
 
                             <div class="col__two">
-                                <div class="col__quantity col ">
-                                    <p class="col__title">Cantidad</p>
-                                    <p class="col__content">10</p>
-                                </div>
-
                                 <div class="col__price col ">
                                     <p class="col__title">Monto</p>
                                     <p class="col__content">$150,000</p>
@@ -360,9 +363,9 @@
                                     <p class="col__content">7/4/21 - 10:38PM</p>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="mobile__row">
+                        <a href="./dashboard-bills-details.html" class="mobile__row">
                             <div class="col__one">
                                 <div class="col__userid col ">
                                     <p class="col__title">ID Compra</p>
@@ -370,22 +373,17 @@
                                 </div>
 
                                 <div class="col__username col ">
-                                    <p class="col__title">ID Cliente</p>
+                                    <p class="col__title">ID Factura</p>
                                     <p class="col__content">987654321</p>
                                 </div>
 
                                 <div class="col__product col ">
-                                    <p class="col__title">Producto</p>
-                                    <p class="col__content">Dog Chow</p>
+                                    <p class="col__title">Medio De Pago</p>
+                                    <p class="col__content">D-512</p>
                                 </div>
                             </div>
 
                             <div class="col__two">
-                                <div class="col__quantity col ">
-                                    <p class="col__title">Cantidad</p>
-                                    <p class="col__content">10</p>
-                                </div>
-
                                 <div class="col__price col ">
                                     <p class="col__title">Monto</p>
                                     <p class="col__content">$150,000</p>
@@ -396,10 +394,10 @@
                                     <p class="col__content">7/4/21 - 10:38PM</p>
                                 </div>
                             </div>
-                        </div>
+                        </a >
 
                        
-                        <div class="mobile__row mobile__row--gray">
+                        <a href="./dashboard-bills-details.html" class="mobile__row mobile__row--gray">
                             <div class="col__one">
                                 <div class="col__userid col ">
                                     <p class="col__title">ID Compra</p>
@@ -407,22 +405,17 @@
                                 </div>
 
                                 <div class="col__username col ">
-                                    <p class="col__title">ID Cliente</p>
+                                    <p class="col__title">ID Factura</p>
                                     <p class="col__content">987654321</p>
                                 </div>
 
                                 <div class="col__product col ">
-                                    <p class="col__title">Producto</p>
-                                    <p class="col__content">Dog Chow</p>
+                                    <p class="col__title">Medio De Pago</p>
+                                    <p class="col__content">D-512</p>
                                 </div>
                             </div>
 
                             <div class="col__two">
-                                <div class="col__quantity col ">
-                                    <p class="col__title">Cantidad</p>
-                                    <p class="col__content">10</p>
-                                </div>
-
                                 <div class="col__price col ">
                                     <p class="col__title">Monto</p>
                                     <p class="col__content">$150,000</p>
@@ -433,9 +426,9 @@
                                     <p class="col__content">7/4/21 - 10:38PM</p>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="mobile__row">
+                        <a href="./dashboard-bills-details.html" class="mobile__row">
                             <div class="col__one">
                                 <div class="col__userid col ">
                                     <p class="col__title">ID Compra</p>
@@ -443,22 +436,17 @@
                                 </div>
 
                                 <div class="col__username col ">
-                                    <p class="col__title">ID Cliente</p>
+                                    <p class="col__title">ID Factura</p>
                                     <p class="col__content">987654321</p>
                                 </div>
 
                                 <div class="col__product col ">
-                                    <p class="col__title">Producto</p>
-                                    <p class="col__content">Dog Chow</p>
+                                    <p class="col__title">Medio De Pago</p>
+                                    <p class="col__content">D-512</p>
                                 </div>
                             </div>
 
                             <div class="col__two">
-                                <div class="col__quantity col ">
-                                    <p class="col__title">Cantidad</p>
-                                    <p class="col__content">10</p>
-                                </div>
-
                                 <div class="col__price col ">
                                     <p class="col__title">Monto</p>
                                     <p class="col__content">$150,000</p>
@@ -469,10 +457,10 @@
                                     <p class="col__content">7/4/21 - 10:38PM</p>
                                 </div>
                             </div>
-                        </div>
+                        </a >
 
                        
-                        <div class="mobile__row mobile__row--gray">
+                        <a href="./dashboard-bills-details.html" class="mobile__row mobile__row--gray">
                             <div class="col__one">
                                 <div class="col__userid col ">
                                     <p class="col__title">ID Compra</p>
@@ -480,22 +468,17 @@
                                 </div>
 
                                 <div class="col__username col ">
-                                    <p class="col__title">ID Cliente</p>
+                                    <p class="col__title">ID Factura</p>
                                     <p class="col__content">987654321</p>
                                 </div>
 
                                 <div class="col__product col ">
-                                    <p class="col__title">Producto</p>
-                                    <p class="col__content">Dog Chow</p>
+                                    <p class="col__title">Medio De Pago</p>
+                                    <p class="col__content">D-512</p>
                                 </div>
                             </div>
 
                             <div class="col__two">
-                                <div class="col__quantity col ">
-                                    <p class="col__title">Cantidad</p>
-                                    <p class="col__content">10</p>
-                                </div>
-
                                 <div class="col__price col ">
                                     <p class="col__title">Monto</p>
                                     <p class="col__content">$150,000</p>
@@ -506,9 +489,9 @@
                                     <p class="col__content">7/4/21 - 10:38PM</p>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="mobile__row">
+                        <a href="./dashboard-bills-details.html" class="mobile__row">
                             <div class="col__one">
                                 <div class="col__userid col ">
                                     <p class="col__title">ID Compra</p>
@@ -516,22 +499,17 @@
                                 </div>
 
                                 <div class="col__username col ">
-                                    <p class="col__title">ID Cliente</p>
+                                    <p class="col__title">ID Factura</p>
                                     <p class="col__content">987654321</p>
                                 </div>
 
                                 <div class="col__product col ">
-                                    <p class="col__title">Producto</p>
-                                    <p class="col__content">Dog Chow</p>
+                                    <p class="col__title">Medio De Pago</p>
+                                    <p class="col__content">D-512</p>
                                 </div>
                             </div>
 
                             <div class="col__two">
-                                <div class="col__quantity col ">
-                                    <p class="col__title">Cantidad</p>
-                                    <p class="col__content">10</p>
-                                </div>
-
                                 <div class="col__price col ">
                                     <p class="col__title">Monto</p>
                                     <p class="col__content">$150,000</p>
@@ -542,10 +520,10 @@
                                     <p class="col__content">7/4/21 - 10:38PM</p>
                                 </div>
                             </div>
-                        </div>
+                        </a >
 
                        
-                        <div class="mobile__row mobile__row--gray">
+                        <a href="./dashboard-bills-details.html" class="mobile__row mobile__row--gray">
                             <div class="col__one">
                                 <div class="col__userid col ">
                                     <p class="col__title">ID Compra</p>
@@ -553,22 +531,17 @@
                                 </div>
 
                                 <div class="col__username col ">
-                                    <p class="col__title">ID Cliente</p>
+                                    <p class="col__title">ID Factura</p>
                                     <p class="col__content">987654321</p>
                                 </div>
 
                                 <div class="col__product col ">
-                                    <p class="col__title">Producto</p>
-                                    <p class="col__content">Dog Chow</p>
+                                    <p class="col__title">Medio De Pago</p>
+                                    <p class="col__content">D-512</p>
                                 </div>
                             </div>
 
                             <div class="col__two">
-                                <div class="col__quantity col ">
-                                    <p class="col__title">Cantidad</p>
-                                    <p class="col__content">10</p>
-                                </div>
-
                                 <div class="col__price col ">
                                     <p class="col__title">Monto</p>
                                     <p class="col__content">$150,000</p>
@@ -579,9 +552,9 @@
                                     <p class="col__content">7/4/21 - 10:38PM</p>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="mobile__row">
+                        <a href="./dashboard-bills-details.html" class="mobile__row">
                             <div class="col__one">
                                 <div class="col__userid col ">
                                     <p class="col__title">ID Compra</p>
@@ -589,22 +562,17 @@
                                 </div>
 
                                 <div class="col__username col ">
-                                    <p class="col__title">ID Cliente</p>
+                                    <p class="col__title">ID Factura</p>
                                     <p class="col__content">987654321</p>
                                 </div>
 
                                 <div class="col__product col ">
-                                    <p class="col__title">Producto</p>
-                                    <p class="col__content">Dog Chow</p>
+                                    <p class="col__title">Medio De Pago</p>
+                                    <p class="col__content">D-512</p>
                                 </div>
                             </div>
 
                             <div class="col__two">
-                                <div class="col__quantity col ">
-                                    <p class="col__title">Cantidad</p>
-                                    <p class="col__content">10</p>
-                                </div>
-
                                 <div class="col__price col ">
                                     <p class="col__title">Monto</p>
                                     <p class="col__content">$150,000</p>
@@ -615,10 +583,10 @@
                                     <p class="col__content">7/4/21 - 10:38PM</p>
                                 </div>
                             </div>
-                        </div>
+                        </a >
 
                        
-                        <div class="mobile__row mobile__row--gray">
+                        <a href="./dashboard-bills-details.html" class="mobile__row mobile__row--gray">
                             <div class="col__one">
                                 <div class="col__userid col ">
                                     <p class="col__title">ID Compra</p>
@@ -626,22 +594,17 @@
                                 </div>
 
                                 <div class="col__username col ">
-                                    <p class="col__title">ID Cliente</p>
+                                    <p class="col__title">ID Factura</p>
                                     <p class="col__content">987654321</p>
                                 </div>
 
                                 <div class="col__product col ">
-                                    <p class="col__title">Producto</p>
-                                    <p class="col__content">Dog Chow</p>
+                                    <p class="col__title">Medio De Pago</p>
+                                    <p class="col__content">D-512</p>
                                 </div>
                             </div>
 
                             <div class="col__two">
-                                <div class="col__quantity col ">
-                                    <p class="col__title">Cantidad</p>
-                                    <p class="col__content">10</p>
-                                </div>
-
                                 <div class="col__price col ">
                                     <p class="col__title">Monto</p>
                                     <p class="col__content">$150,000</p>
@@ -652,7 +615,7 @@
                                     <p class="col__content">7/4/21 - 10:38PM</p>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </section>
