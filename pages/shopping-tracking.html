@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/shopping-tracking.css">
+    <title>Estado De Orden</title>
+</head>
+<body>
+    <main class="main">
+        <section class="navigation">
+            <div id="menu">
+                <img id="menu__icon" src="../imgs/icons/menu-icon.svg" alt="menu-icon">
+            </div>
+
+            <nav class="nav">
+                <a class="navigation__logo nav__item nav__profile" href="#">
+                    ShoPets
+                </a>
+
+                <ul class="navigation__indexs">
+                    <li class="nav__item">
+                        <a class="nav__link" href="#">Inicio</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a class="nav__link" href="#">Cat&aacute;logo</a>
+                    </li class="nav__item">
+
+                    <li class="nav__item">
+                        <a class="nav__link" href="#">Nosotros</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a class="nav__link" href="#">Contacto</a>
+                    </li>
+                    <li class="nav__msc">
+                        <a class="nav__btn" href="#">Cerrar Sesi&oacute;n</a>
+                        <a id="nav__cart" href="#">
+                            <img src="../imgs/icons/cart.svg" alt="cart-icon" id="nav__cart__icon">
+                            <div class="cart__count">
+                                <p class="cart__number">0</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+
+        <section class="tracking">
+            <div class="tracking__container">
+                <h2 class="tracking__title">Estado De Orden</h2>
+                <h3 class="tracking__subtitle" id="tracking__id">ID De Compra <span class="tracking__descr">123456789</span></h3>
+                <div class="stages">
+
+                    <div class="stage stage--dot">1</div>
+                    <div class="stage stage--line"></div>
+                    <div class="stage stage--dot">2</div>
+                    <div class="stage stage--line"></div>
+                    <div class="stage stage--dot">3</div>
+                    <div class="stage stage--line stage--uncompleted"></div>
+                    <div class="stage stage--dot stage--uncompleted">4</div>
+                </div>
+                <p class="tracking__subtitle">Etapa Actual <span class="tracking__descr">En Camino</span></p>
+                <p class="tracking__subtitle">Llega el <span class="tracking__descr">11/04/2021</span></p>
+                <div class="tracking__actions">
+                    <div class="action">
+                        <img src="../imgs/icons/phone-call.svg" alt="">
+                    </div>
+
+                    <div class="action">
+                        <img src="../imgs/icons/mail-call.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <figure class="footer__logo">
+                <p class="footer__isotype">Chao Mundo</p>
+            </figure>
+        </div>
+    </footer>
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

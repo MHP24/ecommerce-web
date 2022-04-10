@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/contact-us.css">
+    <title>Contactanos</title>
+</head>
+<body>
+    <main class="main">
+        <section class="navigation">
+            <div id="menu">
+                <img id="menu__icon" src="../imgs/icons/menu-icon.svg" alt="menu-icon">
+            </div>
+
+            <nav class="nav">
+                <a class="navigation__logo nav__item nav__profile" href="#">
+                    ShoPets
+                </a>
+
+                <ul class="navigation__indexs">
+                    <li class="nav__item">
+                        <a class="nav__link" href="#">Inicio</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a class="nav__link" href="#">Cat&aacute;logo</a>
+                    </li class="nav__item">
+
+                    <li class="nav__item">
+                        <a class="nav__link" href="#">Nosotros</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a class="nav__link" href="#">Contacto</a>
+                    </li>
+                    <li class="nav__msc">
+                        <a class="nav__btn" href="#">Acceder</a>
+                        <a class="nav__btn" href="#">Unirse</a>
+                        <a id="nav__cart" href="#">
+                            <img src="../imgs/icons/cart.svg" alt="cart-icon" id="nav__cart__icon">
+                            <div class="cart__count">
+                                <p class="cart__number">0</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="contact">
+            <img src="../imgs/msc/contact-picture.jpg" alt="" class="form__img">
+            <div class="form">
+                <form class="form__contact" action="#" method="post">
+                    <h3 class="form__title">¡Contactanos!</h3>
+                    <div class="form__inputs">
+                        <div class="form__input">
+                            <label class="input__label">Nombre</label>
+                            <input class="input__input" type="text" placeholder="Ingresar nombre" required>
+                        </div>
+
+                        <div class="form__input">
+                            <label class="input__label">Email</label>
+                            <input class="input__input" type="email" placeholder="Ingresar Email" required>
+                        </div>
+
+                        <div class="form__input">
+                            <label class="input__label">Mensaje</label>
+                            <textarea class="input__input input__descr" type="text" placeholder="¡Escribenos!" required></textarea>
+                        </div>
+
+                    </div>
+                    <div class="form__btns">
+                        <button class="form__btn" type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <figure class="footer__logo">
+                <p class="footer__isotype">Chao Mundo</p>
+            </figure>
+        </div>
+    </footer>
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

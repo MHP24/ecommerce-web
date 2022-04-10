@@ -1,0 +1,56 @@
+.about {
+    margin: 7em auto 1em;
+    width: 100%;
+    text-align: center;
+}
+
+.about__container {
+    width: 90%;
+    margin: auto;
+    text-align: justify;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+.about__title {
+    font-size: 2rem;
+    margin-bottom: 1em;
+    font-weight: 500;
+}
+
+.about__epigraph {
+    line-height: 2rem;
+}
+
+.about__description {
+    box-shadow: 1px 7px 15px -16px #000000;
+    border-radius: 5px;
+    border-left: 4px #00BFA6 solid;
+    padding: 1em;
+    transition: .5s;
+}
+
+.about__description:hover {
+    transition: .5s;
+    transform: scale(1.02);
+}
+
+.about__img {
+    cursor: pointer;
+}
+
+@media (max-width: 1120px) {
+    .about__container {
+        flex-direction: column;
+    }
+
+    .about__epigraph  {
+        font-size: 1rem;
+    }
+}
+
+.policy {
+    background-color: #fafafa;
+}
