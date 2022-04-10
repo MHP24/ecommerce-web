@@ -1,7 +1,7 @@
 
 .account {
     margin: 7rem auto;
-    height: 85vh;
+    height: 100vh;
     width: 80%;
     display: flex;
     justify-content: center;
@@ -79,6 +79,7 @@
 }
 
 .form__forgot {
+    color: #00BFA6;
     font-style: italic;
     text-decoration: none;
     transition: .3s;
@@ -95,6 +96,8 @@
 }
 
 .form__btn {
+    text-decoration: none;
+    text-align: center;
     cursor: pointer;
     font-weight: 500;
     border: none;

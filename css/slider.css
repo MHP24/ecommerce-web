@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    margin-top: 5rem;
+    margin-top: 4.5rem;
 }
 
 .slider__item {

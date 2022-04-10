@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/dashboard.css">
     <title>Panel de administraci&oacute;n</title>
 </head>
@@ -32,12 +33,12 @@
                 <p class="nav__name">Facturas</p>
             </a>
 
-            <a class="nav__item" href="../dashboard/stock/dashboard-product-stock.html">
+            <a class="nav__item" href="./stock/dashboard-product-stock.html">
                 <img class="nav__img" src="../imgs/icons/stock.svg" alt="Stock">
                 <p class="nav__name">Stock</p>
             </a>
 
-            <a class="nav__item" href="../dashboard/users/dashboard-users.html">
+            <a class="nav__item" href="./users/dashboard-users.html">
                 <img class="nav__img" src="../imgs/icons/user.svg" alt="Users">
                 <p class="nav__name">Usuarios</p>
             </a>
@@ -47,8 +48,6 @@
                 <p class="nav__name">Historial</p>
             </a>
         </nav>
-        <hr>
-        <button class="logout-btn">Cerrar Sesi&oacute;n</button>
     </header>
     <main >
 <!--  -->
@@ -158,7 +157,7 @@
 
                     </div>
                     
-                    <button class="sells__btn">Ver Historial</button>
+                    <a href="./history/dashboard-sales-history.html" class="sells__btn">Ver Historial</a>
                 </div>
 
 <!--  -->
@@ -194,8 +193,7 @@
                             <p class="stock__description">Lorem ipsum dolor sit. x10</p>
                             <a class="stock__link" href="#">Detalles</a>
                         </div>
-                    
-                        <button class="stock__btn">Ver Productos</button>
+                        <a href="./stock/dashboard-product-stock.html" class="stock__btn">Ver Productos</a>
                     </div>
                 </div>
             </section>        

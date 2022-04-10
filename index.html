@@ -11,13 +11,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+    <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/slider.css">
     <title>ShoPets</title>
 </head>
 
 <body>
-    <a id="nav__cart--f" href="#">
+    <a id="nav__cart--f" href="./pages/shopping-cart.html">
         <img src="./imgs/icons/cart.svg" alt="cart-icon" id="nav__cart__icon">
         <div class="cart__count">
             <p class="cart__number">0</p>
@@ -33,29 +34,28 @@
             <nav class="nav">
                 <a class="navigation__logo nav__item nav__profile" href="#">
                     ShoPets
-                    <!-- <img class="nav__pic" src="./imgs/msc/profile-picture.jpg" alt="profile-picture"> -->
                 </a>
 
                 <ul class="navigation__indexs">
                     <li class="nav__item">
-                        <a class="nav__link" href="#">Inicio</a>
+                        <a class="nav__link" href="./index.html">Inicio</a>
                     </li>
 
                     <li class="nav__item">
-                        <a class="nav__link" href="#">Cat&aacute;logo</a>
+                        <a class="nav__link" href="./pages/products.html">Cat&aacute;logo</a>
                     </li class="nav__item">
 
                     <li class="nav__item">
-                        <a class="nav__link" href="#">Nosotros</a>
+                        <a class="nav__link" href="./pages/about.html">Nosotros</a>
                     </li>
 
                     <li class="nav__item">
-                        <a class="nav__link" href="#">Contacto</a>
+                        <a class="nav__link" href="./pages/contact-us.html">Contacto</a>
                     </li>
                     <li class="nav__msc">
-                        <a class="nav__btn" href="#">Acceder</a>
-                        <a class="nav__btn" href="#">Unirse</a>
-                        <a id="nav__cart" href="#">
+                        <a class="nav__btn" href="./pages/login.html">Acceder</a>
+                        <a class="nav__btn" href="./pages/register.html">Unirse</a>
+                        <a id="nav__cart" href="./pages/shopping-cart.html">
                             <img src="./imgs/icons/cart.svg" alt="cart-icon" id="nav__cart__icon">
                             <div class="cart__count">
                                 <p class="cart__number">0</p>
@@ -148,34 +148,74 @@
                 </button>
                 
                 <div class="most-selled__products">
-                    <div class="most-selled__product">
-                        <img class="most-selled__product__image" src="./imgs/products/product1.jpg" alt="Frontline Spray">
-                        <a class="most-selled__product__btn" href="#">Ver</a>
+                    <div class="most-selled__product product--discount">
+                        <img class="most-selled__product__image" src="./imgs/products/product1.jpg" alt="product-image">
+                        <a class="most-selled__product__btn" href="./pages/product-view.html">Ver</a>
                     </div>
 
                     <div class="most-selled__product">
-                        <img class="most-selled__product__image" src="./imgs/products/product2.jpg" alt="Master Dog Pack">
-                        <a class="most-selled__product__btn" href="#">Ver</a>
+                        <img class="most-selled__product__image" src="./imgs/products/product2.jpg" alt="product-image">
+                        <a class="most-selled__product__btn" href="./pages/product-view.html">Ver</a>
+                    </div>
+
+                    <div class="most-selled__product product--discount">
+                        <img class="most-selled__product__image" src="./imgs/products/product3.jpg" alt="product-image">
+                        <a class="most-selled__product__btn" href="./pages/product-view.html">Ver</a>
+                    </div>
+
+                    <div class="most-selled__product product--discount">
+                        <img class="most-selled__product__image" src="./imgs/products/product4.jpg" alt="product-image">
+                        <a class="most-selled__product__btn" href="./pages/product-view.html">Ver</a>
                     </div>
 
                     <div class="most-selled__product">
-                        <img class="most-selled__product__image" src="./imgs/products/product3.jpg" alt="Dog Chow Pack">
-                        <a class="most-selled__product__btn" href="#">Ver</a>
+                        <img class="most-selled__product__image" src="./imgs/products/product5.jpg" alt="product-image">
+                        <a class="most-selled__product__btn" href="./pages/product-view.html">Ver</a>
+                    </div>
+
+                    <div class="most-selled__product product--discount">
+                        <img class="most-selled__product__image" src="./imgs/products/product6.jpg" alt="product-image">
+                        <a class="most-selled__product__btn" href="./pages/product-view.html">Ver</a>
                     </div>
 
                     <div class="most-selled__product">
-                        <img class="most-selled__product__image" src="./imgs/products/product4.jpg" alt="Cannes Dog Pack">
-                        <a class="most-selled__product__btn" href="#">Ver</a>
+                        <img class="most-selled__product__image" src="./imgs/products/product7.jpg" alt="product-image">
+                        <a class="most-selled__product__btn" href="./pages/product-view.html">Ver</a>
+                    </div>
+
+                    <div class="most-selled__product product--discount">
+                        <img class="most-selled__product__image" src="./imgs/products/product8.jpg" alt="product-image">
+                        <a class="most-selled__product__btn" href="./pages/product-view.html">Ver</a>
                     </div>
 
                     <div class="most-selled__product">
-                        <img class="most-selled__product__image" src="./imgs/products/product5.jpg" alt="Champion Dog Pack">
-                        <a class="most-selled__product__btn" href="#">Ver</a>
+                        <img class="most-selled__product__image" src="./imgs/products/product9.jpg" alt="product-image">
+                        <a class="most-selled__product__btn" href="./pages/product-view.html">Ver</a>
                     </div>
 
-                    <div class="most-selled__product">
-                        <img class="most-selled__product__image" src="./imgs/products/product6.jpg" alt="Champion Dog Pack">
-                        <a class="most-selled__product__btn" href="#">Ver</a>
+                    <div class="most-selled__product product--discount">
+                        <img class="most-selled__product__image" src="./imgs/products/product10.jpg" alt="product-image">
+                        <a class="most-selled__product__btn" href="./pages/product-view.html">Ver</a>
+                    </div>
+
+                    <div class="most-selled__product product--discount">
+                        <img class="most-selled__product__image" src="./imgs/products/product11.jpg" alt="product-image">
+                        <a class="most-selled__product__btn" href="./pages/product-view.html">Ver</a>
+                    </div>
+
+                    <div class="most-selled__product product--discount">
+                        <img class="most-selled__product__image" src="./imgs/products/product12.jpg" alt="product-image">
+                        <a class="most-selled__product__btn" href="./pages/product-view.html">Ver</a>
+                    </div>
+
+                    <div class="most-selled__product product--discount">
+                        <img class="most-selled__product__image" src="./imgs/products/product13.jpg" alt="product-image">
+                        <a class="most-selled__product__btn" href="./pages/product-view.html">Ver</a>
+                    </div>
+
+                    <div class="most-selled__product product--discount">
+                        <img class="most-selled__product__image" src="./imgs/products/product14.jpg" alt="product-image">
+                        <a class="most-selled__product__btn" href="./pages/product-view.html">Ver</a>
                     </div>
                 </div>
 

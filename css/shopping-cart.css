@@ -14,7 +14,7 @@
 .cart__container {
     box-shadow: 0px 2px 10px -6px rgba(0,0,0,0.48);
     border-left: #00BFA6 4px solid;
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
     display: flex;
     height: 85vh;
@@ -47,8 +47,6 @@
         flex-wrap: wrap;
     }
 }
-
-
 
 .list__item {
     display: flex;
@@ -157,16 +155,6 @@ p, label, h2{
     justify-content: space-between;
     flex-wrap: wrap;
     gap: .1em;
-}
-
-.delivery-type {
-    cursor: pointer;
-    border: 1px #7e8192 solid;
-    text-align: center;
-    text-transform: capitalize;
-    padding: .2em 0;
-    border-radius: 2px;
-    font-weight: 300;
 }
 
 .summary__code {
