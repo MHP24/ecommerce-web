@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <title>Cat&aacute;logo De Compra</title>
+</head>
+<body>
+    <a id="nav__cart--f" href="./shopping-cart.html">
+        <img src="../imgs/icons/cart.svg" alt="cart-icon" id="nav__cart__icon">
+        <div class="cart__count">
+            <p class="cart__number">0</p>
+        </div>
+    </a>
+
+    <main class="main">
+        <section class="navigation">
+            <div id="menu">
+                <img id="menu__icon" src="../imgs/icons/menu-icon.svg" alt="menu-icon">
+            </div>
+
+            <nav class="nav">
+                <a class="navigation__logo nav__item nav__profile" href="../index.html">
+                    ShoPets
+                </a>
+
+                <ul class="navigation__indexs">
+                    <li class="nav__item">
+                        <a class="nav__link" href="../index.html">Inicio</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a class="nav__link" href="./products.html">Cat&aacute;logo</a>
+                    </li class="nav__item">
+
+                    <li class="nav__item">
+                        <a class="nav__link" href="./about.html">Nosotros</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a class="nav__link" href="./contact-us.html">Contacto</a>
+                    </li>
+                    <li class="nav__msc">
+                        <a class="nav__btn" href="./login.html">Acceder</a>
+                        <a class="nav__btn" href="./register.html">Unirse</a>
+                        <a id="nav__cart" href="./shopping-cart.html">
+                            <img src="../imgs/icons/cart.svg" alt="cart-icon" id="nav__cart__icon">
+                            <div class="cart__count">
+                                <p class="cart__number">0</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="products">
+            <div class="products__searcher">
+                <h2 class="categories__title">Categorias</h2>
+                <ul class="categories">
+                    <li class="categorie categorie--gray">
+                        <a class="categorie__content" href="#"><img src="../imgs/icons/dog-icon.svg" alt="" class="categorie__img">Perros</a>
+                    </li>
+                    <li class="categorie">
+                        <a class="categorie__content" href="#"><img src="../imgs/icons/cat-icon.svg" alt="" class="categorie__img">Gatos</a>
+                    </li>
+                    <li class="categorie categorie--gray">
+                        <a class="categorie__content" href="#"><img src="../imgs/icons/fish-icon.svg" alt="" class="categorie__img">Peces</a>
+                    </li>
+                    <li class="categorie">
+                        <a class="categorie__content" href="#"><img src="../imgs/icons/accesories-icon.svg" alt="" class="categorie__img">Accesorios</a>
+                    </li>
+                    <li class="categorie categorie--gray">
+                        <a class="categorie__content" href="#"><img src="../imgs/icons/food-icon.svg" alt="" class="categorie__img">Alimentos</a>
+                    </li>
+                    <li class="categorie">
+                        <a class="categorie__content" href="#"><img src="../imgs/icons/fishbowl-icon.svg" alt="" class="categorie__img">Peceras</a>
+                    </li>
+                </ul>
+            </div>
+
+  
+            <div class="products__navigation">
+                <div class="products__filter">
+                    <div class="input">
+                        <label for="input__filter" class="input__label">Ordenar Por:</label>
+                        <select class="input__filter" name="filters" id="filters">
+                            <option class="input__option" value="recommended">Recomendados</option>
+                            <option class="input__option" value="value-min">Precio Menor a Mayor</option>
+                            <option class="input__option" value="value-max">Precio Mayor a Menor</option>
+                            <option class="input__option" value="company">Marca</option>
+                        </select>
+                    </div>
+    
+                    <form class="searcher" method="post">
+                        <input type="text" name="search" id="search" class="product__search" placeholder="¿Qué Buscas?">
+                        <button type="submit" class="search__btn"><img src="../imgs/icons/search.svg" alt="search" class="search__icon"></button>
+                    </form>
+    
+                    <p class="filter__results"><span class="results__count">25</span> Resultados</p>
+                </div>
+                <ul class="products__list">
+                    <li class="product">
+                        <a class="product__link" href="./product-view.html">
+                            <div class="product__img product--discount">
+                                <img src="../imgs/products/product1.jpg" alt="" class="img__src">
+                            </div>
+                            <div class="product__description">
+                                <p class="description__company">Lorem ipsum</p>
+                                <p class="description__name">Lorem ipsum dolor ipsum</p>
+                                <p class="description__price">$90,000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="product">
+                        <a class="product__link" href="./product-view.html">
+                            <div class="product__img">
+                                <img src="../imgs/products/product2.jpg" alt="" class="img__src">
+                            </div>
+                            <div class="product__description">
+                                <p class="description__company">Lorem ipsum</p>
+                                <p class="description__name">Lorem ipsum dolor ipsum</p>
+                                <p class="description__price">$90,000</p>
+                            </div>
+                        </a>
+                    </li>
+    
+                    <li class="product">
+                        <a class="product__link" href="./product-view.html">
+                            <div class="product__img">
+                                <img src="../imgs/products/product3.jpg" alt="" class="img__src">
+                            </div>
+                            <div class="product__description">
+                                <p class="description__company">Lorem ipsum</p>
+                                <p class="description__name">Lorem ipsum dolor ipsum</p>
+                                <p class="description__price">$90,000</p>
+                            </div>
+                        </a>
+                    </li>
+    
+                    <li class="product">
+                        <a class="product__link" href="./product-view.html">
+                            <div class="product__img product--discount">
+                                <img src="../imgs/products/product5.jpg" alt="" class="img__src">
+                            </div>
+                            <div class="product__description">
+                                <p class="description__company">Lorem ipsum</p>
+                                <p class="description__name">Lorem ipsum dolor ipsum</p>
+                                <p class="description__price">$90,000</p>
+                            </div>
+                        </a>
+                    </li>
+    
+                    <li class="product">
+                        <a class="product__link" href="./product-view.html">
+                            <div class="product__img">
+                                <img src="../imgs/products/product6.jpg" alt="" class="img__src">
+                            </div>
+                            <div class="product__description">
+                                <p class="description__company">Lorem ipsum</p>
+                                <p class="description__name">Lorem ipsum dolor ipsum</p>
+                                <p class="description__price">$90,000</p>
+                            </div>
+                        </a>
+                    </li>
+    
+                    <li class="product">
+                        <a class="product__link" href="./product-view.html">
+                            <div class="product__img product--discount">
+                                <img src="../imgs/products/product7.jpg" alt="" class="img__src">
+                            </div>
+                            <div class="product__description">
+                                <p class="description__company">Lorem ipsum</p>
+                                <p class="description__name">Lorem ipsum dolor ipsum</p>
+                                <p class="description__price">$90,000</p>
+                            </div>
+                        </a>
+                    </li>
+    
+                    <li class="product">
+                        <a class="product__link" href="./product-view.html">
+                            <div class="product__img product--discount">
+                                <img src="../imgs/products/product8.jpg" alt="" class="img__src">
+                            </div>
+                            <div class="product__description">
+                                <p class="description__company">Lorem ipsum</p>
+                                <p class="description__name">Lorem ipsum dolor ipsum</p>
+                                <p class="description__price">$90,000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="product">
+                        <a class="product__link" href="./product-view.html">
+                            <div class="product__img">
+                                <img src="../imgs/products/product9.jpg" alt="" class="img__src">
+                            </div>
+                            <div class="product__description">
+                                <p class="description__company">Lorem ipsum</p>
+                                <p class="description__name">Lorem ipsum dolor ipsum</p>
+                                <p class="description__price">$90,000</p>
+                            </div>
+                        </a>
+                    </li>
+    
+                    <li class="product">
+                        <a class="product__link" href="./product-view.html">
+                            <div class="product__img">
+                                <img src="../imgs/products/product10.jpg" alt="" class="img__src">
+                            </div>
+                            <div class="product__description">
+                                <p class="description__company">Lorem ipsum</p>
+                                <p class="description__name">Lorem ipsum dolor ipsum</p>
+                                <p class="description__price">$90,000</p>
+                            </div>
+                        </a>
+                    </li>
+    
+                    <li class="product">
+                        <a class="product__link" href="./product-view.html">
+                            <div class="product__img product--discount">
+                                <img src="../imgs/products/product11.jpg" alt="" class="img__src">
+                            </div>
+                            <div class="product__description">
+                                <p class="description__company">Lorem ipsum</p>
+                                <p class="description__name">Lorem ipsum dolor ipsum</p>
+                                <p class="description__price">$90,000</p>
+                            </div>
+                        </a>
+                    </li>
+    
+                    <li class="product">
+                        <a class="product__link" href="./product-view.html">
+                            <div class="product__img">
+                                <img src="../imgs/products/product12.jpg" alt="" class="img__src">
+                            </div>
+                            <div class="product__description">
+                                <p class="description__company">Lorem ipsum</p>
+                                <p class="description__name">Lorem ipsum dolor ipsum</p>
+                                <p class="description__price">$90,000</p>
+                            </div>
+                        </a>
+                    </li>
+    
+                    <li class="product">
+                        <a class="product__link" href="./product-view.html">
+                            <div class="product__img product--discount">
+                                <img src="../imgs/products/product13.jpg" alt="" class="img__src">
+                            </div>
+                            <div class="product__description">
+                                <p class="description__company">Lorem ipsum</p>
+                                <p class="description__name">Lorem ipsum dolor ipsum</p>
+                                <p class="description__price">$90,000</p>
+                            </div>
+                        </a>
+                    </li>
+    
+                    <li class="product">
+                        <a class="product__link" href="./product-view.html">
+                            <div class="product__img product--discount">
+                                <img src="../imgs/products/product14.jpg" alt="" class="img__src">
+                            </div>
+                            <div class="product__description">
+                                <p class="description__company">Lorem ipsum</p>
+                                <p class="description__name">Lorem ipsum dolor ipsum</p>
+                                <p class="description__price">$90,000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="product">
+                        <a class="product__link" href="./product-view.html">
+                            <div class="product__img">
+                                <img src="../imgs/products/product15.jpg" alt="" class="img__src">
+                            </div>
+                            <div class="product__description">
+                                <p class="description__company">Lorem ipsum</p>
+                                <p class="description__name">Lorem ipsum dolor ipsum</p>
+                                <p class="description__price">$90,000</p>
+                            </div>
+                        </a>
+                    </li>
+    
+                    <li class="product">
+                        <a class="product__link" href="./product-view.html">
+                            <div class="product__img">
+                                <img src="../imgs/products/product16.jpg" alt="" class="img__src">
+                            </div>
+                            <div class="product__description">
+                                <p class="description__company">Lorem ipsum</p>
+                                <p class="description__name">Lorem ipsum dolor ipsum</p>
+                                <p class="description__price">$90,000</p>
+                            </div>
+                        </a>
+                    </li>
+    
+                    <li class="product">
+                        <a class="product__link" href="./product-view.html">
+                            <div class="product__img product--discount">
+                                <img src="../imgs/products/product17.jpg" alt="" class="img__src">
+                            </div>
+                            <div class="product__description">
+                                <p class="description__company">Lorem ipsum</p>
+                                <p class="description__name">Lorem ipsum dolor ipsum</p>
+                                <p class="description__price">$90,000</p>
+                            </div>
+                        </a>
+                    </li>
+    
+                    <li class="product">
+                        <a class="product__link" href="./product-view.html">
+                            <div class="product__img">
+                                <img src="../imgs/products/product18.jpg" alt="" class="img__src">
+                            </div>
+                            <div class="product__description">
+                                <p class="description__company">Lorem ipsum</p>
+                                <p class="description__name">Lorem ipsum dolor ipsum</p>
+                                <p class="description__price">$90,000</p>
+                            </div>
+                        </a>
+                    </li>
+    
+                    <li class="product">
+                        <a class="product__link" href="./product-view.html">
+                            <div class="product__img product--discount">
+                                <img src="../imgs/products/product19.jpg" alt="" class="img__src">
+                            </div>
+                            <div class="product__description">
+                                <p class="description__company">Lorem ipsum</p>
+                                <p class="description__name">Lorem ipsum dolor ipsum</p>
+                                <p class="description__price">$90,000</p>
+                            </div>
+                        </a>
+                    </li>
+    
+                    <li class="product">
+                        <a class="product__link" href="./product-view.html">
+                            <div class="product__img product--discount">
+                                <img src="../imgs/products/product20.jpg" alt="" class="img__src">
+                            </div>
+                            <div class="product__description">
+                                <p class="description__company">Lorem ipsum</p>
+                                <p class="description__name">Lorem ipsum dolor ipsum</p>
+                                <p class="description__price">$90,000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="product">
+                        <a class="product__link" href="./product-view.html">
+                            <div class="product__img">
+                                <img src="../imgs/products/product21.jpg" alt="" class="img__src">
+                            </div>
+                            <div class="product__description">
+                                <p class="description__company">Lorem ipsum</p>
+                                <p class="description__name">Lorem ipsum dolor ipsum</p>
+                                <p class="description__price">$90,000</p>
+                            </div>
+                        </a>
+                    </li>
+    
+                    <li class="product">
+                        <a class="product__link" href="./product-view.html">
+                            <div class="product__img">
+                                <img src="../imgs/products/product22.jpg" alt="" class="img__src">
+                            </div>
+                            <div class="product__description">
+                                <p class="description__company">Lorem ipsum</p>
+                                <p class="description__name">Lorem ipsum dolor ipsum</p>
+                                <p class="description__price">$90,000</p>
+                            </div>
+                        </a>
+                    </li>
+    
+                    <li class="product">
+                        <a class="product__link" href="./product-view.html">
+                            <div class="product__img product--discount">
+                                <img src="../imgs/products/product23.jpg" alt="" class="img__src">
+                            </div>
+                            <div class="product__description">
+                                <p class="description__company">Lorem ipsum</p>
+                                <p class="description__name">Lorem ipsum dolor ipsum</p>
+                                <p class="description__price">$90,000</p>
+                            </div>
+                        </a>
+                    </li>
+    
+                    <li class="product">
+                        <a class="product__link" href="./product-view.html">
+                            <div class="product__img">
+                                <img src="../imgs/products/product24.jpg" alt="" class="img__src">
+                            </div>
+                            <div class="product__description">
+                                <p class="description__company">Lorem ipsum</p>
+                                <p class="description__name">Lorem ipsum dolor ipsum</p>
+                                <p class="description__price">$90,000</p>
+                            </div>
+                        </a>
+                    </li>
+    
+                    <li class="product">
+                        <a class="product__link" href="./product-view.html">
+                            <div class="product__img product--discount">
+                                <img src="../imgs/products/product25.jpg" alt="" class="img__src">
+                            </div>
+                            <div class="product__description">
+                                <p class="description__company">Lorem ipsum</p>
+                                <p class="description__name">Lorem ipsum dolor ipsum</p>
+                                <p class="description__price">$90,000</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <figure class="footer__logo">
+                <p class="footer__isotype">Chao Mundo</p>
+            </figure>
+        </div>
+    </footer>
+
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

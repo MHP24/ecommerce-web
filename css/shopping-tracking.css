@@ -1,0 +1,107 @@
+body {
+    background-color: #fafafa;
+}
+
+.tracking {
+    width: 100%;
+    margin: 7rem auto;
+    display: grid;
+    place-items: center;
+}
+
+.tracking__title {
+    font-family: 'Lavishly Yours', cursive;
+    font-size: 2.5rem;
+}
+
+.tracking__container {
+    text-align: center;
+    background-color: #fff;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+    padding: 1.5em;
+    box-shadow: 1px 7px 15px -16px #000000;
+    border-radius: 5px;
+    border-left: 4px #00BFA6 solid;
+}
+
+.stages {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.stage {
+    background-color: #00BFA6;
+    display: grid;
+    place-content: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.stage--dot {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.stage--line {
+    width: 25%;
+    height: 5px;
+}
+
+.stage--uncompleted {
+    background-color: rgba(162, 145, 145, 0.188);
+}
+
+img {
+    width: 50px;
+}
+
+.tracking__actions {
+    display: flex;
+    gap: 1em;
+}
+
+.action {
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    background-color: #24252A;
+    border-radius: 50%;
+    padding: .5em;
+    transform: scale(.98);
+    transition: .5s;
+}
+
+.action:hover {
+    transform: scale(1);
+    opacity: .9;
+    transition: .5s;
+}
+
+.tracking__subtitle,
+.tracking__descr {
+    font-size: 1.2rem;
+}
+
+.tracking__descr {
+    color: #00BFA6;
+    font-weight: 500;
+}
+
+@media (max-width: 720px) {
+    .stage--dot {
+        height: 40px;
+        width: 60px;
+    }
+    .stage {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <title>Panel de administraci&oacute;n</title>
+</head>
+<body>
+
+    <header class="dashboard-navigation">
+        <h2 class="title">ShoPets</h2>
+        <hr>
+       <nav class="nav">
+            <a class="nav__item" href="./dashboard.html">
+                <img class="nav__img" src="../imgs/icons/home.svg" alt="Home">
+                <p class="nav__name">Inicio</p>
+            </a>
+
+            <a class="nav__item" href="./products/dashboard-products.html">
+                <img class="nav__img" src="../imgs/icons/package.svg" alt="Products">
+                <p class="nav__name">Productos</p>
+            </a>
+
+            <a class="nav__item" href="./bills/dashboard-bills.html">
+                <img class="nav__img" src="../imgs/icons/clip.svg" alt="Facts">
+                <p class="nav__name">Facturas</p>
+            </a>
+
+            <a class="nav__item" href="./stock/dashboard-product-stock.html">
+                <img class="nav__img" src="../imgs/icons/stock.svg" alt="Stock">
+                <p class="nav__name">Stock</p>
+            </a>
+
+            <a class="nav__item" href="./users/dashboard-users.html">
+                <img class="nav__img" src="../imgs/icons/user.svg" alt="Users">
+                <p class="nav__name">Usuarios</p>
+            </a>
+
+            <a class="nav__item" href="./history/dashboard-sales-history.html">
+                <img class="nav__img" src="../imgs/icons/history.svg" alt="History">
+                <p class="nav__name">Historial</p>
+            </a>
+        </nav>
+    </header>
+    <main >
+<!--  -->
+        <section class="panel">
+            <section class="searcher">
+                <img id="searcher__burger" src="../imgs/icons/menu-dashboard.svg" alt="">
+                <div class="searcher__item searcher__item--search">
+                    <input class="searcher__input" name="search" id="search" type="text" placeholder="Search...">
+                    <button class="searcher__btn"><img class="searcher__btn-img"src="../imgs/icons/search.svg" alt="S"></button>
+                </div>
+
+                <div class="searcher__item searcher__item--actions">
+                    <div class="searcher__item searcher__item--options">
+                        <img class="searcher__option" src="../imgs/icons/notification.svg" alt="Notifications">
+                        <img class="searcher__option" src="../imgs/icons/email.svg" alt="Messages">
+                    </div>
+    
+                    <div class="searcher__item searcher__item--profile">
+                        <p class="searcher__user">Don Miguelo</p>
+                        <img class="searcher__picture"src="../imgs/msc/profile-picture.jpg" alt="You">
+                    </div>
+                </div>
+            </section>
+
+<!--  -->
+            <section class="summary">
+                <div class="summary__item summary__item--t">
+                    <h2 class="summary__title">¡Bienvenido Don Miguelo!</h2>
+                    <button class="summary__btn"> <img class="summary__btn--img" src="../imgs/icons/download.svg"> Generar Reporte</button>
+                </div>
+
+                <div class="summary__item summary__item--pf">
+                    <div class="summary__subitem">
+                        <div class="subitem__content">
+                            <p class="subitem__summary">Lorem, ipsum (dolor)</p>
+                            <p class="subitem__quantity">$99.999</p>
+                        </div>
+                        <img class="subitem__img" src="../imgs/icons/calendar.svg" alt="">
+                    </div>
+
+                    <div class="summary__subitem">
+                        <div class="subitem__content">
+                            <p class="subitem__summary">Lorem, ipsum (dolor)</p>
+                            <p class="subitem__quantity">$99.999</p>
+                        </div>
+                        <img class="subitem__img" src="../imgs/icons/calendar.svg" alt="">
+                    </div>
+
+                    <div class="summary__subitem">
+                        <div class="subitem__content">
+                            <p class="subitem__summary">Lorem, ipsum (dolor)</p>
+                            <p class="subitem__quantity">$99.999</p>
+                        </div>
+                        <img class="subitem__img" src="../imgs/icons/calendar.svg" alt="">
+                    </div>
+
+                    <div class="summary__subitem">
+                        <div class="subitem__content">
+                            <p class="subitem__summary">Lorem, ipsum (dolor)</p>
+                            <p class="subitem__quantity">$99.999</p>
+                        </div>
+                        <img class="subitem__img" src="../imgs/icons/calendar.svg" alt="">
+                    </div>
+                </div>
+            </section>
+
+<!--  -->
+
+            <section class="sells">
+                <div class="sells__list">
+                    <h2 class="sells__title">Ventas Recientes</h2>
+                    <div class="sells__container">
+                        <div class="sell">
+                            <img class="sell__img" src="../imgs/msc/profile-picture-dashboard.jpg" alt="Profile picture">
+                            <p class="sell_description">Lorem ipsum dolor sit, amet consectetur adipisicing. - $10.000</p>
+                            <a class="sell__link" href="#">Detalles</a>
+                        </div>
+    
+                        <div class="sell">
+                            <img class="sell__img" src="../imgs/msc/profile-picture-dashboard.jpg" alt="Profile picture">
+                            <p class="sell_description">Lorem ipsum dolor sit, amet consectetur adipisicing. - $10.000</p>
+
+                            <a class="sell__link" href="#">Detalles</a>
+                        </div>
+    
+                        <div class="sell">
+                            <img class="sell__img" src="../imgs/msc/profile-picture-dashboard.jpg" alt="Profile picture">
+                            <p class="sell_description">Lorem ipsum dolor sit, amet consectetur adipisicing. - $10.000</p>
+
+                            <a class="sell__link" href="#">Detalles</a>
+                        </div>
+    
+                        <div class="sell">
+                            <img class="sell__img" src="../imgs/msc/profile-picture-dashboard.jpg" alt="Profile picture">
+                            <p class="sell_description">Lorem ipsum dolor sit, amet consectetur adipisicing. - $10.000</p>
+
+                            <a class="sell__link" href="#">Detalles</a>
+                        </div>
+    
+                        <div class="sell">
+                            <img class="sell__img" src="../imgs/msc/profile-picture-dashboard.jpg" alt="Profile picture">
+                            <p class="sell_description">Lorem ipsum dolor sit, amet consectetur adipisicing. - $10.000</p>
+
+                            <a class="sell__link" href="#">Detalles</a>
+                        </div>
+
+
+                    </div>
+                    
+                    <a href="./history/dashboard-sales-history.html" class="sells__btn">Ver Historial</a>
+                </div>
+
+<!--  -->
+                <div class="stock__list">
+                    <h2 class="stock__title">Stock m&aacute;s vendidos</h2>
+                    <div class="stock__container">
+                        <div class="stock">
+                            <img class="stock__img" src="../imgs/products/product1.jpg" alt="Profile picture">
+                            <p class="stock__description">Lorem ipsum dolor sit. x10</p>
+                            <a class="stock__link" href="#">Detalles</a>
+                        </div>
+    
+                        <div class="stock">
+                            <img class="stock__img" src="../imgs/products/product2.jpg" alt="Profile picture">
+                            <p class="stock__description">Lorem ipsum dolor sit. x10</p>
+                            <a class="stock__link" href="#">Detalles</a>
+                        </div>
+
+                        <div class="stock">
+                            <img class="stock__img" src="../imgs/products/product3.jpg" alt="Profile picture">
+                            <p class="stock__description">Lorem ipsum dolor sit. x10</p>
+                            <a class="stock__link" href="#">Detalles</a>
+                        </div>
+
+                        <div class="stock">
+                            <img class="stock__img" src="../imgs/products/product4.jpg" alt="Profile picture">
+                            <p class="stock__description">Lorem ipsum dolor sit. x10</p>
+                            <a class="stock__link" href="#">Detalles</a>
+                        </div>
+
+                        <div class="stock">
+                            <img class="stock__img" src="../imgs/products/product5.jpg" alt="Profile picture">
+                            <p class="stock__description">Lorem ipsum dolor sit. x10</p>
+                            <a class="stock__link" href="#">Detalles</a>
+                        </div>
+                        <a href="./stock/dashboard-product-stock.html" class="stock__btn">Ver Productos</a>
+                    </div>
+                </div>
+            </section>        
+
+    </main>
+    <script src="../js/dashboardNavigation.js"></script>
+</body>
+</html>

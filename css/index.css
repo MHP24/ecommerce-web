@@ -392,8 +392,7 @@ img {
     display: block;
     padding: .5rem 1.6rem;
     font-weight: 500;
-    background-color: red;
-    border-radius: 25px;
+    border-radius: 2px;
     color: #f2f2f2;
     text-decoration: none;
     font-size: 1.2rem;
@@ -412,6 +411,18 @@ img {
     transition: .5s;
 }
 
+.product--discount::before {
+    content: '20%';
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: .1em;
+    border-radius: 2px;
+    background-color: #f53d3d;
+}
 
 /* Month Offer */
 .offer {
@@ -651,7 +662,12 @@ img {
 }
 
 /* Footer */
+.footer {
+    margin-top: 10em;
+}   
+
 .footer__container {
+    margin-top: 1em;
     background-color: #24252A;
     color: #fafafa;
     text-align: center;

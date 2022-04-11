@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/dashboard-table-layout.css">
+    <link rel="stylesheet" href="../../css/dashboard-bills-details.css">
+    <title>Detalles 123456789</title>
+</head>
+<body>
+
+    <header class="dashboard-navigation">
+        <h2 class="title">ShoPets</h2>
+        <hr>
+        <nav class="nav">
+            <a class="nav__item" href="../dashboard.html">
+                <img class="nav__img" src="../../imgs/icons/home.svg" alt="Home">
+                <p class="nav__name">Inicio</p>
+            </a>
+
+            <a class="nav__item" href="../products/dashboard-products.html">
+                <img class="nav__img" src="../../imgs/icons/package.svg" alt="Products">
+                <p class="nav__name">Productos</p>
+            </a>
+
+            <a class="nav__item" href="./dashboard-bills.html">
+                <img class="nav__img" src="../../imgs/icons/clip.svg" alt="Facts">
+                <p class="nav__name">Facturas</p>
+            </a>
+
+            <a class="nav__item" href="../stock/dashboard-product-stock.html">
+                <img class="nav__img" src="../../imgs/icons/stock.svg" alt="Stock">
+                <p class="nav__name">Stock</p>
+            </a>
+
+            <a class="nav__item" href="../users/dashboard-users.html">
+                <img class="nav__img" src="../../imgs/icons/user.svg" alt="Users">
+                <p class="nav__name">Usuarios</p>
+            </a>
+
+            <a class="nav__item" href="../history/dashboard-sales-history.html">
+                <img class="nav__img" src="../../imgs/icons/history.svg" alt="History">
+                <p class="nav__name">Historial</p>
+            </a>
+        </nav>
+    </header>
+
+
+    <!--  -->
+    <main >
+        <section class="panel">
+            <section class="searcher">
+                <img id="searcher__burger" src="../../imgs/icons/menu-dashboard.svg" alt="">
+                <div class="searcher__item searcher__item--search">
+                    <input class="searcher__input" name="search" id="search" type="text" placeholder="Search...">
+                    <button class="searcher__btn"><img class="searcher__btn-img"src="../../imgs/icons/search.svg" alt="S"></button>
+                </div>
+
+                <div class="searcher__item searcher__item--actions">
+                    <div class="searcher__item searcher__item--options">
+                        <img class="searcher__option" src="../../imgs/icons/notification.svg" alt="Notifications">
+                        <img class="searcher__option" src="../../imgs/icons/email.svg" alt="Messages">
+                    </div>
+    
+                    <div class="searcher__item searcher__item--profile">
+                        <p class="searcher__user">Don Miguelo</p>
+                        <img class="searcher__picture"src="../../imgs/msc/profile-picture.jpg" alt="You">
+                    </div>
+                </div>
+            </section>
+            
+            <div class="summary">
+                    <div class="summary__item summary__item--t">
+                        <h2 class="summary__title">Detalles Facturaci&oacute;n</h2>
+                        <a class="summary__btn" href="./dashboard-products-add.html"> <img class="summary__btn--img" src="../../imgs/icons/download.svg">Descargar</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <section class="details">
+                <div class="details__container">
+                    <div class="detail__item">
+                        <h2 class="detail__title">ShoPets</h2>
+                    </div>
+
+                    <div class="detail__item">
+                        <div class="detail__subitem">
+                            <div class="detail__idem">
+                                <p>Facturar A: <span class="detail">123456789</span></p>
+                                
+                                <p>Nombre: <span>Don Miguelo</span></p>
+                            </div>
+
+                        </div>
+
+                        <div class="detail__subitem">
+                                <p>N Factura: <span class="detail">987654321</span></p>
+                                <p>Fecha: <span>7/4/21 - 10:38PM</span></p>
+                        </div>
+                    </div>
+
+                    <ul class="detail__products">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Cantidad</th>
+                                    <th>Precio Unitario</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tr--g">
+                                    <th>Master Dog</th>
+                                    <th>10</th>
+                                    <th>10,000</th>
+                                </tr>
+
+                                <tr>
+                                    <th>Dog Chow</th>
+                                    <th>6</th>
+                                    <th>15,000</th>
+                                </tr>
+
+                                <tr class="tr--g">
+                                    <th>Whiskas</th>
+                                    <th>5</th>
+                                    <th>9,000</th>
+                                </tr>
+
+                                <tr>
+                                    <th class="detail--important">Medio de pago</th>
+                                    <th></th>
+                                    <th class="detail--important">Credito</th>
+                                </tr>
+
+                                <tr class="tr--g">
+                                    <th class="detail--important">Cuotas</th>
+                                    <th></th>
+                                    <th class="detail--important">2</th>
+                                </tr>
+
+                                <tr>
+                                    <th></th>
+                                    <th>Total</th>
+                                    <th class="detail--important">235,000</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </ul>
+                </div>
+            </section>
+
+        </section>
+
+    </main>
+    <script src="../../js/dashboardNavigation.js"></script>
+</body>
+</html>

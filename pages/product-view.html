@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/product-view.css">
+    <title>Vista Previa</title>
+</head>
+<body>
+    <a id="nav__cart--f" href="./shopping-cart.html">
+        <img src="../imgs/icons/cart.svg" alt="cart-icon" id="nav__cart__icon">
+        <div class="cart__count">
+            <p class="cart__number">0</p>
+        </div>
+    </a>
+
+    <main class="main">
+        <section class="navigation">
+            <div id="menu">
+                <img id="menu__icon" src="../imgs/icons/menu-icon.svg" alt="menu-icon">
+            </div>
+
+            <nav class="nav">
+                <a class="navigation__logo nav__item nav__profile" href="../index.html">
+                    ShoPets
+                </a>
+
+                <ul class="navigation__indexs">
+                    <li class="nav__item">
+                        <a class="nav__link" href="../index.html">Inicio</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a class="nav__link" href="./products.html">Cat&aacute;logo</a>
+                    </li class="nav__item">
+
+                    <li class="nav__item">
+                        <a class="nav__link" href="./about.html">Nosotros</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a class="nav__link" href="./contact-us.html">Contacto</a>
+                    </li>
+                    <li class="nav__msc">
+                        <a class="nav__btn" href="./profile.html">Mi Perfil</a>
+                        <a class="nav__btn" href="#">Cerrar Sesi&oacute;n</a>
+                        <a id="nav__cart" href="./shopping-cart.html">
+                            <img src="../imgs/icons/cart.svg" alt="cart-icon" id="nav__cart__icon">
+                            <div class="cart__count">
+                                <p class="cart__number">0</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="preview">
+            <div class="preview__container">
+                <div class="preview__product">
+                    <div class="img__container product--discount">
+                        <img src="../imgs/products/product21.jpg" alt="" class="product__img">
+                    </div>
+
+                    <div class="product__content">
+
+                        <div class="product__data">
+                            <h2 class="product__name">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, recusandae.</h2>
+                            <p class="product__code">SKU: 123456789</p>
+                            <p class="product__pet">Lorem ipsum dolor</p>
+                        </div>
+
+                        <div class="product__values">
+                            <div class="product__price">
+                                <p class="product__platform">Internet</p>
+                                <p class="product__value">$90,000</p>
+                            </div>
+    
+                            <div class="product__price">
+                                <p class="product__platform product__platform--member">Miembro</p>
+                                <p class="product__value product__value--member">$75,000</p>
+                            </div>
+                        </div>
+
+                        <div class="product__buy">
+                            <form class="product__quantity">
+                                <p class="quantity__handler quantity__min">-</p>
+                                <input type="number" name="quantity" id="quantity" class="quantity__count">
+                                <p class="quantity__handler quantity__add">+</p>
+                            </form>
+
+                            <button class="product__buy__btn">Agregar Al Carro</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer__container">
+            <figure class="footer__logo">
+                <p class="footer__isotype">Chao Mundo</p>
+            </figure>
+        </div>
+    </footer>
+
+    <script src="../js/navigation.js"></script>
+</body>
+</html>
