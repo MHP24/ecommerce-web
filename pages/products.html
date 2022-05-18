@@ -13,15 +13,36 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="../css/shopping-cart.css">
     <title>Cat&aacute;logo De Compra</title>
 </head>
+
 <body>
-    <a id="nav__cart--f" href="./shopping-cart.html">
+
+    <div class="modalcart">
+        <div class="cart">
+            <div class="cart__list">
+            </div>
+
+            <div class="cart__summary">
+                <p id="closeCart">X</p>
+                <div class="summary__item">
+                    <h2 class="summary__title">Resumen</h2>
+                </div>
+
+                <div id="summary__payment"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="nav__cart--f" href="./shopping-cart.html">
         <img src="../imgs/icons/cart.svg" alt="cart-icon" id="nav__cart__icon">
         <div class="cart__count">
             <p class="cart__number">0</p>
         </div>
-    </a>
+    </div>
 
     <main class="main">
         <section class="navigation">
@@ -53,43 +74,48 @@
                     <li class="nav__msc">
                         <a class="nav__btn" href="./login.html">Acceder</a>
                         <a class="nav__btn" href="./register.html">Unirse</a>
-                        <a id="nav__cart" href="./shopping-cart.html">
+                        <div id="nav__cart" href="./shopping-cart.html">
                             <img src="../imgs/icons/cart.svg" alt="cart-icon" id="nav__cart__icon">
                             <div class="cart__count">
                                 <p class="cart__number">0</p>
                             </div>
-                        </a>
+                        </div>
                     </li>
                 </ul>
             </nav>
         </section>
-
         <section class="products">
             <div class="products__searcher">
                 <h2 class="categories__title">Categorias</h2>
                 <ul class="categories">
                     <li class="categorie categorie--gray">
-                        <a class="categorie__content" href="#"><img src="../imgs/icons/dog-icon.svg" alt="" class="categorie__img">Perros</a>
+                        <a class="categorie__content" href="#"><img src="../imgs/icons/dog-icon.svg" alt=""
+                                class="categorie__img">Perros</a>
                     </li>
                     <li class="categorie">
-                        <a class="categorie__content" href="#"><img src="../imgs/icons/cat-icon.svg" alt="" class="categorie__img">Gatos</a>
+                        <a class="categorie__content" href="#"><img src="../imgs/icons/cat-icon.svg" alt=""
+                                class="categorie__img">Gatos</a>
                     </li>
                     <li class="categorie categorie--gray">
-                        <a class="categorie__content" href="#"><img src="../imgs/icons/fish-icon.svg" alt="" class="categorie__img">Peces</a>
+                        <a class="categorie__content" href="#"><img src="../imgs/icons/fish-icon.svg" alt=""
+                                class="categorie__img">Peces</a>
                     </li>
                     <li class="categorie">
-                        <a class="categorie__content" href="#"><img src="../imgs/icons/accesories-icon.svg" alt="" class="categorie__img">Accesorios</a>
+                        <a class="categorie__content" href="#"><img src="../imgs/icons/accesories-icon.svg" alt=""
+                                class="categorie__img">Accesorios</a>
                     </li>
                     <li class="categorie categorie--gray">
-                        <a class="categorie__content" href="#"><img src="../imgs/icons/food-icon.svg" alt="" class="categorie__img">Alimentos</a>
+                        <a class="categorie__content" href="#"><img src="../imgs/icons/food-icon.svg" alt=""
+                                class="categorie__img">Alimentos</a>
                     </li>
                     <li class="categorie">
-                        <a class="categorie__content" href="#"><img src="../imgs/icons/fishbowl-icon.svg" alt="" class="categorie__img">Peceras</a>
+                        <a class="categorie__content" href="#"><img src="../imgs/icons/fishbowl-icon.svg" alt=""
+                                class="categorie__img">Peceras</a>
                     </li>
                 </ul>
             </div>
 
-  
+
             <div class="products__navigation">
                 <div class="products__filter">
                     <div class="input">
@@ -101,15 +127,16 @@
                             <option class="input__option" value="company">Marca</option>
                         </select>
                     </div>
-    
+
                     <form class="searcher" method="post">
                         <input type="text" name="search" id="search" class="product__search" placeholder="¿Qué Buscas?">
-                        <button type="submit" class="search__btn"><img src="../imgs/icons/search.svg" alt="search" class="search__icon"></button>
+                        <button type="submit" class="search__btn"><img src="../imgs/icons/search.svg" alt="search"
+                                class="search__icon"></button>
                     </form>
-    
+
                     <p class="filter__results"><span class="results__count">25</span> Resultados</p>
                 </div>
-                <ul class="products__list">
+                <ul class="products__list" id="products">
                     <li class="product">
                         <a class="product__link" href="./product-view.html">
                             <div class="product__img product--discount">
@@ -118,9 +145,11 @@
                             <div class="product__description">
                                 <p class="description__company">Lorem ipsum</p>
                                 <p class="description__name">Lorem ipsum dolor ipsum</p>
-                                <p class="description__price">$90,000</p>
+                                <p class="description__price">$90000</p>
                             </div>
                         </a>
+                        <button class="product__btn">Agregar</button>
+
                     </li>
                     <li class="product">
                         <a class="product__link" href="./product-view.html">
@@ -130,11 +159,12 @@
                             <div class="product__description">
                                 <p class="description__company">Lorem ipsum</p>
                                 <p class="description__name">Lorem ipsum dolor ipsum</p>
-                                <p class="description__price">$90,000</p>
+                                <p class="description__price">$90000</p>
                             </div>
                         </a>
+                        <button class="product__btn">Agregar</button>
                     </li>
-    
+
                     <li class="product">
                         <a class="product__link" href="./product-view.html">
                             <div class="product__img">
@@ -143,11 +173,12 @@
                             <div class="product__description">
                                 <p class="description__company">Lorem ipsum</p>
                                 <p class="description__name">Lorem ipsum dolor ipsum</p>
-                                <p class="description__price">$90,000</p>
+                                <p class="description__price">$90000</p>
                             </div>
                         </a>
+                        <button class="product__btn">Agregar</button>
                     </li>
-    
+
                     <li class="product">
                         <a class="product__link" href="./product-view.html">
                             <div class="product__img product--discount">
@@ -156,11 +187,12 @@
                             <div class="product__description">
                                 <p class="description__company">Lorem ipsum</p>
                                 <p class="description__name">Lorem ipsum dolor ipsum</p>
-                                <p class="description__price">$90,000</p>
+                                <p class="description__price">$90000</p>
                             </div>
                         </a>
+                        <button class="product__btn">Agregar</button>
                     </li>
-    
+
                     <li class="product">
                         <a class="product__link" href="./product-view.html">
                             <div class="product__img">
@@ -169,11 +201,12 @@
                             <div class="product__description">
                                 <p class="description__company">Lorem ipsum</p>
                                 <p class="description__name">Lorem ipsum dolor ipsum</p>
-                                <p class="description__price">$90,000</p>
+                                <p class="description__price">$90000</p>
                             </div>
                         </a>
+                        <button class="product__btn">Agregar</button>
                     </li>
-    
+
                     <li class="product">
                         <a class="product__link" href="./product-view.html">
                             <div class="product__img product--discount">
@@ -182,11 +215,12 @@
                             <div class="product__description">
                                 <p class="description__company">Lorem ipsum</p>
                                 <p class="description__name">Lorem ipsum dolor ipsum</p>
-                                <p class="description__price">$90,000</p>
+                                <p class="description__price">$90000</p>
                             </div>
                         </a>
+                        <button class="product__btn">Agregar</button>
                     </li>
-    
+
                     <li class="product">
                         <a class="product__link" href="./product-view.html">
                             <div class="product__img product--discount">
@@ -195,9 +229,10 @@
                             <div class="product__description">
                                 <p class="description__company">Lorem ipsum</p>
                                 <p class="description__name">Lorem ipsum dolor ipsum</p>
-                                <p class="description__price">$90,000</p>
+                                <p class="description__price">$90000</p>
                             </div>
                         </a>
+                        <button class="product__btn">Agregar</button>
                     </li>
                     <li class="product">
                         <a class="product__link" href="./product-view.html">
@@ -207,11 +242,12 @@
                             <div class="product__description">
                                 <p class="description__company">Lorem ipsum</p>
                                 <p class="description__name">Lorem ipsum dolor ipsum</p>
-                                <p class="description__price">$90,000</p>
+                                <p class="description__price">$90000</p>
                             </div>
                         </a>
+                        <button class="product__btn">Agregar</button>
                     </li>
-    
+
                     <li class="product">
                         <a class="product__link" href="./product-view.html">
                             <div class="product__img">
@@ -220,11 +256,12 @@
                             <div class="product__description">
                                 <p class="description__company">Lorem ipsum</p>
                                 <p class="description__name">Lorem ipsum dolor ipsum</p>
-                                <p class="description__price">$90,000</p>
+                                <p class="description__price">$90000</p>
                             </div>
                         </a>
+                        <button class="product__btn">Agregar</button>
                     </li>
-    
+
                     <li class="product">
                         <a class="product__link" href="./product-view.html">
                             <div class="product__img product--discount">
@@ -233,11 +270,12 @@
                             <div class="product__description">
                                 <p class="description__company">Lorem ipsum</p>
                                 <p class="description__name">Lorem ipsum dolor ipsum</p>
-                                <p class="description__price">$90,000</p>
+                                <p class="description__price">$90000</p>
                             </div>
                         </a>
+                        <button class="product__btn">Agregar</button>
                     </li>
-    
+
                     <li class="product">
                         <a class="product__link" href="./product-view.html">
                             <div class="product__img">
@@ -246,11 +284,12 @@
                             <div class="product__description">
                                 <p class="description__company">Lorem ipsum</p>
                                 <p class="description__name">Lorem ipsum dolor ipsum</p>
-                                <p class="description__price">$90,000</p>
+                                <p class="description__price">$90000</p>
                             </div>
                         </a>
+                        <button class="product__btn">Agregar</button>
                     </li>
-    
+
                     <li class="product">
                         <a class="product__link" href="./product-view.html">
                             <div class="product__img product--discount">
@@ -259,11 +298,12 @@
                             <div class="product__description">
                                 <p class="description__company">Lorem ipsum</p>
                                 <p class="description__name">Lorem ipsum dolor ipsum</p>
-                                <p class="description__price">$90,000</p>
+                                <p class="description__price">$90000</p>
                             </div>
                         </a>
+                        <button class="product__btn">Agregar</button>
                     </li>
-    
+
                     <li class="product">
                         <a class="product__link" href="./product-view.html">
                             <div class="product__img product--discount">
@@ -272,9 +312,10 @@
                             <div class="product__description">
                                 <p class="description__company">Lorem ipsum</p>
                                 <p class="description__name">Lorem ipsum dolor ipsum</p>
-                                <p class="description__price">$90,000</p>
+                                <p class="description__price">$90000</p>
                             </div>
                         </a>
+                        <button class="product__btn">Agregar</button>
                     </li>
                     <li class="product">
                         <a class="product__link" href="./product-view.html">
@@ -284,11 +325,12 @@
                             <div class="product__description">
                                 <p class="description__company">Lorem ipsum</p>
                                 <p class="description__name">Lorem ipsum dolor ipsum</p>
-                                <p class="description__price">$90,000</p>
+                                <p class="description__price">$90000</p>
                             </div>
                         </a>
+                        <button class="product__btn">Agregar</button>
                     </li>
-    
+
                     <li class="product">
                         <a class="product__link" href="./product-view.html">
                             <div class="product__img">
@@ -297,11 +339,12 @@
                             <div class="product__description">
                                 <p class="description__company">Lorem ipsum</p>
                                 <p class="description__name">Lorem ipsum dolor ipsum</p>
-                                <p class="description__price">$90,000</p>
+                                <p class="description__price">$90000</p>
                             </div>
                         </a>
+                        <button class="product__btn">Agregar</button>
                     </li>
-    
+
                     <li class="product">
                         <a class="product__link" href="./product-view.html">
                             <div class="product__img product--discount">
@@ -310,11 +353,12 @@
                             <div class="product__description">
                                 <p class="description__company">Lorem ipsum</p>
                                 <p class="description__name">Lorem ipsum dolor ipsum</p>
-                                <p class="description__price">$90,000</p>
+                                <p class="description__price">$90000</p>
                             </div>
                         </a>
+                        <button class="product__btn">Agregar</button>
                     </li>
-    
+
                     <li class="product">
                         <a class="product__link" href="./product-view.html">
                             <div class="product__img">
@@ -323,11 +367,12 @@
                             <div class="product__description">
                                 <p class="description__company">Lorem ipsum</p>
                                 <p class="description__name">Lorem ipsum dolor ipsum</p>
-                                <p class="description__price">$90,000</p>
+                                <p class="description__price">$90000</p>
                             </div>
                         </a>
+                        <button class="product__btn">Agregar</button>
                     </li>
-    
+
                     <li class="product">
                         <a class="product__link" href="./product-view.html">
                             <div class="product__img product--discount">
@@ -336,11 +381,12 @@
                             <div class="product__description">
                                 <p class="description__company">Lorem ipsum</p>
                                 <p class="description__name">Lorem ipsum dolor ipsum</p>
-                                <p class="description__price">$90,000</p>
+                                <p class="description__price">$90000</p>
                             </div>
                         </a>
+                        <button class="product__btn">Agregar</button>
                     </li>
-    
+
                     <li class="product">
                         <a class="product__link" href="./product-view.html">
                             <div class="product__img product--discount">
@@ -349,9 +395,10 @@
                             <div class="product__description">
                                 <p class="description__company">Lorem ipsum</p>
                                 <p class="description__name">Lorem ipsum dolor ipsum</p>
-                                <p class="description__price">$90,000</p>
+                                <p class="description__price">$90000</p>
                             </div>
                         </a>
+                        <button class="product__btn">Agregar</button>
                     </li>
                     <li class="product">
                         <a class="product__link" href="./product-view.html">
@@ -361,11 +408,12 @@
                             <div class="product__description">
                                 <p class="description__company">Lorem ipsum</p>
                                 <p class="description__name">Lorem ipsum dolor ipsum</p>
-                                <p class="description__price">$90,000</p>
+                                <p class="description__price">$90000</p>
                             </div>
                         </a>
+                        <button class="product__btn">Agregar</button>
                     </li>
-    
+
                     <li class="product">
                         <a class="product__link" href="./product-view.html">
                             <div class="product__img">
@@ -374,11 +422,12 @@
                             <div class="product__description">
                                 <p class="description__company">Lorem ipsum</p>
                                 <p class="description__name">Lorem ipsum dolor ipsum</p>
-                                <p class="description__price">$90,000</p>
+                                <p class="description__price">$90000</p>
                             </div>
                         </a>
+                        <button class="product__btn">Agregar</button>
                     </li>
-    
+
                     <li class="product">
                         <a class="product__link" href="./product-view.html">
                             <div class="product__img product--discount">
@@ -387,11 +436,12 @@
                             <div class="product__description">
                                 <p class="description__company">Lorem ipsum</p>
                                 <p class="description__name">Lorem ipsum dolor ipsum</p>
-                                <p class="description__price">$90,000</p>
+                                <p class="description__price">$90000</p>
                             </div>
                         </a>
+                        <button class="product__btn">Agregar</button>
                     </li>
-    
+
                     <li class="product">
                         <a class="product__link" href="./product-view.html">
                             <div class="product__img">
@@ -400,11 +450,12 @@
                             <div class="product__description">
                                 <p class="description__company">Lorem ipsum</p>
                                 <p class="description__name">Lorem ipsum dolor ipsum</p>
-                                <p class="description__price">$90,000</p>
+                                <p class="description__price">$90000</p>
                             </div>
                         </a>
+                        <button class="product__btn">Agregar</button>
                     </li>
-    
+
                     <li class="product">
                         <a class="product__link" href="./product-view.html">
                             <div class="product__img product--discount">
@@ -413,13 +464,14 @@
                             <div class="product__description">
                                 <p class="description__company">Lorem ipsum</p>
                                 <p class="description__name">Lorem ipsum dolor ipsum</p>
-                                <p class="description__price">$90,000</p>
+                                <p class="description__price">$90000</p>
                             </div>
                         </a>
+                        <button class="product__btn">Agregar</button>
                     </li>
                 </ul>
             </div>
-            
+
         </section>
     </main>
     <footer class="footer">
@@ -431,5 +483,7 @@
     </footer>
 
     <script src="../js/navigation.js"></script>
+    <script src="../js/shopping-cart/cart.js"></script>
 </body>
+
 </html>

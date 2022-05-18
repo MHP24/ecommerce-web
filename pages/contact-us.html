@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,6 +16,7 @@
     <link rel="stylesheet" href="../css/contact-us.css">
     <title>Contactanos</title>
 </head>
+
 <body>
     <a id="nav__cart--f" href="./shopping-cart.html">
         <img src="../imgs/icons/cart.svg" alt="cart-icon" id="nav__cart__icon">
@@ -66,22 +68,25 @@
         <section class="contact">
             <img src="../imgs/msc/contact-picture.jpg" alt="" class="form__img">
             <div class="form">
-                <form class="form__contact" action="#" method="post">
+                <form class="form__contact" action="#" method="post" id="contact">
                     <h3 class="form__title">¡Contactanos!</h3>
                     <div class="form__inputs">
                         <div class="form__input">
-                            <label class="input__label">Nombre</label>
-                            <input class="input__input" type="text" placeholder="Ingresar nombre" required>
+                            <label class="input__label" for="input__input--name">Nombre</label>
+                            <input class="input__input" id="input__input--name" name="input__input--name" type="text"
+                                placeholder="Ingresar nombre" required>
                         </div>
 
                         <div class="form__input">
-                            <label class="input__label">Email</label>
-                            <input class="input__input" type="email" placeholder="Ingresar Email" required>
+                            <label class="input__label" for="input__input--email">Email</label>
+                            <input class="input__input" id="input__input--email" name="input__input--email" type="email"
+                                placeholder="Ingresar Email" required>
                         </div>
 
                         <div class="form__input">
-                            <label class="input__label">Mensaje</label>
-                            <textarea class="input__input input__descr" type="text" placeholder="¡Escribenos!" required></textarea>
+                            <label class="input__label" for="input__input--msg">Mensaje</label>
+                            <textarea class="input__input input__descr" id="input__input--msg" name="input__input--msg" type="text" placeholder="¡Escribenos!"
+                                required></textarea>
                         </div>
 
                     </div>
@@ -99,6 +104,13 @@
             </figure>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"
+        integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../js/navigation.js"></script>
+    <script src="../js/forms/contact.js"></script>
 </body>
+
 </html>

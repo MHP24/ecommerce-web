@@ -6,7 +6,7 @@ const nav = document.querySelector('.dashboard-navigation');
 const buttons = document.querySelector('.nav');
 btnMenu.addEventListener('click', () => {
     nav.classList.toggle('dashboard-navigation--show');
-    console.log('clciked');
+    // console.log('clciked');
 });
 
 window.addEventListener("click", w => {

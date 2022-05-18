@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../../css/normalize.css">
     <link rel="stylesheet" href="../../css/dashboard.css">
     <link rel="stylesheet" href="../../css/dashboard-input-handler.css">
+    <link rel="stylesheet" href="../../css/dashboard-table-layout.css">
     <title>Men&uacute; De Edici&oacute;n</title>
 </head>
 <body>
@@ -29,17 +30,12 @@
                 <p class="nav__name">Productos</p>
             </a>
 
-            <a class="nav__item" href="../bills/dashboard-bills.html">
-                <img class="nav__img" src="../../imgs/icons/clip.svg" alt="Facts">
-                <p class="nav__name">Facturas</p>
-            </a>
-
             <a class="nav__item" href="../stock/dashboard-product-stock.html">
                 <img class="nav__img" src="../../imgs/icons/stock.svg" alt="Stock">
                 <p class="nav__name">Stock</p>
             </a>
 
-            <a class="nav__item" href="../users/dashboard-users.html">
+            <a class="nav__item" href="../users/dashboard-user-details.html">
                 <img class="nav__img" src="../../imgs/icons/user.svg" alt="Users">
                 <p class="nav__name">Usuarios</p>
             </a>
@@ -47,6 +43,11 @@
             <a class="nav__item" href="../history/dashboard-sales-history.html">
                 <img class="nav__img" src="../../imgs/icons/history.svg" alt="History">
                 <p class="nav__name">Historial</p>
+            </a>
+
+            <a class="nav__item" href="../../index.html">
+                <img class="nav__img" src="../../imgs/icons/logout.svg" alt="Logout">
+                <p class="nav__name">Cerrar Ses&oacute;n</p>
             </a>
         </nav>
     </header>
@@ -74,60 +75,626 @@
                     </div>
                 </div>
             </section>
-
-            
             
             <div class="summary">
                     <div class="summary__item summary__item--t">
                         <h2 class="summary__title">Editar Stock</h2>
                     </div>
                 </div>
-
             </div>
 
 
             <div class="form">
-                <h3 class="form__title">Formulario de Stock de Productos</h3>
-                <form class="form__product" action="#" method="post">
+                <h3 class="form__title">Formulario De Productos</h3>
+                <form class="form__product" action="#" method="post" id="stock-handler">
                     <div class="form__inputs">
-
-                        <div class="form__input">
-                            <label class="input__label">Cantidad</label>
-                            <input class="input__input" type="number" placeholder="Cantidad del Producto" required>
+                        <div class="input-group-a">
+                            <div class="form__input">
+                                <label class="input__label" for="input__input--id">ID</label>
+                                <input class="input__input" id="input__input--id" name="input__input--id" type="text" placeholder="Ingresar ID" required>
+                            </div>
+    
+                            <div class="form__input">
+                                <label class="input__label" for="input__input--category">Categor&iacute;a</label>
+                                <input class="input__input" id="input__input--category" name="input__input--category" type="text" placeholder="Ingresar Categoría" required>
+                            </div>
+    
+                            <div class="form__input">
+                                <label class="input__label" for="input__input--name">Nombre</label>
+                                <input class="input__input" id="input__input--name" name="input__input--name" type="text" placeholder="Nombre" required>
+                            </div>
+    
+                            <div class="form__input">
+                                <label class="input__label" for="input__input--count">Cantidad</label>
+                                <input class="input__input" id="input__input--count" name="input__input--count" type="text" placeholder="Cantidad" required>
+                            </div>
                         </div>
 
-                        <div class="form__input">
-                            <label class="input__label">Descuento <span class="input__label--optional">*</span></label>
-                            <input class="input__input" type="number" placeholder="%">
-                        </div>
-
-                        <div class="form__input">
-                            <label class="input__label">Descripci&oacute;n</label>
-                            <input class="input__input" type="text" placeholder="Describa el Producto" required  minlength="10"maxlength="40" required>
-                        </div>
-
-                        <div class="form__input">
-                            <label class="input__label">Im&aacute;gen</label>
-                            <input class="input__input input__input--img" type="file" required>
-                        </div>
-
-                        <div class="form__input--available">
-                            <label class="input__label--available">Descontinuado</label>
-                            <input class="input__input--available" type="radio">
+                        <div class="input-group-b">
+                            <div class="form__input">
+                                <img src="../../imgs/products/product2.jpg" alt="" class="input__img">
+                                <label class="input__label" for="img__input">Im&aacute;gen</label>
+                                <input id="img__input" name="img__input" class="input__input input__input--img" type="file" required>
+                            </div>
                         </div>
 
                     </div>
 
                     <div class="form__btns">
-                        <button class="form__btn" type="submit">Guardar Cambios</button>
+                        <button class="form__btn">Agregar</button>
+                        <button class="form__btn">Nuevo</button>
+                        <button class="form__btn">Limpiar</button>
                     </div>
                 </form>
-            </div>
 
+                <div class="result">
+                    <table class="table search-result">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Categor&iacute;a</th>
+                                <th>Nombre</th>
+                                <th>Estado</th>
+                                <th>Opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr  class="tr--g">
+                                <th>11</th>
+                                <th>Perros</th>
+                                <th>Dog Chow</th>
+                                <th>Vendido</th>
+                                <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/delete.svg"></th>
+                            </tr>
+                            <tr>
+                                <th>11</th>
+                                <th>Perros</th>
+                                <th>Dog Chow</th>
+                                <th>Vendido</th>
+                                <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/delete.svg"></th>
+                            </tr>
+    
+                            <tr  class="tr--g">
+                                <th>11</th>
+                                <th>Perros</th>
+                                <th>Dog Chow</th>
+                                <th>Vendido</th>
+                                <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/delete.svg"></th>
+                            </tr>
+                            <tr>
+                                <th>11</th>
+                                <th>Perros</th>
+                                <th>Dog Chow</th>
+                                <th>Vendido</th>
+                                <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/delete.svg"></th>
+                            </tr>
+    
+                            <tr  class="tr--g">
+                                <th>11</th>
+                                <th>Perros</th>
+                                <th>Dog Chow</th>
+                                <th>Vendido</th>
+                                <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/delete.svg"></th>
+                            </tr>
+                            <tr>
+                                <th>11</th>
+                                <th>Perros</th>
+                                <th>Dog Chow</th>
+                                <th>Vendido</th>
+                                <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/delete.svg"></th>
+                            </tr>
+    
+                            <tr  class="tr--g">
+                                <th>11</th>
+                                <th>Perros</th>
+                                <th>Dog Chow</th>
+                                <th>Vendido</th>
+                                <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/delete.svg"></th>
+                            </tr>
+                            <tr>
+                                <th>11</th>
+                                <th>Perros</th>
+                                <th>Dog Chow</th>
+                                <th>Vendido</th>
+                                <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/delete.svg"></th>
+                            </tr>
+    
+                            <tr  class="tr--g">
+                                <th>11</th>
+                                <th>Perros</th>
+                                <th>Dog Chow</th>
+                                <th>Vendido</th>
+                                <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/delete.svg"></th>
+                            </tr>
+                            <tr>
+                                <th>11</th>
+                                <th>Perros</th>
+                                <th>Dog Chow</th>
+                                <th>Vendido</th>
+                                <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/delete.svg"></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table--mobile">
+                    <div class="resmobile">
+                        <div class="mobile__row">
+                            <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado</p>
+                                    <p class="col__content">Vendido</p>
+                                </div>
+
+                                <div class="col__options col ">
+                                    <p class="col__title">Opciones</p>
+                                    <div class="col__content">
+                                        <img class= "table__action__img" src="../../imgs/icons/delete.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        <div class="mobile__row mobile__row--gray">
+                             <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado</p>
+                                    <p class="col__content">Vendido</p>
+                                </div>
+
+                                <div class="col__options col ">
+                                    <p class="col__title">Opciones</p>
+                                    <div class="col__content">
+                                        <img class= "table__action__img" src="../../imgs/icons/delete.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mobile__row">
+                             <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado</p>
+                                    <p class="col__content">Vendido</p>
+                                </div>
+
+                                <div class="col__options col ">
+                                    <p class="col__title">Opciones</p>
+                                    <div class="col__content">
+                                        <img class= "table__action__img" src="../../imgs/icons/delete.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        <div class="mobile__row mobile__row--gray">
+                             <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado</p>
+                                    <p class="col__content">Vendido</p>
+                                </div>
+
+                                <div class="col__options col ">
+                                    <p class="col__title">Opciones</p>
+                                    <div class="col__content">
+                                        <img class= "table__action__img" src="../../imgs/icons/delete.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mobile__row">
+                             <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado</p>
+                                    <p class="col__content">Vendido</p>
+                                </div>
+
+                                <div class="col__options col ">
+                                    <p class="col__title">Opciones</p>
+                                    <div class="col__content">
+                                        <img class= "table__action__img" src="../../imgs/icons/delete.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        <div class="mobile__row mobile__row--gray">
+                             <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado</p>
+                                    <p class="col__content">Vendido</p>
+                                </div>
+
+                                <div class="col__options col ">
+                                    <p class="col__title">Opciones</p>
+                                    <div class="col__content">
+                                        <img class= "table__action__img" src="../../imgs/icons/delete.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mobile__row">
+                             <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado</p>
+                                    <p class="col__content">Vendido</p>
+                                </div>
+
+                                <div class="col__options col ">
+                                    <p class="col__title">Opciones</p>
+                                    <div class="col__content">
+                                        <img class= "table__action__img" src="../../imgs/icons/delete.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        <div class="mobile__row mobile__row--gray">
+                             <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado</p>
+                                    <p class="col__content">Vendido</p>
+                                </div>
+
+                                <div class="col__options col ">
+                                    <p class="col__title">Opciones</p>
+                                    <div class="col__content">
+                                        <img class= "table__action__img" src="../../imgs/icons/delete.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mobile__row">
+                             <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado</p>
+                                    <p class="col__content">Vendido</p>
+                                </div>
+
+                                <div class="col__options col ">
+                                    <p class="col__title">Opciones</p>
+                                    <div class="col__content">
+                                        <img class= "table__action__img" src="../../imgs/icons/delete.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        <div class="mobile__row mobile__row--gray">
+                             <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado</p>
+                                    <p class="col__content">Vendido</p>
+                                </div>
+
+                                <div class="col__options col ">
+                                    <p class="col__title">Opciones</p>
+                                    <div class="col__content">
+                                        <img class= "table__action__img" src="../../imgs/icons/delete.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mobile__row">
+                             <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado</p>
+                                    <p class="col__content">Vendido</p>
+                                </div>
+
+                                <div class="col__options col ">
+                                    <p class="col__title">Opciones</p>
+                                    <div class="col__content">
+                                        <img class= "table__action__img" src="../../imgs/icons/delete.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        <div class="mobile__row mobile__row--gray">
+                             <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado</p>
+                                    <p class="col__content">Vendido</p>
+                                </div>
+
+                                <div class="col__options col ">
+                                    <p class="col__title">Opciones</p>
+                                    <div class="col__content">
+                                        <img class= "table__action__img" src="../../imgs/icons/delete.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mobile__row">
+                             <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado</p>
+                                    <p class="col__content">Vendido</p>
+                                </div>
+
+                                <div class="col__options col ">
+                                    <p class="col__title">Opciones</p>
+                                    <div class="col__content">
+                                        <img class= "table__action__img" src="../../imgs/icons/delete.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        <div class="mobile__row mobile__row--gray">
+                             <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado</p>
+                                    <p class="col__content">Vendido</p>
+                                </div>
+
+                                <div class="col__options col ">
+                                    <p class="col__title">Opciones</p>
+                                    <div class="col__content">
+                                        <img class= "table__action__img" src="../../imgs/icons/delete.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </section>
 <!--  -->
 
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../../js/dashboardNavigation.js"></script>
+    <script src="../../js/forms/stock-handler.js"></script>
 </body>
 </html>

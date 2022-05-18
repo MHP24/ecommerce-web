@@ -1,3 +1,18 @@
+:root {
+    --color-c1: #F2F2F2;
+    --color-c2: #FAFAFA;
+    --color-c3: #FFFFFF;
+    --color-c4: #24252A;
+    --color-c4-hover: #2E2F36;
+    --color-c5: #00BFA6;
+    --color-c5-hover: #039E89;
+    --color-c6: #FF3696;
+    --color-c7: #F53D3D;
+    --color-c8: #53545C;
+    --color-c9: #000000;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +22,7 @@
 }
 
 body {
-    background-color: #F5F6F9;
+    background-color: var(--color-c1);
 }
 
 .profile {
@@ -37,7 +52,6 @@ body {
 
 }
 
-
 .profile__user {
     overflow: hidden;
     border-radius: 5px;
@@ -47,20 +61,20 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 1px 7px 15px -16px #000000;
+    box-shadow: 1px 7px 15px -16px var(--color-c9);
 }
 
 .card__header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #24252A;
+    background-color: var(--color-c4);
     padding: 2em 4em;
 }
 
 .card__name, 
 .card__email {
-    color: #f2f2f2;
+    color: var(--color-c1);
 }
 
 .card__name {
@@ -87,10 +101,10 @@ body {
 
 .option {
     text-align: center;
-    background-color: #fafafa;
+    background-color: var(--color-c2);
     width: 100%;
     font-size: .8rem;
-    border-bottom: #24252a0b 1px solid;
+    border-bottom:#24252A0b 1px solid;
 }
 
 .option__title {
@@ -103,21 +117,21 @@ body {
 }
 
 .option__logout {
-    color: #00BFA6;
+    color: var(--color-c5);
     font-weight: 500;
 }
 
 .option__title:hover {
-    background-color: #f2f2f2;
+    background-color: var(--color-c1);
     transition: .3s;
 }
 
 .action {
-    background-color: #fafafa;
-    box-shadow: 1px 7px 15px -16px #000000;
+    background-color: var(--color-c2);
+    box-shadow: 1px 7px 15px -16px var(--color-c9);
     padding: 1em;
     border-radius: 4px;
-    border-left: #00BFA6 4px solid;
+    border-left: var(--color-c5) 4px solid;
     margin-bottom: 2em;
 }
 
@@ -142,8 +156,8 @@ body {
     border-radius: 5px;
     justify-content: center;
     align-items: center;
-    border-left: 4px #00BFA6 solid;
-    background-color: #fff;
+    border-left: 4px var(--color-c5) solid;
+    background-color: var(--color-c3);
     cursor: pointer;
 }
 
@@ -162,7 +176,7 @@ body {
     text-transform: uppercase;
     font-size: 1.1rem;
     font-weight: 500;
-    color: #00BFA6;
+    color: var(--color-c5);
 }
 
 .order__price,
@@ -172,7 +186,7 @@ body {
 
 .order__price {
     font-weight: 500;
-    color: #00BFA6;
+    color: var(--color-c5);
 }
 
 .order__delivery {
@@ -196,7 +210,7 @@ body {
 }
 
 .content__title {
-    color: #00BFA6;
+    color: var(--color-c5);
     font-weight: 500;
 }
 

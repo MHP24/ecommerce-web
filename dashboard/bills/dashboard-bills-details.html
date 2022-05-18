@@ -30,17 +30,12 @@
                 <p class="nav__name">Productos</p>
             </a>
 
-            <a class="nav__item" href="./dashboard-bills.html">
-                <img class="nav__img" src="../../imgs/icons/clip.svg" alt="Facts">
-                <p class="nav__name">Facturas</p>
-            </a>
-
             <a class="nav__item" href="../stock/dashboard-product-stock.html">
                 <img class="nav__img" src="../../imgs/icons/stock.svg" alt="Stock">
                 <p class="nav__name">Stock</p>
             </a>
 
-            <a class="nav__item" href="../users/dashboard-users.html">
+            <a class="nav__item" href="../users/dashboard-user-details.html">
                 <img class="nav__img" src="../../imgs/icons/user.svg" alt="Users">
                 <p class="nav__name">Usuarios</p>
             </a>
@@ -48,6 +43,11 @@
             <a class="nav__item" href="../history/dashboard-sales-history.html">
                 <img class="nav__img" src="../../imgs/icons/history.svg" alt="History">
                 <p class="nav__name">Historial</p>
+            </a>
+
+            <a class="nav__item" href="../../index.html">
+                <img class="nav__img" src="../../imgs/icons/logout.svg" alt="Logout">
+                <p class="nav__name">Cerrar Ses&oacute;n</p>
             </a>
         </nav>
     </header>
@@ -77,14 +77,21 @@
             </section>
             
             <div class="summary">
-                    <div class="summary__item summary__item--t">
+                    <div class="summary__item summary__item--f">
                         <h2 class="summary__title">Detalles Facturaci&oacute;n</h2>
-                        <a class="summary__btn" href="./dashboard-products-add.html"> <img class="summary__btn--img" src="../../imgs/icons/download.svg">Descargar</a>
+                        <div class="stages">
+                            <div class="stage stage--dot">1</div>
+                            <div class="stage stage--line"></div>
+                            <div class="stage stage--dot">2</div>
+                            <div class="stage stage--line stage--uncompleted"></div>
+                            <div class="stage stage--dot stage--uncompleted">3</div>
+                        </div>
+                        <p class="tracking__subtitle">Etapa Actual <span class="tracking__descr">Despachado</span></p>
+                        <p class="tracking__subtitle">Llega el <span class="tracking__descr">18/05/2022</span></p>
                     </div>
                 </div>
 
             </div>
-
             <section class="details">
                 <div class="details__container">
                     <div class="detail__item">
@@ -157,6 +164,7 @@
                     </ul>
                 </div>
             </section>
+
 
         </section>
 

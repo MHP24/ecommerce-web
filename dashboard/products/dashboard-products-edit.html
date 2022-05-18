@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../../css/normalize.css">
     <link rel="stylesheet" href="../../css/dashboard.css">
     <link rel="stylesheet" href="../../css/dashboard-input-handler.css">
+    <link rel="stylesheet" href="../../css/dashboard-table-layout.css">
     <title>Men&uacute; De Edici&oacute;n</title>
 </head>
 <body>
@@ -29,17 +30,12 @@
                 <p class="nav__name">Productos</p>
             </a>
 
-            <a class="nav__item" href="../bills/dashboard-bills.html">
-                <img class="nav__img" src="../../imgs/icons/clip.svg" alt="Facts">
-                <p class="nav__name">Facturas</p>
-            </a>
-
             <a class="nav__item" href="../stock/dashboard-product-stock.html">
                 <img class="nav__img" src="../../imgs/icons/stock.svg" alt="Stock">
                 <p class="nav__name">Stock</p>
             </a>
 
-            <a class="nav__item" href="../users/dashboard-users.html">
+            <a class="nav__item" href="../users/dashboard-user-details.html">
                 <img class="nav__img" src="../../imgs/icons/user.svg" alt="Users">
                 <p class="nav__name">Usuarios</p>
             </a>
@@ -47,6 +43,11 @@
             <a class="nav__item" href="../history/dashboard-sales-history.html">
                 <img class="nav__img" src="../../imgs/icons/history.svg" alt="History">
                 <p class="nav__name">Historial</p>
+            </a>
+
+            <a class="nav__item" href="../../index.html">
+                <img class="nav__img" src="../../imgs/icons/logout.svg" alt="Logout">
+                <p class="nav__name">Cerrar Ses&oacute;n</p>
             </a>
         </nav>
     </header>
@@ -75,65 +76,776 @@
                 </div>
             </section>
 
-            
-            
             <div class="summary">
                     <div class="summary__item summary__item--t">
-                        <h2 class="summary__title">Editar Productos</h2>
+                        <h2 class="summary__title">Mantenedor De Productos</h2>
                     </div>
                 </div>
 
             </div>
 
-
             <div class="form">
                 <h3 class="form__title">Formulario De Productos</h3>
-                <form class="form__product" action="#" method="post">
+                <form class="form__product" action="#" method="post" id="product-handler">
                     <div class="form__inputs">
-                        <div class="form__input">
-                            <label class="input__label">Nombre Producto</label>
-                            <input class="input__input" type="text" placeholder="Ingresar nombre" required>
+                        <div class="input-group-a">
+                            <div class="form__input">
+                                <label class="input__label" for="input__input--id">ID</label>
+                                <input class="input__input" id="input__input--id" name="input__input--id" type="text" placeholder="Ingresar ID" required>
+                            </div>
+    
+                            <div class="form__input">
+                                <label class="input__label" for="input__input--category">Categor&iacute;a</label>
+                                <input class="input__input" id="input__input--category" name="input__input--category" type="text" placeholder="Ingresar Categoría" required>
+                            </div>
+    
+                            <div class="form__input">
+                                <label class="input__label" for="input__input--name">Nombre</label>
+                                <input class="input__input" id="input__input--name" name="input__input--name" type="text" placeholder="Nombre Producto" required>
+                            </div>
+    
+                            <div class="form__input">
+                                <label class="input__label" for="input__input--description">Descripci&oacute;n</label>
+                                <textarea class="input__area" id="input__input--description" name="input__input--description" required placeholder="Describa el Producto"></textarea>
+                            </div>
+    
+                            <div class="form__input">
+                                <label class="input__label" for="input__input--price1">Precio</label>
+                                <input class="input__input" id="input__input--price1" name="input__input--price1" type="text" placeholder="Valor" required>
+                            </div>
+    
+                            <div class="form__input">
+                                <label class="input__label" for="input__input--discount">Descuento subscriptor</label>
+                                <input class="input__input" id="input__input--discount" name="input__input--discount" type="text" placeholder="%" required>
+                            </div>
+    
+                            <div class="form__input">
+                                <label class="input__label" for="input__input--discount2">Descuento por oferta</label>
+                                <input class="input__input" id="input__input--discount2" name="input__input--discount2" type="text" placeholder="%" required>
+                            </div>
                         </div>
 
-                        <div class="form__input">
-                            <label class="input__label">Cantidad</label>
-                            <input class="input__input" type="number" placeholder="Cantidad del Producto" required>
-                        </div>
-
-                        <div class="form__input">
-                            <label class="input__label">Descuento <span class="input__label--optional">*</span></label>
-                            <input class="input__input" type="number" placeholder="%">
-                        </div>
-
-                        <div class="form__input">
-                            <label class="input__label">Descripci&oacute;n</label>
-                            <input class="input__input" type="text" placeholder="Describa el Producto" required  minlength="10"maxlength="40" required>
-                        </div>
-
-                        <div class="form__input">
-                            <label class="input__label">Im&aacute;gen</label>
-                            <input class="input__input input__input--img" type="file" required>
-                        </div>
-
-                        <div class="form__input--available">
-                            <label class="input__label--available">Descontinuado</label>
-                            <input class="input__radio input__input--available" name="available" type="radio" required>
-                            <label class="input__label--available">Disponible</label>
-                            <input class="input__radio input__input--available" name="available" type="radio" required>
+                        <div class="input-group-b">
+                            <div class="form__input">
+                                <img src="../../imgs/products/product1.jpg" alt="" class="input__img">
+                                <label class="input__label" for="img__input">Im&aacute;gen</label>
+                                <input id="img__input" name="img__input" class="input__input input__input--img" type="file" required>
+                            </div>
                         </div>
 
                     </div>
 
                     <div class="form__btns">
-                        <button class="form__btn" type="submit">Guardar Cambios</button>
+                        <button class="form__btn">Guardar</button>
+                        <button class="form__btn">Nuevo</button>
+                        <button class="form__btn">Eliminar</button>
                     </div>
                 </form>
-            </div>
+
+                <div class="result">
+                    <table class="table search-result">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Categor&iacute;a</th>
+                                <th>Nombre</th>
+                                <th>Descripci&oacute;n</th>
+                                <th>Precio</th>
+                                <th>Desc. Subscriptor</th>
+                                <th>Desc. Oferta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr  class="tr--g">
+                                <th>123456789</th>
+                                <th>Perros</th>
+                                <th>Dog Chow</th>
+                                <th>Lorem ipsum dolor sit amet.</th>
+                                <th>$150,000</th>
+                                <th>5%</th>
+                                <th>2%</th>
+                            </tr>
+                            <tr>
+                                <th>123456789</th>
+                                <th>Perros</th>
+                                <th>Dog Chow</th>
+                                <th>Lorem ipsum dolor sit amet.</th>
+                                <th>$150,000</th>
+                                <th>5%</th>
+                                <th>2%</th>
+                            </tr>
+    
+                            <tr  class="tr--g">
+                                <th>123456789</th>
+                                <th>Perros</th>
+                                <th>Dog Chow</th>
+                                <th>Lorem ipsum dolor sit amet.</th>
+                                <th>$150,000</th>
+                                <th>5%</th>
+                                <th>2%</th>
+                            </tr>
+                            <tr>
+                                <th>123456789</th>
+                                <th>Perros</th>
+                                <th>Dog Chow</th>
+                                <th>Lorem ipsum dolor sit amet.</th>
+                                <th>$150,000</th>
+                                <th>5%</th>
+                                <th>2%</th>
+                            </tr>
+    
+                            <tr  class="tr--g">
+                                <th>123456789</th>
+                                <th>Perros</th>
+                                <th>Dog Chow</th>
+                                <th>Lorem ipsum dolor sit amet.</th>
+                                <th>$150,000</th>
+                                <th>5%</th>
+                                <th>2%</th>
+                            </tr>
+                            <tr>
+                                <th>123456789</th>
+                                <th>Perros</th>
+                                <th>Dog Chow</th>
+                                <th>Lorem ipsum dolor sit amet.</th>
+                                <th>$150,000</th>
+                                <th>5%</th>
+                                <th>2%</th>
+                            </tr>
+    
+                            <tr  class="tr--g">
+                                <th>123456789</th>
+                                <th>Perros</th>
+                                <th>Dog Chow</th>
+                                <th>Lorem ipsum dolor sit amet.</th>
+                                <th>$150,000</th>
+                                <th>5%</th>
+                                <th>2%</th>
+                            </tr>
+                            <tr>
+                                <th>123456789</th>
+                                <th>Perros</th>
+                                <th>Dog Chow</th>
+                                <th>Lorem ipsum dolor sit amet.</th>
+                                <th>$150,000</th>
+                                <th>5%</th>
+                                <th>2%</th>
+                            </tr>
+    
+                            <tr  class="tr--g">
+                                <th>123456789</th>
+                                <th>Perros</th>
+                                <th>Dog Chow</th>
+                                <th>Lorem ipsum dolor sit amet.</th>
+                                <th>$150,000</th>
+                                <th>5%</th>
+                                <th>2%</th>
+                            </tr>
+                            <tr>
+                                <th>123456789</th>
+                                <th>Perros</th>
+                                <th>Dog Chow</th>
+                                <th>Lorem ipsum dolor sit amet.</th>
+                                <th>$150,000</th>
+                                <th>5%</th>
+                                <th>2%</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table--mobile">
+                    <div class="resmobile">
+                        <div class="mobile__row">
+                            <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Producto</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__descr col ">
+                                    <p class="col__title">Descripci&oacute;n</p>
+                                    <p class="col__content">Lorem ipsum dolor sit amet</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Precio</p>
+                                    <p class="col__content">$150,000</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Subscriptor</p>
+                                    <p class="col__content">5%</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Oferta</p>
+                                    <p class="col__content">2%</p>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        <div class="mobile__row mobile__row--gray">
+                            <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Producto</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__descr col ">
+                                    <p class="col__title">Descripci&oacute;n</p>
+                                    <p class="col__content">Lorem ipsum dolor sit amet</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Precio</p>
+                                    <p class="col__content">$150,000</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Subscriptor</p>
+                                    <p class="col__content">5%</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Oferta</p>
+                                    <p class="col__content">2%</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mobile__row">
+                            <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Producto</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__descr col ">
+                                    <p class="col__title">Descripci&oacute;n</p>
+                                    <p class="col__content">Lorem ipsum dolor sit amet</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Precio</p>
+                                    <p class="col__content">$150,000</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Subscriptor</p>
+                                    <p class="col__content">5%</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Oferta</p>
+                                    <p class="col__content">2%</p>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        <div class="mobile__row mobile__row--gray">
+                            <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Producto</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__descr col ">
+                                    <p class="col__title">Descripci&oacute;n</p>
+                                    <p class="col__content">Lorem ipsum dolor sit amet</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Precio</p>
+                                    <p class="col__content">$150,000</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Subscriptor</p>
+                                    <p class="col__content">5%</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Oferta</p>
+                                    <p class="col__content">2%</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mobile__row">
+                            <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Producto</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__descr col ">
+                                    <p class="col__title">Descripci&oacute;n</p>
+                                    <p class="col__content">Lorem ipsum dolor sit amet</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Precio</p>
+                                    <p class="col__content">$150,000</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Subscriptor</p>
+                                    <p class="col__content">5%</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Oferta</p>
+                                    <p class="col__content">2%</p>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        <div class="mobile__row mobile__row--gray">
+                            <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Producto</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__descr col ">
+                                    <p class="col__title">Descripci&oacute;n</p>
+                                    <p class="col__content">Lorem ipsum dolor sit amet</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Precio</p>
+                                    <p class="col__content">$150,000</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Subscriptor</p>
+                                    <p class="col__content">5%</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Oferta</p>
+                                    <p class="col__content">2%</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mobile__row">
+                            <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Producto</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__descr col ">
+                                    <p class="col__title">Descripci&oacute;n</p>
+                                    <p class="col__content">Lorem ipsum dolor sit amet</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Precio</p>
+                                    <p class="col__content">$150,000</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Subscriptor</p>
+                                    <p class="col__content">5%</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Oferta</p>
+                                    <p class="col__content">2%</p>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        <div class="mobile__row mobile__row--gray">
+                            <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Producto</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__descr col ">
+                                    <p class="col__title">Descripci&oacute;n</p>
+                                    <p class="col__content">Lorem ipsum dolor sit amet</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Precio</p>
+                                    <p class="col__content">$150,000</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Subscriptor</p>
+                                    <p class="col__content">5%</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Oferta</p>
+                                    <p class="col__content">2%</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mobile__row">
+                            <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Producto</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__descr col ">
+                                    <p class="col__title">Descripci&oacute;n</p>
+                                    <p class="col__content">Lorem ipsum dolor sit amet</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Precio</p>
+                                    <p class="col__content">$150,000</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Subscriptor</p>
+                                    <p class="col__content">5%</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Oferta</p>
+                                    <p class="col__content">2%</p>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        <div class="mobile__row mobile__row--gray">
+                            <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Producto</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__descr col ">
+                                    <p class="col__title">Descripci&oacute;n</p>
+                                    <p class="col__content">Lorem ipsum dolor sit amet</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Precio</p>
+                                    <p class="col__content">$150,000</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Subscriptor</p>
+                                    <p class="col__content">5%</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Oferta</p>
+                                    <p class="col__content">2%</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mobile__row">
+                            <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Producto</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__descr col ">
+                                    <p class="col__title">Descripci&oacute;n</p>
+                                    <p class="col__content">Lorem ipsum dolor sit amet</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Precio</p>
+                                    <p class="col__content">$150,000</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Subscriptor</p>
+                                    <p class="col__content">5%</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Oferta</p>
+                                    <p class="col__content">2%</p>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        <div class="mobile__row mobile__row--gray">
+                            <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Producto</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__descr col ">
+                                    <p class="col__title">Descripci&oacute;n</p>
+                                    <p class="col__content">Lorem ipsum dolor sit amet</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Precio</p>
+                                    <p class="col__content">$150,000</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Subscriptor</p>
+                                    <p class="col__content">5%</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Oferta</p>
+                                    <p class="col__content">2%</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mobile__row">
+                            <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Producto</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__descr col ">
+                                    <p class="col__title">Descripci&oacute;n</p>
+                                    <p class="col__content">Lorem ipsum dolor sit amet</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Precio</p>
+                                    <p class="col__content">$150,000</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Subscriptor</p>
+                                    <p class="col__content">5%</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Oferta</p>
+                                    <p class="col__content">2%</p>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        <div class="mobile__row mobile__row--gray">
+                            <div class="col__one">
+                                <div class="col__product-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">123456789</p>
+                                </div>
+
+                                <div class="col__category col ">
+                                    <p class="col__title">Categoria</p>
+                                    <p class="col__content">Perros</p>
+                                </div>
+
+                                <div class="col__product col ">
+                                    <p class="col__title">Producto</p>
+                                    <p class="col__content">Dog Chow</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__descr col ">
+                                    <p class="col__title">Descripci&oacute;n</p>
+                                    <p class="col__content">Lorem ipsum dolor sit amet</p>
+                                </div>
+
+                                <div class="col__price col ">
+                                    <p class="col__title">Precio</p>
+                                    <p class="col__content">$150,000</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Subscriptor</p>
+                                    <p class="col__content">5%</p>
+                                </div>
+
+                                <div class="col__discount col ">
+                                    <p class="col__title">Desc. Oferta</p>
+                                    <p class="col__content">2%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
         </section>
 <!--  -->
 
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../../js/dashboardNavigation.js"></script>
+    <script src="../../js/forms/product-handler.js"></script>
 </body>
 </html>

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../../css/normalize.css">
     <link rel="stylesheet" href="../../css/dashboard.css">
     <link rel="stylesheet" href="../../css/dashboard-table-layout.css">
+    <link rel="stylesheet" href="../../css/dashboard-input-handler.css">
     <title>Historial De Ventas</title>
 </head>
 <body>
@@ -29,17 +30,12 @@
                 <p class="nav__name">Productos</p>
             </a>
 
-            <a class="nav__item" href="../bills/dashboard-bills.html">
-                <img class="nav__img" src="../../imgs/icons/clip.svg" alt="Facts">
-                <p class="nav__name">Facturas</p>
-            </a>
-
             <a class="nav__item" href="../stock/dashboard-product-stock.html">
                 <img class="nav__img" src="../../imgs/icons/stock.svg" alt="Stock">
                 <p class="nav__name">Stock</p>
             </a>
 
-            <a class="nav__item" href="../users/dashboard-users.html">
+            <a class="nav__item" href="../users/dashboard-user-details.html">
                 <img class="nav__img" src="../../imgs/icons/user.svg" alt="Users">
                 <p class="nav__name">Usuarios</p>
             </a>
@@ -47,6 +43,11 @@
             <a class="nav__item" href="./dashboard-sales-history.html">
                 <img class="nav__img" src="../../imgs/icons/history.svg" alt="History">
                 <p class="nav__name">Historial</p>
+            </a>
+
+            <a class="nav__item" href="../../index.html">
+                <img class="nav__img" src="../../imgs/icons/logout.svg" alt="Logout">
+                <p class="nav__name">Cerrar Ses&oacute;n</p>
             </a>
         </nav>
     </header>
@@ -78,7 +79,7 @@
             <div class="summary">
                 <div class="summary__item summary__item--t">
                     <h2 class="summary__title">Historial De Ventas</h2>
-                    <button class="summary__btn"> <img class="summary__btn--img" src="../../imgs/icons/download.svg"> Generar Reporte</button>
+                    <button class="summary__btn">Guardar Cambios</button>
                 </div>
             </div>
 
@@ -91,123 +92,244 @@
                 <table class="table recents">
                     <thead>
                         <tr>
-                            <th>ID Compra</th>
-                            <th>ID Cliente</th>
-                            <th>Producto</th>
-                            <th>Cantidad</th>
-                            <th>Monto</th>
-                            <th>Fecha y Hora</th>
-                            <th class="table__action"></th>
+                            <th>Nro Factura</th>
+                            <th>Fecha</th>
+                            <th>Nombre Cliente</th>
+                            <th>Subscrito</th>
+                            <th>Monto Total</th>
+                            <th>Estado Actual</th>
+                            <th>Detalle</th>
+                            <th>Cambiar Estado</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr  class="tr--g">
-                            <th>123456789</th>
-                            <th>987654321</th>
-                            <th>Dog Chow</th>
-                            <th>10</th>
+                        <tr class="tr--g">
+                            <th>12345</th>
+                            <th>18/05/22</th>
+                            <th>Juan Alcachofa</th>
+                            <th>Si</th>
                             <th>$150,000</th>
-                            <th>7/4/21 - 10:38PM</th>
-                            <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/download2.svg"></th>
+                            <th>Despachado (D)</th>
+                            <th class="table__action"> <a href="../bills/dashboard-bills-details.html" class="table__action__link"><img class= "table__action__img" src="../../imgs/icons/view.svg"></a></th>
+                            <th class="table__radial">
+                                <div class="form__input" style="flex-direction: row; justify-content: center;">
+                                    <div class="form__input--radial">
+                                        <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/truck.svg"></label>
+                                    </div>
+                                    <div class="form__input--radial">
+                                        <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/happy-delivery.svg"></label>
+                                    </div>
+                                </div>
+                            </th>
                         </tr>
                         <tr>
-                            <th>123456789</th>
-                            <th>987654321</th>
-                            <th>Dog Chow</th>
-                            <th>10</th>
+                            <th>12345</th>
+                            <th>18/05/22</th>
+                            <th>Juan Alcachofa</th>
+                            <th>Si</th>
                             <th>$150,000</th>
-                            <th>7/4/21 - 10:38PM</th>
-                            <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/download2.svg"></th>
+                            <th>Despachado (D)</th>
+                            <th class="table__action"> <a href="../bills/dashboard-bills-details.html" class="table__action__link"><img class= "table__action__img" src="../../imgs/icons/view.svg"></a></th>
+                            <th class="table__radial">
+                                <div class="form__input" style="flex-direction: row; justify-content: center;">
+                                    <div class="form__input--radial">
+                                        <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/truck.svg"></label>
+                                    </div>
+                                    <div class="form__input--radial">
+                                        <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/happy-delivery.svg"></label>
+                                    </div>
+                                </div>
+                            </th>
                         </tr>
                         <tr class="tr--g">
-                            <th>123456789</th>
-                            <th>987654321</th>
-                            <th>Dog Chow</th>
-                            <th>10</th>
+                            <th>12345</th>
+                            <th>18/05/22</th>
+                            <th>Juan Alcachofa</th>
+                            <th>Si</th>
                             <th>$150,000</th>
-                            <th>7/4/21 - 10:38PM</th>
-                            <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/download2.svg"></th>
+                            <th>Despachado (D)</th>
+                            <th class="table__action"> <a href="../bills/dashboard-bills-details.html" class="table__action__link"><img class= "table__action__img" src="../../imgs/icons/view.svg"></a></th>
+                            <th class="table__radial">
+                                <div class="form__input" style="flex-direction: row; justify-content: center;">
+                                    <div class="form__input--radial">
+                                        <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/truck.svg"></label>
+                                    </div>
+                                    <div class="form__input--radial">
+                                        <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/happy-delivery.svg"></label>
+                                    </div>
+                                </div>
+                            </th>
                         </tr>
                         <tr>
-                            <th>123456789</th>
-                            <th>987654321</th>
-                            <th>Dog Chow</th>
-                            <th>10</th>
+                            <th>12345</th>
+                            <th>18/05/22</th>
+                            <th>Juan Alcachofa</th>
+                            <th>Si</th>
                             <th>$150,000</th>
-                            <th>7/4/21 - 10:38PM</th>
-                            <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/download2.svg"></th>
+                            <th>Despachado (D)</th>
+                            <th class="table__action"> <a href="../bills/dashboard-bills-details.html" class="table__action__link"><img class= "table__action__img" src="../../imgs/icons/view.svg"></a></th>
+                            <th class="table__radial">
+                                <div class="form__input" style="flex-direction: row; justify-content: center;">
+                                    <div class="form__input--radial">
+                                        <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/truck.svg"></label>
+                                    </div>
+                                    <div class="form__input--radial">
+                                        <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/happy-delivery.svg"></label>
+                                    </div>
+                                </div>
+                            </th>
                         </tr>
                         <tr class="tr--g">  
-                            <th>123456789</th>
-                            <th>987654321</th>
-                            <th>Dog Chow</th>
-                            <th>10</th>
+                            <th>12345</th>
+                            <th>18/05/22</th>
+                            <th>Juan Alcachofa</th>
+                            <th>Si</th>
                             <th>$150,000</th>
-                            <th>7/4/21 - 10:38PM</th>
-                            <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/download2.svg"></th>
+                            <th>Despachado (D)</th>
+                            <th class="table__action"> <a href="../bills/dashboard-bills-details.html" class="table__action__link"><img class= "table__action__img" src="../../imgs/icons/view.svg"></a></th>
+                            <th class="table__radial">
+                                <div class="form__input" style="flex-direction: row; justify-content: center;">
+                                    <div class="form__input--radial">
+                                        <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/truck.svg"></label>
+                                    </div>
+                                    <div class="form__input--radial">
+                                        <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/happy-delivery.svg"></label>
+                                    </div>
+                                </div>
+                            </th>
                         </tr>
                         <tr>
-                            <th>123456789</th>
-                            <th>987654321</th>
-                            <th>Dog Chow</th>
-                            <th>10</th>
+                            <th>12345</th>
+                            <th>18/05/22</th>
+                            <th>Juan Alcachofa</th>
+                            <th>Si</th>
                             <th>$150,000</th>
-                            <th>7/4/21 - 10:38PM</th>
-                            <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/download2.svg"></th>
+                            <th>Despachado (D)</th>
+                            <th class="table__action"> <a href="../bills/dashboard-bills-details.html" class="table__action__link"><img class= "table__action__img" src="../../imgs/icons/view.svg"></a></th>
+                            <th class="table__radial">
+                                <div class="form__input" style="flex-direction: row; justify-content: center;">
+                                    <div class="form__input--radial">
+                                        <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/truck.svg"></label>
+                                    </div>
+                                    <div class="form__input--radial">
+                                        <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/happy-delivery.svg"></label>
+                                    </div>
+                                </div>
+                            </th>
                         </tr>
                         <tr class="tr--g">
-                            <th>123456789</th>
-                            <th>987654321</th>
-                            <th>Dog Chow</th>
-                            <th>10</th>
+                            <th>12345</th>
+                            <th>18/05/22</th>
+                            <th>Juan Alcachofa</th>
+                            <th>Si</th>
                             <th>$150,000</th>
-                            <th>7/4/21 - 10:38PM</th>
-                            <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/download2.svg"></th>
+                            <th>Despachado (D)</th>
+                            <th class="table__action"> <a href="../bills/dashboard-bills-details.html" class="table__action__link"><img class= "table__action__img" src="../../imgs/icons/view.svg"></a></th>
+                            <th class="table__radial">
+                                <div class="form__input" style="flex-direction: row; justify-content: center;">
+                                    <div class="form__input--radial">
+                                        <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/truck.svg"></label>
+                                    </div>
+                                    <div class="form__input--radial">
+                                        <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/happy-delivery.svg"></label>
+                                    </div>
+                                </div>
+                            </th>
                         </tr>
                         <tr>
-                            <th>123456789</th>
-                            <th>987654321</th>
-                            <th>Dog Chow</th>
-                            <th>10</th>
+                            <th>12345</th>
+                            <th>18/05/22</th>
+                            <th>Juan Alcachofa</th>
+                            <th>Si</th>
                             <th>$150,000</th>
-                            <th>7/4/21 - 10:38PM</th>
-                            <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/download2.svg"></th>
+                            <th>Despachado (D)</th>
+                            <th class="table__action"> <a href="../bills/dashboard-bills-details.html" class="table__action__link"><img class= "table__action__img" src="../../imgs/icons/view.svg"></a></th>
+                            <th class="table__radial">
+                                <div class="form__input" style="flex-direction: row; justify-content: center;">
+                                    <div class="form__input--radial">
+                                        <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/truck.svg"></label>
+                                    </div>
+                                    <div class="form__input--radial">
+                                        <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/happy-delivery.svg"></label>
+                                    </div>
+                                </div>
+                            </th>
                         </tr>
                         <tr class="tr--g">
-                            <th>123456789</th>
-                            <th>987654321</th>
-                            <th>Dog Chow</th>
-                            <th>10</th>
+                            <th>12345</th>
+                            <th>18/05/22</th>
+                            <th>Juan Alcachofa</th>
+                            <th>Si</th>
                             <th>$150,000</th>
-                            <th>7/4/21 - 10:38PM</th>
-                            <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/download2.svg"></th>
+                            <th>Despachado (D)</th>
+                            <th class="table__action"> <a href="../bills/dashboard-bills-details.html" class="table__action__link"><img class= "table__action__img" src="../../imgs/icons/view.svg"></a></th>
+                            <th class="table__radial">
+                                <div class="form__input" style="flex-direction: row; justify-content: center;">
+                                    <div class="form__input--radial">
+                                        <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/truck.svg"></label>
+                                    </div>
+                                    <div class="form__input--radial">
+                                        <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/happy-delivery.svg"></label>
+                                    </div>
+                                </div>
+                            </th>
                         </tr>
                         <tr>
-                            <th>123456789</th>
-                            <th>987654321</th>
-                            <th>Dog Chow</th>
-                            <th>10</th>
+                            <th>12345</th>
+                            <th>18/05/22</th>
+                            <th>Juan Alcachofa</th>
+                            <th>Si</th>
                             <th>$150,000</th>
-                            <th>7/4/21 - 10:38PM</th>
-                            <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/download2.svg"></th>
+                            <th>Despachado (D)</th>
+                            <th class="table__action"> <a href="../bills/dashboard-bills-details.html" class="table__action__link"><img class= "table__action__img" src="../../imgs/icons/view.svg"></a></th>
+                            <th class="table__radial">
+                                <div class="form__input" style="flex-direction: row; justify-content: center;">
+                                    <div class="form__input--radial">
+                                        <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/truck.svg"></label>
+                                    </div>
+                                    <div class="form__input--radial">
+                                        <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/happy-delivery.svg"></label>
+                                    </div>
+                                </div>
+                            </th>
                         </tr>
                         <tr class="tr--g">
-                            <th>123456789</th>
-                            <th>987654321</th>
-                            <th>Dog Chow</th>
-                            <th>10</th>
+                            <th>12345</th>
+                            <th>18/05/22</th>
+                            <th>Juan Alcachofa</th>
+                            <th>Si</th>
                             <th>$150,000</th>
-                            <th>7/4/21 - 10:38PM</th>
-                            <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/download2.svg"></th>
+                            <th>Despachado (D)</th>
+                            <th class="table__action"> <a href="../bills/dashboard-bills-details.html" class="table__action__link"><img class= "table__action__img" src="../../imgs/icons/view.svg"></a></th>
+                            <th class="table__radial">
+                                <div class="form__input" style="flex-direction: row; justify-content: center;">
+                                    <div class="form__input--radial">
+                                        <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/truck.svg"></label>
+                                    </div>
+                                    <div class="form__input--radial">
+                                        <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/happy-delivery.svg"></label>
+                                    </div>
+                                </div>
+                            </th>
                         </tr>
                         <tr>
-                            <th>123456789</th>
-                            <th>987654321</th>
-                            <th>Dog Chow</th>
-                            <th>10</th>
+                            <th>12345</th>
+                            <th>18/05/22</th>
+                            <th>Juan Alcachofa</th>
+                            <th>Si</th>
                             <th>$150,000</th>
-                            <th>7/4/21 - 10:38PM</th>
-                            <th class="table__action"> <img class= "table__action__img" src="../../imgs/icons/download2.svg"></th>
+                            <th>Despachado (D)</th>
+                            <th class="table__action"> <a href="../bills/dashboard-bills-details.html" class="table__action__link"><img class= "table__action__img" src="../../imgs/icons/view.svg"></a></th>
+                            <th class="table__radial">
+                                <div class="form__input" style="flex-direction: row; justify-content: center;">
+                                    <div class="form__input--radial">
+                                        <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/truck.svg"></label>
+                                    </div>
+                                    <div class="form__input--radial">
+                                        <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/happy-delivery.svg"></label>
+                                    </div>
+                                </div>
+                            </th>
                         </tr>
                     </tbody>
 
@@ -217,36 +339,55 @@
                     <div class="recents--mobile">
                         <div class="mobile__row">
                             <div class="col__one">
-                                <div class="col__userid col ">
-                                    <p class="col__title">ID Compra</p>
-                                    <p class="col__content">123456789</p>
+                                <div class="col__sold-id col ">
+                                    <p class="col__title">Nro Factura</p>
+                                    <p class="col__content">12345</p>
                                 </div>
 
-                                <div class="col__username col ">
-                                    <p class="col__title">ID Cliente</p>
-                                    <p class="col__content">987654321</p>
+                                <div class="col__date col ">
+                                    <p class="col__title">Fecha</p>
+                                    <p class="col__content">18/05/22</p>
                                 </div>
 
-                                <div class="col__product col ">
-                                    <p class="col__title">Producto</p>
-                                    <p class="col__content">Dog Chow</p>
+                                <div class="col__client col ">
+                                    <p class="col__title">Cliente</p>
+                                    <p class="col__content">Juan Alcachofa</p>
                                 </div>
                             </div>
 
                             <div class="col__two">
-                                <div class="col__quantity col ">
-                                    <p class="col__title">Cantidad</p>
-                                    <p class="col__content">10</p>
+                                <div class="col__membership col ">
+                                    <p class="col__title">Subscrito</p>
+                                    <p class="col__content">Si</p>
                                 </div>
 
                                 <div class="col__price col ">
-                                    <p class="col__title">Monto</p>
+                                    <p class="col__title">Monto Total</p>
                                     <p class="col__content">$150,000</p>
                                 </div>
 
-                                <div class="col__date col ">
-                                    <p class="col__title">Fecha y Hora</p>
-                                    <p class="col__content">7/4/21 - 10:38PM</p>
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado Actual</p>
+                                    <p class="col__content">Despachado (D)</p>
+                                </div>
+
+                                <div class="col__details col ">
+                                    <p class="col__title">Detalle</p>
+                                    <p class="col__content"><a href="../bills/dashboard-bills-details.html" class="col__content__link"><img class= "table__action__img" src="../../imgs/icons/view.svg"></a></p>
+                                </div>
+
+                                <div class="col__status col ">
+                                    <p class="col__title">Cambiar Estado</p>
+                                    <div class="col__content">
+                                        <div class="form__input" style="flex-direction: row; justify-content: center;">
+                                            <div class="form__input--radial">
+                                                <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/truck.svg"></label>
+                                            </div>
+                                            <div class="form__input--radial">
+                                                <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/happy-delivery.svg"></label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -254,72 +395,110 @@
                        
                         <div class="mobile__row mobile__row--gray">
                             <div class="col__one">
-                                <div class="col__userid col ">
-                                    <p class="col__title">ID Compra</p>
-                                    <p class="col__content">123456789</p>
+                                <div class="col__sold-id col ">
+                                    <p class="col__title">Nro Factura</p>
+                                    <p class="col__content">12345</p>
                                 </div>
 
-                                <div class="col__username col ">
-                                    <p class="col__title">ID Cliente</p>
-                                    <p class="col__content">987654321</p>
+                                <div class="col__date col ">
+                                    <p class="col__title">Fecha</p>
+                                    <p class="col__content">18/05/22</p>
                                 </div>
 
-                                <div class="col__product col ">
-                                    <p class="col__title">Producto</p>
-                                    <p class="col__content">Dog Chow</p>
+                                <div class="col__client col ">
+                                    <p class="col__title">Cliente</p>
+                                    <p class="col__content">Juan Alcachofa</p>
                                 </div>
                             </div>
 
                             <div class="col__two">
-                                <div class="col__quantity col ">
-                                    <p class="col__title">Cantidad</p>
-                                    <p class="col__content">10</p>
+                                <div class="col__membership col ">
+                                    <p class="col__title">Subscrito</p>
+                                    <p class="col__content">Si</p>
                                 </div>
 
                                 <div class="col__price col ">
-                                    <p class="col__title">Monto</p>
+                                    <p class="col__title">Monto Total</p>
                                     <p class="col__content">$150,000</p>
                                 </div>
 
-                                <div class="col__date col ">
-                                    <p class="col__title">Fecha y Hora</p>
-                                    <p class="col__content">7/4/21 - 10:38PM</p>
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado Actual</p>
+                                    <p class="col__content">Despachado (D)</p>
+                                </div>
+
+                                <div class="col__details col ">
+                                    <p class="col__title">Detalle</p>
+                                    <p class="col__content"><a href="../bills/dashboard-bills-details.html" class="col__content__link"><img class= "table__action__img" src="../../imgs/icons/view.svg"></a></p>
+                                </div>
+
+                                <div class="col__status col ">
+                                    <p class="col__title">Cambiar Estado</p>
+                                    <div class="col__content">
+                                        <div class="form__input" style="flex-direction: row; justify-content: center;">
+                                            <div class="form__input--radial">
+                                                <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/truck.svg"></label>
+                                            </div>
+                                            <div class="form__input--radial">
+                                                <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/happy-delivery.svg"></label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="mobile__row">
                             <div class="col__one">
-                                <div class="col__userid col ">
-                                    <p class="col__title">ID Compra</p>
-                                    <p class="col__content">123456789</p>
+                                <div class="col__sold-id col ">
+                                    <p class="col__title">Nro Factura</p>
+                                    <p class="col__content">12345</p>
                                 </div>
 
-                                <div class="col__username col ">
-                                    <p class="col__title">ID Cliente</p>
-                                    <p class="col__content">987654321</p>
+                                <div class="col__date col ">
+                                    <p class="col__title">Fecha</p>
+                                    <p class="col__content">18/05/22</p>
                                 </div>
 
-                                <div class="col__product col ">
-                                    <p class="col__title">Producto</p>
-                                    <p class="col__content">Dog Chow</p>
+                                <div class="col__client col ">
+                                    <p class="col__title">Cliente</p>
+                                    <p class="col__content">Juan Alcachofa</p>
                                 </div>
                             </div>
 
                             <div class="col__two">
-                                <div class="col__quantity col ">
-                                    <p class="col__title">Cantidad</p>
-                                    <p class="col__content">10</p>
+                                <div class="col__membership col ">
+                                    <p class="col__title">Subscrito</p>
+                                    <p class="col__content">Si</p>
                                 </div>
 
                                 <div class="col__price col ">
-                                    <p class="col__title">Monto</p>
+                                    <p class="col__title">Monto Total</p>
                                     <p class="col__content">$150,000</p>
                                 </div>
 
-                                <div class="col__date col ">
-                                    <p class="col__title">Fecha y Hora</p>
-                                    <p class="col__content">7/4/21 - 10:38PM</p>
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado Actual</p>
+                                    <p class="col__content">Despachado (D)</p>
+                                </div>
+
+                                <div class="col__details col ">
+                                    <p class="col__title">Detalle</p>
+                                    <p class="col__content"><a href="../bills/dashboard-bills-details.html" class="col__content__link"><img class= "table__action__img" src="../../imgs/icons/view.svg"></a></p>
+                                </div>
+
+                                <div class="col__status col ">
+                                    <p class="col__title">Cambiar Estado</p>
+                                    <div class="col__content">
+                                        <div class="form__input" style="flex-direction: row; justify-content: center;">
+                                            <div class="form__input--radial">
+                                                <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/truck.svg"></label>
+                                            </div>
+                                            <div class="form__input--radial">
+                                                <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/happy-delivery.svg"></label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -327,72 +506,110 @@
                        
                         <div class="mobile__row mobile__row--gray">
                             <div class="col__one">
-                                <div class="col__userid col ">
-                                    <p class="col__title">ID Compra</p>
-                                    <p class="col__content">123456789</p>
+                                <div class="col__sold-id col ">
+                                    <p class="col__title">Nro Factura</p>
+                                    <p class="col__content">12345</p>
                                 </div>
 
-                                <div class="col__username col ">
-                                    <p class="col__title">ID Cliente</p>
-                                    <p class="col__content">987654321</p>
+                                <div class="col__date col ">
+                                    <p class="col__title">Fecha</p>
+                                    <p class="col__content">18/05/22</p>
                                 </div>
 
-                                <div class="col__product col ">
-                                    <p class="col__title">Producto</p>
-                                    <p class="col__content">Dog Chow</p>
+                                <div class="col__client col ">
+                                    <p class="col__title">Cliente</p>
+                                    <p class="col__content">Juan Alcachofa</p>
                                 </div>
                             </div>
 
                             <div class="col__two">
-                                <div class="col__quantity col ">
-                                    <p class="col__title">Cantidad</p>
-                                    <p class="col__content">10</p>
+                                <div class="col__membership col ">
+                                    <p class="col__title">Subscrito</p>
+                                    <p class="col__content">Si</p>
                                 </div>
 
                                 <div class="col__price col ">
-                                    <p class="col__title">Monto</p>
+                                    <p class="col__title">Monto Total</p>
                                     <p class="col__content">$150,000</p>
                                 </div>
 
-                                <div class="col__date col ">
-                                    <p class="col__title">Fecha y Hora</p>
-                                    <p class="col__content">7/4/21 - 10:38PM</p>
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado Actual</p>
+                                    <p class="col__content">Despachado (D)</p>
+                                </div>
+
+                                <div class="col__details col ">
+                                    <p class="col__title">Detalle</p>
+                                    <p class="col__content"><a href="../bills/dashboard-bills-details.html" class="col__content__link"><img class= "table__action__img" src="../../imgs/icons/view.svg"></a></p>
+                                </div>
+
+                                <div class="col__status col ">
+                                    <p class="col__title">Cambiar Estado</p>
+                                    <div class="col__content">
+                                        <div class="form__input" style="flex-direction: row; justify-content: center;">
+                                            <div class="form__input--radial">
+                                                <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/truck.svg"></label>
+                                            </div>
+                                            <div class="form__input--radial">
+                                                <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/happy-delivery.svg"></label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="mobile__row">
                             <div class="col__one">
-                                <div class="col__userid col ">
-                                    <p class="col__title">ID Compra</p>
-                                    <p class="col__content">123456789</p>
+                                <div class="col__sold-id col ">
+                                    <p class="col__title">Nro Factura</p>
+                                    <p class="col__content">12345</p>
                                 </div>
 
-                                <div class="col__username col ">
-                                    <p class="col__title">ID Cliente</p>
-                                    <p class="col__content">987654321</p>
+                                <div class="col__date col ">
+                                    <p class="col__title">Fecha</p>
+                                    <p class="col__content">18/05/22</p>
                                 </div>
 
-                                <div class="col__product col ">
-                                    <p class="col__title">Producto</p>
-                                    <p class="col__content">Dog Chow</p>
+                                <div class="col__client col ">
+                                    <p class="col__title">Cliente</p>
+                                    <p class="col__content">Juan Alcachofa</p>
                                 </div>
                             </div>
 
                             <div class="col__two">
-                                <div class="col__quantity col ">
-                                    <p class="col__title">Cantidad</p>
-                                    <p class="col__content">10</p>
+                                <div class="col__membership col ">
+                                    <p class="col__title">Subscrito</p>
+                                    <p class="col__content">Si</p>
                                 </div>
 
                                 <div class="col__price col ">
-                                    <p class="col__title">Monto</p>
+                                    <p class="col__title">Monto Total</p>
                                     <p class="col__content">$150,000</p>
                                 </div>
 
-                                <div class="col__date col ">
-                                    <p class="col__title">Fecha y Hora</p>
-                                    <p class="col__content">7/4/21 - 10:38PM</p>
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado Actual</p>
+                                    <p class="col__content">Despachado (D)</p>
+                                </div>
+
+                                <div class="col__details col ">
+                                    <p class="col__title">Detalle</p>
+                                    <p class="col__content"><a href="../bills/dashboard-bills-details.html" class="col__content__link"><img class= "table__action__img" src="../../imgs/icons/view.svg"></a></p>
+                                </div>
+
+                                <div class="col__status col ">
+                                    <p class="col__title">Cambiar Estado</p>
+                                    <div class="col__content">
+                                        <div class="form__input" style="flex-direction: row; justify-content: center;">
+                                            <div class="form__input--radial">
+                                                <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/truck.svg"></label>
+                                            </div>
+                                            <div class="form__input--radial">
+                                                <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/happy-delivery.svg"></label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -400,72 +617,110 @@
                        
                         <div class="mobile__row mobile__row--gray">
                             <div class="col__one">
-                                <div class="col__userid col ">
-                                    <p class="col__title">ID Compra</p>
-                                    <p class="col__content">123456789</p>
+                                <div class="col__sold-id col ">
+                                    <p class="col__title">Nro Factura</p>
+                                    <p class="col__content">12345</p>
                                 </div>
 
-                                <div class="col__username col ">
-                                    <p class="col__title">ID Cliente</p>
-                                    <p class="col__content">987654321</p>
+                                <div class="col__date col ">
+                                    <p class="col__title">Fecha</p>
+                                    <p class="col__content">18/05/22</p>
                                 </div>
 
-                                <div class="col__product col ">
-                                    <p class="col__title">Producto</p>
-                                    <p class="col__content">Dog Chow</p>
+                                <div class="col__client col ">
+                                    <p class="col__title">Cliente</p>
+                                    <p class="col__content">Juan Alcachofa</p>
                                 </div>
                             </div>
 
                             <div class="col__two">
-                                <div class="col__quantity col ">
-                                    <p class="col__title">Cantidad</p>
-                                    <p class="col__content">10</p>
+                                <div class="col__membership col ">
+                                    <p class="col__title">Subscrito</p>
+                                    <p class="col__content">Si</p>
                                 </div>
 
                                 <div class="col__price col ">
-                                    <p class="col__title">Monto</p>
+                                    <p class="col__title">Monto Total</p>
                                     <p class="col__content">$150,000</p>
                                 </div>
 
-                                <div class="col__date col ">
-                                    <p class="col__title">Fecha y Hora</p>
-                                    <p class="col__content">7/4/21 - 10:38PM</p>
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado Actual</p>
+                                    <p class="col__content">Despachado (D)</p>
+                                </div>
+
+                                <div class="col__details col ">
+                                    <p class="col__title">Detalle</p>
+                                    <p class="col__content"><a href="../bills/dashboard-bills-details.html" class="col__content__link"><img class= "table__action__img" src="../../imgs/icons/view.svg"></a></p>
+                                </div>
+
+                                <div class="col__status col ">
+                                    <p class="col__title">Cambiar Estado</p>
+                                    <div class="col__content">
+                                        <div class="form__input" style="flex-direction: row; justify-content: center;">
+                                            <div class="form__input--radial">
+                                                <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/truck.svg"></label>
+                                            </div>
+                                            <div class="form__input--radial">
+                                                <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/happy-delivery.svg"></label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="mobile__row">
                             <div class="col__one">
-                                <div class="col__userid col ">
-                                    <p class="col__title">ID Compra</p>
-                                    <p class="col__content">123456789</p>
+                                <div class="col__sold-id col ">
+                                    <p class="col__title">Nro Factura</p>
+                                    <p class="col__content">12345</p>
                                 </div>
 
-                                <div class="col__username col ">
-                                    <p class="col__title">ID Cliente</p>
-                                    <p class="col__content">987654321</p>
+                                <div class="col__date col ">
+                                    <p class="col__title">Fecha</p>
+                                    <p class="col__content">18/05/22</p>
                                 </div>
 
-                                <div class="col__product col ">
-                                    <p class="col__title">Producto</p>
-                                    <p class="col__content">Dog Chow</p>
+                                <div class="col__client col ">
+                                    <p class="col__title">Cliente</p>
+                                    <p class="col__content">Juan Alcachofa</p>
                                 </div>
                             </div>
 
                             <div class="col__two">
-                                <div class="col__quantity col ">
-                                    <p class="col__title">Cantidad</p>
-                                    <p class="col__content">10</p>
+                                <div class="col__membership col ">
+                                    <p class="col__title">Subscrito</p>
+                                    <p class="col__content">Si</p>
                                 </div>
 
                                 <div class="col__price col ">
-                                    <p class="col__title">Monto</p>
+                                    <p class="col__title">Monto Total</p>
                                     <p class="col__content">$150,000</p>
                                 </div>
 
-                                <div class="col__date col ">
-                                    <p class="col__title">Fecha y Hora</p>
-                                    <p class="col__content">7/4/21 - 10:38PM</p>
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado Actual</p>
+                                    <p class="col__content">Despachado (D)</p>
+                                </div>
+
+                                <div class="col__details col ">
+                                    <p class="col__title">Detalle</p>
+                                    <p class="col__content"><a href="../bills/dashboard-bills-details.html" class="col__content__link"><img class= "table__action__img" src="../../imgs/icons/view.svg"></a></p>
+                                </div>
+
+                                <div class="col__status col ">
+                                    <p class="col__title">Cambiar Estado</p>
+                                    <div class="col__content">
+                                        <div class="form__input" style="flex-direction: row; justify-content: center;">
+                                            <div class="form__input--radial">
+                                                <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/truck.svg"></label>
+                                            </div>
+                                            <div class="form__input--radial">
+                                                <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/happy-delivery.svg"></label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -473,72 +728,110 @@
                        
                         <div class="mobile__row mobile__row--gray">
                             <div class="col__one">
-                                <div class="col__userid col ">
-                                    <p class="col__title">ID Compra</p>
-                                    <p class="col__content">123456789</p>
+                                <div class="col__sold-id col ">
+                                    <p class="col__title">Nro Factura</p>
+                                    <p class="col__content">12345</p>
                                 </div>
 
-                                <div class="col__username col ">
-                                    <p class="col__title">ID Cliente</p>
-                                    <p class="col__content">987654321</p>
+                                <div class="col__date col ">
+                                    <p class="col__title">Fecha</p>
+                                    <p class="col__content">18/05/22</p>
                                 </div>
 
-                                <div class="col__product col ">
-                                    <p class="col__title">Producto</p>
-                                    <p class="col__content">Dog Chow</p>
+                                <div class="col__client col ">
+                                    <p class="col__title">Cliente</p>
+                                    <p class="col__content">Juan Alcachofa</p>
                                 </div>
                             </div>
 
                             <div class="col__two">
-                                <div class="col__quantity col ">
-                                    <p class="col__title">Cantidad</p>
-                                    <p class="col__content">10</p>
+                                <div class="col__membership col ">
+                                    <p class="col__title">Subscrito</p>
+                                    <p class="col__content">Si</p>
                                 </div>
 
                                 <div class="col__price col ">
-                                    <p class="col__title">Monto</p>
+                                    <p class="col__title">Monto Total</p>
                                     <p class="col__content">$150,000</p>
                                 </div>
 
-                                <div class="col__date col ">
-                                    <p class="col__title">Fecha y Hora</p>
-                                    <p class="col__content">7/4/21 - 10:38PM</p>
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado Actual</p>
+                                    <p class="col__content">Despachado (D)</p>
+                                </div>
+
+                                <div class="col__details col ">
+                                    <p class="col__title">Detalle</p>
+                                    <p class="col__content"><a href="../bills/dashboard-bills-details.html" class="col__content__link"><img class= "table__action__img" src="../../imgs/icons/view.svg"></a></p>
+                                </div>
+
+                                <div class="col__status col ">
+                                    <p class="col__title">Cambiar Estado</p>
+                                    <div class="col__content">
+                                        <div class="form__input" style="flex-direction: row; justify-content: center;">
+                                            <div class="form__input--radial">
+                                                <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/truck.svg"></label>
+                                            </div>
+                                            <div class="form__input--radial">
+                                                <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/happy-delivery.svg"></label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="mobile__row">
                             <div class="col__one">
-                                <div class="col__userid col ">
-                                    <p class="col__title">ID Compra</p>
-                                    <p class="col__content">123456789</p>
+                                <div class="col__sold-id col ">
+                                    <p class="col__title">Nro Factura</p>
+                                    <p class="col__content">12345</p>
                                 </div>
 
-                                <div class="col__username col ">
-                                    <p class="col__title">ID Cliente</p>
-                                    <p class="col__content">987654321</p>
+                                <div class="col__date col ">
+                                    <p class="col__title">Fecha</p>
+                                    <p class="col__content">18/05/22</p>
                                 </div>
 
-                                <div class="col__product col ">
-                                    <p class="col__title">Producto</p>
-                                    <p class="col__content">Dog Chow</p>
+                                <div class="col__client col ">
+                                    <p class="col__title">Cliente</p>
+                                    <p class="col__content">Juan Alcachofa</p>
                                 </div>
                             </div>
 
                             <div class="col__two">
-                                <div class="col__quantity col ">
-                                    <p class="col__title">Cantidad</p>
-                                    <p class="col__content">10</p>
+                                <div class="col__membership col ">
+                                    <p class="col__title">Subscrito</p>
+                                    <p class="col__content">Si</p>
                                 </div>
 
                                 <div class="col__price col ">
-                                    <p class="col__title">Monto</p>
+                                    <p class="col__title">Monto Total</p>
                                     <p class="col__content">$150,000</p>
                                 </div>
 
-                                <div class="col__date col ">
-                                    <p class="col__title">Fecha y Hora</p>
-                                    <p class="col__content">7/4/21 - 10:38PM</p>
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado Actual</p>
+                                    <p class="col__content">Despachado (D)</p>
+                                </div>
+
+                                <div class="col__details col ">
+                                    <p class="col__title">Detalle</p>
+                                    <p class="col__content"><a href="../bills/dashboard-bills-details.html" class="col__content__link"><img class= "table__action__img" src="../../imgs/icons/view.svg"></a></p>
+                                </div>
+
+                                <div class="col__status col ">
+                                    <p class="col__title">Cambiar Estado</p>
+                                    <div class="col__content">
+                                        <div class="form__input" style="flex-direction: row; justify-content: center;">
+                                            <div class="form__input--radial">
+                                                <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/truck.svg"></label>
+                                            </div>
+                                            <div class="form__input--radial">
+                                                <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/happy-delivery.svg"></label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -546,72 +839,110 @@
                        
                         <div class="mobile__row mobile__row--gray">
                             <div class="col__one">
-                                <div class="col__userid col ">
-                                    <p class="col__title">ID Compra</p>
-                                    <p class="col__content">123456789</p>
+                                <div class="col__sold-id col ">
+                                    <p class="col__title">Nro Factura</p>
+                                    <p class="col__content">12345</p>
                                 </div>
 
-                                <div class="col__username col ">
-                                    <p class="col__title">ID Cliente</p>
-                                    <p class="col__content">987654321</p>
+                                <div class="col__date col ">
+                                    <p class="col__title">Fecha</p>
+                                    <p class="col__content">18/05/22</p>
                                 </div>
 
-                                <div class="col__product col ">
-                                    <p class="col__title">Producto</p>
-                                    <p class="col__content">Dog Chow</p>
+                                <div class="col__client col ">
+                                    <p class="col__title">Cliente</p>
+                                    <p class="col__content">Juan Alcachofa</p>
                                 </div>
                             </div>
 
                             <div class="col__two">
-                                <div class="col__quantity col ">
-                                    <p class="col__title">Cantidad</p>
-                                    <p class="col__content">10</p>
+                                <div class="col__membership col ">
+                                    <p class="col__title">Subscrito</p>
+                                    <p class="col__content">Si</p>
                                 </div>
 
                                 <div class="col__price col ">
-                                    <p class="col__title">Monto</p>
+                                    <p class="col__title">Monto Total</p>
                                     <p class="col__content">$150,000</p>
                                 </div>
 
-                                <div class="col__date col ">
-                                    <p class="col__title">Fecha y Hora</p>
-                                    <p class="col__content">7/4/21 - 10:38PM</p>
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado Actual</p>
+                                    <p class="col__content">Despachado (D)</p>
+                                </div>
+
+                                <div class="col__details col ">
+                                    <p class="col__title">Detalle</p>
+                                    <p class="col__content"><a href="../bills/dashboard-bills-details.html" class="col__content__link"><img class= "table__action__img" src="../../imgs/icons/view.svg"></a></p>
+                                </div>
+
+                                <div class="col__status col ">
+                                    <p class="col__title">Cambiar Estado</p>
+                                    <div class="col__content">
+                                        <div class="form__input" style="flex-direction: row; justify-content: center;">
+                                            <div class="form__input--radial">
+                                                <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/truck.svg"></label>
+                                            </div>
+                                            <div class="form__input--radial">
+                                                <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/happy-delivery.svg"></label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="mobile__row">
                             <div class="col__one">
-                                <div class="col__userid col ">
-                                    <p class="col__title">ID Compra</p>
-                                    <p class="col__content">123456789</p>
+                                <div class="col__sold-id col ">
+                                    <p class="col__title">Nro Factura</p>
+                                    <p class="col__content">12345</p>
                                 </div>
 
-                                <div class="col__username col ">
-                                    <p class="col__title">ID Cliente</p>
-                                    <p class="col__content">987654321</p>
+                                <div class="col__date col ">
+                                    <p class="col__title">Fecha</p>
+                                    <p class="col__content">18/05/22</p>
                                 </div>
 
-                                <div class="col__product col ">
-                                    <p class="col__title">Producto</p>
-                                    <p class="col__content">Dog Chow</p>
+                                <div class="col__client col ">
+                                    <p class="col__title">Cliente</p>
+                                    <p class="col__content">Juan Alcachofa</p>
                                 </div>
                             </div>
 
                             <div class="col__two">
-                                <div class="col__quantity col ">
-                                    <p class="col__title">Cantidad</p>
-                                    <p class="col__content">10</p>
+                                <div class="col__membership col ">
+                                    <p class="col__title">Subscrito</p>
+                                    <p class="col__content">Si</p>
                                 </div>
 
                                 <div class="col__price col ">
-                                    <p class="col__title">Monto</p>
+                                    <p class="col__title">Monto Total</p>
                                     <p class="col__content">$150,000</p>
                                 </div>
 
-                                <div class="col__date col ">
-                                    <p class="col__title">Fecha y Hora</p>
-                                    <p class="col__content">7/4/21 - 10:38PM</p>
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado Actual</p>
+                                    <p class="col__content">Despachado (D)</p>
+                                </div>
+
+                                <div class="col__details col ">
+                                    <p class="col__title">Detalle</p>
+                                    <p class="col__content"><a href="../bills/dashboard-bills-details.html" class="col__content__link"><img class= "table__action__img" src="../../imgs/icons/view.svg"></a></p>
+                                </div>
+
+                                <div class="col__status col ">
+                                    <p class="col__title">Cambiar Estado</p>
+                                    <div class="col__content">
+                                        <div class="form__input" style="flex-direction: row; justify-content: center;">
+                                            <div class="form__input--radial">
+                                                <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/truck.svg"></label>
+                                            </div>
+                                            <div class="form__input--radial">
+                                                <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/happy-delivery.svg"></label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -619,36 +950,55 @@
                        
                         <div class="mobile__row mobile__row--gray">
                             <div class="col__one">
-                                <div class="col__userid col ">
-                                    <p class="col__title">ID Compra</p>
-                                    <p class="col__content">123456789</p>
+                                <div class="col__sold-id col ">
+                                    <p class="col__title">Nro Factura</p>
+                                    <p class="col__content">12345</p>
                                 </div>
 
-                                <div class="col__username col ">
-                                    <p class="col__title">ID Cliente</p>
-                                    <p class="col__content">987654321</p>
+                                <div class="col__date col ">
+                                    <p class="col__title">Fecha</p>
+                                    <p class="col__content">18/05/22</p>
                                 </div>
 
-                                <div class="col__product col ">
-                                    <p class="col__title">Producto</p>
-                                    <p class="col__content">Dog Chow</p>
+                                <div class="col__client col ">
+                                    <p class="col__title">Cliente</p>
+                                    <p class="col__content">Juan Alcachofa</p>
                                 </div>
                             </div>
 
                             <div class="col__two">
-                                <div class="col__quantity col ">
-                                    <p class="col__title">Cantidad</p>
-                                    <p class="col__content">10</p>
+                                <div class="col__membership col ">
+                                    <p class="col__title">Subscrito</p>
+                                    <p class="col__content">Si</p>
                                 </div>
 
                                 <div class="col__price col ">
-                                    <p class="col__title">Monto</p>
+                                    <p class="col__title">Monto Total</p>
                                     <p class="col__content">$150,000</p>
                                 </div>
 
-                                <div class="col__date col ">
-                                    <p class="col__title">Fecha y Hora</p>
-                                    <p class="col__content">7/4/21 - 10:38PM</p>
+                                <div class="col__status col ">
+                                    <p class="col__title">Estado Actual</p>
+                                    <p class="col__content">Despachado (D)</p>
+                                </div>
+
+                                <div class="col__details col ">
+                                    <p class="col__title">Detalle</p>
+                                    <p class="col__content"><a href="../bills/dashboard-bills-details.html" class="col__content__link"><img class= "table__action__img" src="../../imgs/icons/view.svg"></a></p>
+                                </div>
+
+                                <div class="col__status col ">
+                                    <p class="col__title">Cambiar Estado</p>
+                                    <div class="col__content">
+                                        <div class="form__input" style="flex-direction: row; justify-content: center;">
+                                            <div class="form__input--radial">
+                                                <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/truck.svg"></label>
+                                            </div>
+                                            <div class="form__input--radial">
+                                                <label class="input__label--radio" for="usertype"><img class="table__action__img" src="../../imgs/icons/happy-delivery.svg"></label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

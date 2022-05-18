@@ -1,3 +1,17 @@
+:root {
+    --color-c1: #F2F2F2;
+    --color-c2: #FAFAFA;
+    --color-c3: #FFFFFF;
+    --color-c4: #24252A;
+    --color-c4-hover: #2E2F36;
+    --color-c5: #00BFA6;
+    --color-c5-hover: #039E89;
+    --color-c6: #FF3696;
+    --color-c7: #F53D3D;
+    --color-c8: #53545C;
+    --color-c9: #000000;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -36,9 +50,9 @@ img {
 }
 
 .product__pic {
-    background-color: #fff;
+    background-color: var(--color-c3);
     border-radius: 5%;
-    border-right: 4px #00BFA6 solid;
+    border-right: 4px var(--color-c5) solid;
     transition: .5s;
     padding: 1em;
 }
@@ -67,9 +81,9 @@ img {
     gap: 2em;
     padding: 0 1em;
     border-radius: 5px;
-    background-color: #fff;
-    border-left: 4px #00BFA6 solid;
-    box-shadow: 1px 7px 15px -16px #000000;
+    background-color: var(--color-c3);
+    border-left: 4px var(--color-c5) solid;
+    box-shadow: 1px 7px 15px -16px var(--color-c9);
     transform: scale(.98);
     transition: .5s;
 }
@@ -85,7 +99,7 @@ img {
 }
 
 .product__name {
-    color: #00BFA6;
+    color: var(--color-c5);
     font-size: .9rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -115,6 +129,6 @@ img {
 }
 
 .product__count--number {
-    color: #00BFA6;
+    color: var(--color-c5);
     font-weight: 500;
 }

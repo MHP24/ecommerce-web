@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,6 +16,7 @@
     <link rel="stylesheet" href="../css/users-accounts.css">
     <title>Registrarse</title>
 </head>
+
 <body>
     <a id="nav__cart--f" href="./shopping-cart.html">
         <img src="../imgs/icons/cart.svg" alt="cart-icon" id="nav__cart__icon">
@@ -62,43 +64,101 @@
             </nav>
         </section>
 
-        <section class="account">
-            <img src="../imgs/msc/register-picture.jpg" class="img__account" alt="">
+        <section class="account account--register">
             <div class="form">
                 <h3 class="form__title">Formulario De Registro</h3>
-                <form class="form__product" action="#" method="post">
-                    <div class="form__inputs">
-                        <div class="form__input">
-                            <label class="input__label">Nombre</label>
-                            <input class="input__input" type="text" placeholder="Ingresar nombre" required>
+                <form class="form__user" action="#" method="post" id="register">
+                    <div class="form__inputs--register">
+                        <div class="input--group-a">
+                            <div class="form__input">
+                                <label class="input__label" for="input__input--rut">Rut</label>
+                                <input class="input__input" id="input__input--rut" name="input__input--rut" type="text"
+                                    placeholder="Ingresa tu rut" required>
+                                <small id="input__help--rut" class="input__small">
+                                    Escribe tu RUT sin puntos y con guión, por ejemplo: 16560241-2
+                                </small>
+                            </div>
+
+                            <div class="form__input">
+                                <label class="input__label" for="input__input--names">Nombres</label>
+                                <input class="input__input" id="input__input--names" name="input__input--names"
+                                    type="text" placeholder="Ingresar nombres" required>
+                            </div>
+
+                            <div class="form__input">
+                                <label class="input__label" for="input__input--lastnames">Apellidos</label>
+                                <input class="input__input" id="input__input--lastnames" name="input__input--lastnames"
+                                    type="text" placeholder="Ingresar Apellidos" required>
+                            </div>
+
+                            <div class="form__input">
+                                <label class="input__label" for="input__input--email">Email</label>
+                                <input class="input__input" id="input__input--email" name="input__input--email"
+                                    type="email" placeholder="Ingresar Email" required>
+                                <small id="input__help--email" class="input__small">
+                                    Escribe tu correo incluyendo: nombre, @ y dominio, por ejemplo: johndoe@email.com
+                                </small>
+                            </div>
+
+                            <div class="form__input">
+                                <label class="input__label" for="input__input--adress">Direcci&oacute;n</label>
+                                <input class="input__input" id="input__input--adress" name="input__input--adress"
+                                    type="text" placeholder="Ingresar Dirección" required>
+                                <small id="input__help--adress" class="input__small">
+                                    Escribe tu direci&oacute;n completa con: calle, n&uacute;mero, comuna y
+                                    regi&oacute;n
+                                </small>
+                            </div>
+
+                            <div class="form__input">
+                                <div class="input__checkbox">
+                                    <input type="checkbox" class="form-check-input" id="input__input--member-checkbox"
+                                        name="input__input--member-checkbox">
+                                    <label class="input__label" for="input__input--member-checkbox">Con
+                                        subscripci&oacute;n</label>
+
+                                </div>
+                                <small id="input__help--member" class="input__small">
+                                    Deseo subscribirme con un aporte de $3.000 mensuales
+                                    y obtener un 5% de descuento en mis compras
+                                </small>
+                            </div>
+
+                            <div class="form__input">
+                                <label class="input__label" for="input__input--password">Contrase&nacute;a</label>
+                                <input class="input__input" id="input__input--password" name="input__input--password"
+                                    type="password" placeholder="***" required>
+                                <small id="input__help--password" class="input__small">
+                                    La contrase&nacute;a debe tener un m&iacute;nimo de 10 car&aacute;cteres y
+                                    debe contener al menos una may&uacute;scula y un n&uacute;mero
+                                </small>
+                            </div>
+
+                            <div class="form__input">
+                                <label class="input__label" for="input__input--password2">Confirmar
+                                    Contrase&nacute;a</label>
+                                <input class="input__input" id="input__input--password2" name="input__input--password2"
+                                    type="password" placeholder="***" required>
+                            </div>
                         </div>
 
-                        <div class="form__input">
-                            <label class="input__label">Email</label>
-                            <input class="input__input" type="email" placeholder="Ingresar Email" required>
-                        </div>
-
-                        <div class="form__input">
-                            <label class="input__label">Contrase&nacute;a</label>
-                            <input class="input__input" type="password" placeholder="***" required>
-                        </div>
-
-                        <div class="form__input">
-                            <label class="input__label">Confirmar Contrase&nacute;a</label>
-                            <input class="input__input" type="password" placeholder="***" required>
-                        </div>
-
-                        <div class="form__input">
-                            <label class="input__label">Im&aacute;gen de perfil</label>
-                            <input class="input__input input__input--img" type="file" required>
+                        <div class="input--group-b">
+                            <div class="form__input form__input--picture">
+                                <img src="../imgs/msc/profile-picture.png" alt="profile-picture"
+                                    class="input__profile-img">
+                                <label class="input__label" for="input__input--profile-picture">Im&aacute;gen de
+                                    perfil</label>
+                                <input class="input__input input__input--img" id="input__input--profile-picture"
+                                    name="input__input--profile-picture" type="file" required>
+                            </div>
                         </div>
                     </div>
 
                     <div class="form__btns">
-                        <button class="form__btn" type="submit">Registrarse</button>
+                        <button class="form__btn" id="form__btn--register" type="submit">Registrarse</button>
                     </div>
                 </form>
-            </div>  
+            </div>
         </section>
     </main>
     <footer class="footer">
@@ -108,6 +168,10 @@
             </figure>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../js/navigation.js"></script>
+    <script src="../js/forms/register.js"></script>
 </body>
+
 </html>

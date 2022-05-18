@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="../../css/normalize.css">
     <link rel="stylesheet" href="../../css/dashboard.css">
     <link rel="stylesheet" href="../../css/dashboard-input-handler.css">
-    <title>Editar Usuario</title>
+    <link rel="stylesheet" href="../../css/dashboard-table-layout.css">
+    <title>Usuarios</title>
 </head>
 <body>
 
@@ -29,17 +30,12 @@
                 <p class="nav__name">Productos</p>
             </a>
 
-            <a class="nav__item" href="../bills/dashboard-bills.html">
-                <img class="nav__img" src="../../imgs/icons/clip.svg" alt="Facts">
-                <p class="nav__name">Facturas</p>
-            </a>
-
             <a class="nav__item" href="../stock/dashboard-product-stock.html">
                 <img class="nav__img" src="../../imgs/icons/stock.svg" alt="Stock">
                 <p class="nav__name">Stock</p>
             </a>
 
-            <a class="nav__item" href="../users/dashboard-users.html">
+            <a class="nav__item" href="../users/dashboard-user-details.html">
                 <img class="nav__img" src="../../imgs/icons/user.svg" alt="Users">
                 <p class="nav__name">Usuarios</p>
             </a>
@@ -47,6 +43,11 @@
             <a class="nav__item" href="../history/dashboard-sales-history.html">
                 <img class="nav__img" src="../../imgs/icons/history.svg" alt="History">
                 <p class="nav__name">Historial</p>
+            </a>
+
+            <a class="nav__item" href="../../index.html">
+                <img class="nav__img" src="../../imgs/icons/logout.svg" alt="Logout">
+                <p class="nav__name">Cerrar Ses&oacute;n</p>
             </a>
         </nav>
     </header>
@@ -76,64 +77,876 @@
             
             <div class="summary">
                     <div class="summary__item summary__item--t">
-                        <h2 class="summary__title">Editar Usuario</h2>
+                        <h2 class="summary__title">Mantenedor de usuarios</h2>
                     </div>
                 </div>
 
             </div>
 
             <div class="form">
-                <h3 class="form__title">Datos De Don Miguelo</h3>
-                <form class="form__product" action="#" method="post">
+                <form class="form__users" action="#" id="users-handler">
                     <div class="form__inputs">
-                        <div class="form__input">
-                            <label class="input__label">Nombre</label>
-                            <input class="input__input" type="text" placeholder="Ingresar nombre" required>
-                        </div>
+                        <div class="input-group-a">
+                            <div class="form__input">
+                                <label for="input__input--id" class="input__label">ID</label>
+                                <input type="text" id="input__input--id" name="input__input--id" placeholder="ID Usuario" class="input__input" required>
+                            </div>
 
-                        <div class="form__input">
-                            <label class="input__label">Email</label>
-                            <input class="input__input" type="email" placeholder="Ingresar Email" required>
-                        </div>
+                            <div class="form__input" style="flex-direction: row;">
+                                <div class="form__input--radial">
+                                    <label class="input__label--radio" for="usertype">Cliente</label>
+                                    <input class="input__radio" name="usertype" id="usertype-client" type="radio" required> 
+                                </div>
+                                <div class="form__input--radial">
+                                    <label class="input__label--radio" for="usertype">Administrador</label>
+                                    <input class="input__radio" name="usertype" id="usertype-admin" type="radio" required>  
+                                </div>
+                            </div>
 
-                        <div class="form__input">
-                            <label class="input__label">Contrase&nacute;a</label>
-                            <input class="input__input" type="password" placeholder="***" required>
-                        </div>
+                            <div class="form__input">
+                                <label for="input__input--rut" class="input__label">Rut</label>
+                                <input type="text" id="input__input--rut" name="input__input--rut" placeholder="Rut" class="input__input" required>
+                            </div>
 
-                        <div class="form__input">
-                            <label class="input__label">Im&aacute;gen de perfil</label>
-                            <input class="input__input input__input--img" type="file" required>
-                        </div>
+                            <div class="form__input">
+                                <label for="input__input--names" class="input__label">Nombres</label>
+                                <input type="text" id="input__input--names" name="input__input--names" placeholder="Nombres" class="input__input" required>
+                            </div>
 
-                        <div class="form__input a">
-                            <label class="input__label">Miembro</label>
-                            <input class="input__radio" name="membertype" type="radio" required>
-                            <label class="input__label">Usuario</label>
-                            <input class="input__radio" name="membertype" type="radio" required>
-                        </div>
+                            <div class="form__input">
+                                <label for="input__input--lastnames" class="input__label">Apellidos</label>
+                                <input type="text" id="input__input--lastnames" name="input__input--lastnames" placeholder="Apellidos" class="input__input" required>
+                            </div>
 
-                        <div class="form__input">
-                            <label class="input__label" >Tipo de usuario</label>
-                            <select class="input__select">
-                              <option value="Usuario">Usuario</option>
-                              <option value="Miembro">Miembro</option>
-                              <option value="Administrador">Administrador</option>
-                            </select>
-                        </div>
- 
+                            <div class="form__input">
+                                <label for="input__input--email" class="input__label">Email</label>
+                                <input type="text" id="input__input--email" name="input__input--email" placeholder="Email" class="input__input" required>
+                            </div>
+
+                            <div class="form__input">
+                                <label for="input__input--adress" class="input__label">Direcci&oacute;n</label>
+                                <textarea name="input__input--adress" id="input__input--adress" class="input__area" placeholder="Dirección"></textarea>
+                            </div>
+
+                            <div class="form__input">
+                                <div class="input__checkbox">
+                                    <input type="checkbox" class="form-check-input" id="input__input--member-checkbox" name="input__input--member-checkbox">
+                                    <label class="input__label" for="input__input--member-checkbox">Con subscripci&oacute;n</label>
+        
+                                </div>
+                                <small id="input__help--member" class="input__small">
+                                    Deseo subscribirme con un aporte de $3.000 mensuales
+                                    y obtener un 5% de descuento en mis compras
+                                </small>
+                            </div>
+
+                            <div class="form__input">
+                                <label for="input__input--password" class="input__label">Contrase&nacute;a</label>
+                                <input type="password" id="input__input--password" name="input__input--password" placeholder="Contraseña" class="input__input" required>
+                                <button class="form__btn">Generar</button>
+                            </div>
+                         </div>
+
+                         <div class="input-group-b">
+                            <div class="form__input form__input--picture">
+                                <img src="../../imgs/msc/profile-picture.png" alt="profile-picture" class="input__profile-img" width="240px" height="240px">
+                                <label class="input__label" for="input__input--profile-picture">Im&aacute;gen de perfil</label>
+                                <input class="input__input input__input--img" id="input__input--profile-picture" name="input__input--profile-picture" type="file" required>
+                            </div>
+                         </div>
                     </div>
 
-                    <div class="form__btns">
-                        <button class="form__btn" type="submit">Guardar</button>
-                    </div>
                 </form>
+                <div class="form__btns">
+                    <button class="form__btn">Guardar</button>
+                    <button class="form__btn">Nuevo</button>
+                    <button class="form__btn">Eliminar</button>
+                </div>
+
+                <div class="result">
+                    <table class="table search-result">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tipo Usuario</th>
+                                <th>Rut</th>
+                                <th>Nombres</th>
+                                <th>Apellidos</th>
+                                <th>Direcci&oacute;n</th>
+                                <th>Con Subscripci&oacute;n</th>
+                                <th>Im&aacute;gen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr  class="tr--g">
+                                <th>11</th>
+                                <th>Registrado</th>
+                                <th>21.345.678-9</th>
+                                <th>Juan</th>
+                                <th>Alcachofa</th>
+                                <th>San Juan Bautista 423</th>
+                                <th>Si</th>
+                                <th>[][]</th>
+                            </tr>
+                            <tr>
+                                <th>11</th>
+                                <th>Registrado</th>
+                                <th>21.345.678-9</th>
+                                <th>Juan</th>
+                                <th>Alcachofa</th>
+                                <th>San Juan Bautista 423</th>
+                                <th>Si</th>
+                                <th>[][]</th>
+                            </tr>
+    
+                            <tr  class="tr--g">
+                                <th>11</th>
+                                <th>Registrado</th>
+                                <th>21.345.678-9</th>
+                                <th>Juan</th>
+                                <th>Alcachofa</th>
+                                <th>San Juan Bautista 423</th>
+                                <th>Si</th>
+                                <th>[][]</th>
+                            </tr>
+                            <tr>
+                                <th>11</th>
+                                <th>Registrado</th>
+                                <th>21.345.678-9</th>
+                                <th>Juan</th>
+                                <th>Alcachofa</th>
+                                <th>San Juan Bautista 423</th>
+                                <th>Si</th>
+                                <th>[][]</th>
+                            </tr>
+    
+                            <tr  class="tr--g">
+                                <th>11</th>
+                                <th>Registrado</th>
+                                <th>21.345.678-9</th>
+                                <th>Juan</th>
+                                <th>Alcachofa</th>
+                                <th>San Juan Bautista 423</th>
+                                <th>Si</th>
+                                <th>[][]</th>
+                            </tr>
+                            <tr>
+                                <th>11</th>
+                                <th>Registrado</th>
+                                <th>21.345.678-9</th>
+                                <th>Juan</th>
+                                <th>Alcachofa</th>
+                                <th>San Juan Bautista 423</th>
+                                <th>Si</th>
+                                <th>[][]</th>
+                            </tr>
+    
+                            <tr  class="tr--g">
+                                <th>11</th>
+                                <th>Registrado</th>
+                                <th>21.345.678-9</th>
+                                <th>Juan</th>
+                                <th>Alcachofa</th>
+                                <th>San Juan Bautista 423</th>
+                                <th>Si</th>
+                                <th>[][]</th>
+                            </tr>
+                            <tr>
+                                <th>11</th>
+                                <th>Registrado</th>
+                                <th>21.345.678-9</th>
+                                <th>Juan</th>
+                                <th>Alcachofa</th>
+                                <th>San Juan Bautista 423</th>
+                                <th>Si</th>
+                                <th>[][]</th>
+                            </tr>
+    
+                            <tr  class="tr--g">
+                                <th>11</th>
+                                <th>Registrado</th>
+                                <th>21.345.678-9</th>
+                                <th>Juan</th>
+                                <th>Alcachofa</th>
+                                <th>San Juan Bautista 423</th>
+                                <th>Si</th>
+                                <th>[][]</th>
+                            </tr>
+                            <tr>
+                                <th>11</th>
+                                <th>Registrado</th>
+                                <th>21.345.678-9</th>
+                                <th>Juan</th>
+                                <th>Alcachofa</th>
+                                <th>San Juan Bautista 423</th>
+                                <th>Si</th>
+                                <th>[][]</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table--mobile">
+                    <div class="resmobile">
+                        <div class="mobile__row">
+                            <div class="col__one">
+                                <div class="col__user-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__user-type col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Registrado</p>
+                                </div>
+
+                                <div class="col__rut col ">
+                                    <p class="col__title">Rut</p>
+                                    <p class="col__content">21.345.678-9</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__name col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Juan</p>
+                                </div>
+
+                                <div class="col__lastname col ">
+                                    <p class="col__title">Apellidos</p>
+                                    <p class="col__content">Alcachofa</p>
+                                </div>
+
+                                <div class="col__adress col ">
+                                    <p class="col__title">Direcci&oacute;n</p>
+                                    <p class="col__content">San Juan Bautista 423</p>
+                                </div>
+
+                                <div class="col__suscription col ">
+                                    <p class="col__title">Con Suscripci&oacute;n</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__image-url col ">
+                                    <p class="col__title">Im&aacute;gen</p>
+                                    <p class="col__content">[][]</p>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        <div class="mobile__row mobile__row--gray">
+                                                       <div class="col__one">
+                                <div class="col__user-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__user-type col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Registrado</p>
+                                </div>
+
+                                <div class="col__rut col ">
+                                    <p class="col__title">Rut</p>
+                                    <p class="col__content">21.345.678-9</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__name col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Juan</p>
+                                </div>
+
+                                <div class="col__lastname col ">
+                                    <p class="col__title">Apellidos</p>
+                                    <p class="col__content">Alcachofa</p>
+                                </div>
+
+                                <div class="col__adress col ">
+                                    <p class="col__title">Direcci&oacute;n</p>
+                                    <p class="col__content">San Juan Bautista 423</p>
+                                </div>
+
+                                <div class="col__suscription col ">
+                                    <p class="col__title">Con Suscripci&oacute;n</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__image-url col ">
+                                    <p class="col__title">Im&aacute;gen</p>
+                                    <p class="col__content">[][]</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mobile__row">
+                                                       <div class="col__one">
+                                <div class="col__user-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__user-type col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Registrado</p>
+                                </div>
+
+                                <div class="col__rut col ">
+                                    <p class="col__title">Rut</p>
+                                    <p class="col__content">21.345.678-9</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__name col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Juan</p>
+                                </div>
+
+                                <div class="col__lastname col ">
+                                    <p class="col__title">Apellidos</p>
+                                    <p class="col__content">Alcachofa</p>
+                                </div>
+
+                                <div class="col__adress col ">
+                                    <p class="col__title">Direcci&oacute;n</p>
+                                    <p class="col__content">San Juan Bautista 423</p>
+                                </div>
+
+                                <div class="col__suscription col ">
+                                    <p class="col__title">Con Suscripci&oacute;n</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__image-url col ">
+                                    <p class="col__title">Im&aacute;gen</p>
+                                    <p class="col__content">[][]</p>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        <div class="mobile__row mobile__row--gray">
+                                                       <div class="col__one">
+                                <div class="col__user-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__user-type col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Registrado</p>
+                                </div>
+
+                                <div class="col__rut col ">
+                                    <p class="col__title">Rut</p>
+                                    <p class="col__content">21.345.678-9</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__name col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Juan</p>
+                                </div>
+
+                                <div class="col__lastname col ">
+                                    <p class="col__title">Apellidos</p>
+                                    <p class="col__content">Alcachofa</p>
+                                </div>
+
+                                <div class="col__adress col ">
+                                    <p class="col__title">Direcci&oacute;n</p>
+                                    <p class="col__content">San Juan Bautista 423</p>
+                                </div>
+
+                                <div class="col__suscription col ">
+                                    <p class="col__title">Con Suscripci&oacute;n</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__image-url col ">
+                                    <p class="col__title">Im&aacute;gen</p>
+                                    <p class="col__content">[][]</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mobile__row">
+                                                       <div class="col__one">
+                                <div class="col__user-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__user-type col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Registrado</p>
+                                </div>
+
+                                <div class="col__rut col ">
+                                    <p class="col__title">Rut</p>
+                                    <p class="col__content">21.345.678-9</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__name col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Juan</p>
+                                </div>
+
+                                <div class="col__lastname col ">
+                                    <p class="col__title">Apellidos</p>
+                                    <p class="col__content">Alcachofa</p>
+                                </div>
+
+                                <div class="col__adress col ">
+                                    <p class="col__title">Direcci&oacute;n</p>
+                                    <p class="col__content">San Juan Bautista 423</p>
+                                </div>
+
+                                <div class="col__suscription col ">
+                                    <p class="col__title">Con Suscripci&oacute;n</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__image-url col ">
+                                    <p class="col__title">Im&aacute;gen</p>
+                                    <p class="col__content">[][]</p>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        <div class="mobile__row mobile__row--gray">
+                                                       <div class="col__one">
+                                <div class="col__user-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__user-type col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Registrado</p>
+                                </div>
+
+                                <div class="col__rut col ">
+                                    <p class="col__title">Rut</p>
+                                    <p class="col__content">21.345.678-9</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__name col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Juan</p>
+                                </div>
+
+                                <div class="col__lastname col ">
+                                    <p class="col__title">Apellidos</p>
+                                    <p class="col__content">Alcachofa</p>
+                                </div>
+
+                                <div class="col__adress col ">
+                                    <p class="col__title">Direcci&oacute;n</p>
+                                    <p class="col__content">San Juan Bautista 423</p>
+                                </div>
+
+                                <div class="col__suscription col ">
+                                    <p class="col__title">Con Suscripci&oacute;n</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__image-url col ">
+                                    <p class="col__title">Im&aacute;gen</p>
+                                    <p class="col__content">[][]</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mobile__row">
+                                                       <div class="col__one">
+                                <div class="col__user-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__user-type col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Registrado</p>
+                                </div>
+
+                                <div class="col__rut col ">
+                                    <p class="col__title">Rut</p>
+                                    <p class="col__content">21.345.678-9</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__name col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Juan</p>
+                                </div>
+
+                                <div class="col__lastname col ">
+                                    <p class="col__title">Apellidos</p>
+                                    <p class="col__content">Alcachofa</p>
+                                </div>
+
+                                <div class="col__adress col ">
+                                    <p class="col__title">Direcci&oacute;n</p>
+                                    <p class="col__content">San Juan Bautista 423</p>
+                                </div>
+
+                                <div class="col__suscription col ">
+                                    <p class="col__title">Con Suscripci&oacute;n</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__image-url col ">
+                                    <p class="col__title">Im&aacute;gen</p>
+                                    <p class="col__content">[][]</p>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        <div class="mobile__row mobile__row--gray">
+                                                       <div class="col__one">
+                                <div class="col__user-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__user-type col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Registrado</p>
+                                </div>
+
+                                <div class="col__rut col ">
+                                    <p class="col__title">Rut</p>
+                                    <p class="col__content">21.345.678-9</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__name col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Juan</p>
+                                </div>
+
+                                <div class="col__lastname col ">
+                                    <p class="col__title">Apellidos</p>
+                                    <p class="col__content">Alcachofa</p>
+                                </div>
+
+                                <div class="col__adress col ">
+                                    <p class="col__title">Direcci&oacute;n</p>
+                                    <p class="col__content">San Juan Bautista 423</p>
+                                </div>
+
+                                <div class="col__suscription col ">
+                                    <p class="col__title">Con Suscripci&oacute;n</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__image-url col ">
+                                    <p class="col__title">Im&aacute;gen</p>
+                                    <p class="col__content">[][]</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mobile__row">
+                                                       <div class="col__one">
+                                <div class="col__user-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__user-type col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Registrado</p>
+                                </div>
+
+                                <div class="col__rut col ">
+                                    <p class="col__title">Rut</p>
+                                    <p class="col__content">21.345.678-9</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__name col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Juan</p>
+                                </div>
+
+                                <div class="col__lastname col ">
+                                    <p class="col__title">Apellidos</p>
+                                    <p class="col__content">Alcachofa</p>
+                                </div>
+
+                                <div class="col__adress col ">
+                                    <p class="col__title">Direcci&oacute;n</p>
+                                    <p class="col__content">San Juan Bautista 423</p>
+                                </div>
+
+                                <div class="col__suscription col ">
+                                    <p class="col__title">Con Suscripci&oacute;n</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__image-url col ">
+                                    <p class="col__title">Im&aacute;gen</p>
+                                    <p class="col__content">[][]</p>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        <div class="mobile__row mobile__row--gray">
+                                                       <div class="col__one">
+                                <div class="col__user-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__user-type col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Registrado</p>
+                                </div>
+
+                                <div class="col__rut col ">
+                                    <p class="col__title">Rut</p>
+                                    <p class="col__content">21.345.678-9</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__name col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Juan</p>
+                                </div>
+
+                                <div class="col__lastname col ">
+                                    <p class="col__title">Apellidos</p>
+                                    <p class="col__content">Alcachofa</p>
+                                </div>
+
+                                <div class="col__adress col ">
+                                    <p class="col__title">Direcci&oacute;n</p>
+                                    <p class="col__content">San Juan Bautista 423</p>
+                                </div>
+
+                                <div class="col__suscription col ">
+                                    <p class="col__title">Con Suscripci&oacute;n</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__image-url col ">
+                                    <p class="col__title">Im&aacute;gen</p>
+                                    <p class="col__content">[][]</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mobile__row">
+                                                       <div class="col__one">
+                                <div class="col__user-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__user-type col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Registrado</p>
+                                </div>
+
+                                <div class="col__rut col ">
+                                    <p class="col__title">Rut</p>
+                                    <p class="col__content">21.345.678-9</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__name col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Juan</p>
+                                </div>
+
+                                <div class="col__lastname col ">
+                                    <p class="col__title">Apellidos</p>
+                                    <p class="col__content">Alcachofa</p>
+                                </div>
+
+                                <div class="col__adress col ">
+                                    <p class="col__title">Direcci&oacute;n</p>
+                                    <p class="col__content">San Juan Bautista 423</p>
+                                </div>
+
+                                <div class="col__suscription col ">
+                                    <p class="col__title">Con Suscripci&oacute;n</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__image-url col ">
+                                    <p class="col__title">Im&aacute;gen</p>
+                                    <p class="col__content">[][]</p>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        <div class="mobile__row mobile__row--gray">
+                                                       <div class="col__one">
+                                <div class="col__user-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__user-type col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Registrado</p>
+                                </div>
+
+                                <div class="col__rut col ">
+                                    <p class="col__title">Rut</p>
+                                    <p class="col__content">21.345.678-9</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__name col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Juan</p>
+                                </div>
+
+                                <div class="col__lastname col ">
+                                    <p class="col__title">Apellidos</p>
+                                    <p class="col__content">Alcachofa</p>
+                                </div>
+
+                                <div class="col__adress col ">
+                                    <p class="col__title">Direcci&oacute;n</p>
+                                    <p class="col__content">San Juan Bautista 423</p>
+                                </div>
+
+                                <div class="col__suscription col ">
+                                    <p class="col__title">Con Suscripci&oacute;n</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__image-url col ">
+                                    <p class="col__title">Im&aacute;gen</p>
+                                    <p class="col__content">[][]</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mobile__row">
+                                                       <div class="col__one">
+                                <div class="col__user-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__user-type col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Registrado</p>
+                                </div>
+
+                                <div class="col__rut col ">
+                                    <p class="col__title">Rut</p>
+                                    <p class="col__content">21.345.678-9</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__name col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Juan</p>
+                                </div>
+
+                                <div class="col__lastname col ">
+                                    <p class="col__title">Apellidos</p>
+                                    <p class="col__content">Alcachofa</p>
+                                </div>
+
+                                <div class="col__adress col ">
+                                    <p class="col__title">Direcci&oacute;n</p>
+                                    <p class="col__content">San Juan Bautista 423</p>
+                                </div>
+
+                                <div class="col__suscription col ">
+                                    <p class="col__title">Con Suscripci&oacute;n</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__image-url col ">
+                                    <p class="col__title">Im&aacute;gen</p>
+                                    <p class="col__content">[][]</p>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        <div class="mobile__row mobile__row--gray">
+                                                       <div class="col__one">
+                                <div class="col__user-id col ">
+                                    <p class="col__title">ID</p>
+                                    <p class="col__content">11</p>
+                                </div>
+
+                                <div class="col__user-type col ">
+                                    <p class="col__title">Tipo Usuario</p>
+                                    <p class="col__content">Registrado</p>
+                                </div>
+
+                                <div class="col__rut col ">
+                                    <p class="col__title">Rut</p>
+                                    <p class="col__content">21.345.678-9</p>
+                                </div>
+                            </div>
+
+                            <div class="col__two">
+                                <div class="col__name col ">
+                                    <p class="col__title">Nombre</p>
+                                    <p class="col__content">Juan</p>
+                                </div>
+
+                                <div class="col__lastname col ">
+                                    <p class="col__title">Apellidos</p>
+                                    <p class="col__content">Alcachofa</p>
+                                </div>
+
+                                <div class="col__adress col ">
+                                    <p class="col__title">Direcci&oacute;n</p>
+                                    <p class="col__content">San Juan Bautista 423</p>
+                                </div>
+
+                                <div class="col__suscription col ">
+                                    <p class="col__title">Con Suscripci&oacute;n</p>
+                                    <p class="col__content">Si</p>
+                                </div>
+
+                                <div class="col__image-url col ">
+                                    <p class="col__title">Im&aacute;gen</p>
+                                    <p class="col__content">[][]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
 
         </section>
 <!--  -->
 
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../../js/dashboardNavigation.js"></script>
+    <script src="../../js/forms/users-handler.js"></script>
 </body>
 </html>

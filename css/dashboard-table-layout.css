@@ -1,3 +1,16 @@
+:root {
+    --color-c1: #F2F2F2;
+    --color-c2: #FAFAFA;
+    --color-c3: #FFFFFF;
+    --color-c4: #24252A;
+    --color-c4-hover: #2E2F36;
+    --color-c5: #00BFA6;
+    --color-c5-hover: #039E89;
+    --color-c6: #FF3696;
+    --color-c7: #F53D3D;
+    --color-c8: #53545C;
+    --color-c9: #000000;
+}
 
 .history__container {
     margin: 2em;
@@ -12,15 +25,15 @@
     width: 100%;
     table-layout: fixed;
     border-collapse: collapse;
-    background-color: #fff;
-    box-shadow: 1px 7px 15px -16px #000000;
-    border-left: 4px #00BFA6 solid;
+    background-color: var(--color-c3);
+    box-shadow: 1px 7px 15px -16px var(--color-c9);
+    border-left: 4px var(--color-c5) solid;
 }
 
 thead th {
     position: sticky;
     top: 0;
-    color: #00BFA6;
+    color: var(--color-c5);
     font-weight: 500;
     font-size: 1rem;
 }
@@ -33,7 +46,7 @@ tr, th {
     font-style: italic;
     transform: scale(.98);
     transition: .5s;
-    color: #24252A;
+    color: var(--color-c4);
 }
 
 .tr--g {
@@ -47,7 +60,7 @@ tr:hover {
 
 .table__action {
     text-decoration: none;
-    color: #00BFA6;
+    color: var(--color-c5);
     font-weight: 500;
     font-size: 1rem;
 }
@@ -82,11 +95,15 @@ tr:hover {
     width: 100%;
 }
 
+.resmobile {
+    height: 300px;
+    overflow-y: auto;
+}
 .recents--mobile {
-    background-color: #fff;
-    border-left: 4px #00BFA6 solid;
+    background-color: var(--color-c3);
+    border-left: 4px var(--color-c5) solid;
     flex-wrap: wrap;
-    box-shadow: 1px 7px 15px -16px #000000;
+    box-shadow: 1px 7px 15px -16px var(--color-c9);
 }
 
 .mobile__row {
@@ -128,7 +145,7 @@ tr:hover {
 }
 
 .col__title {
-    color: #00BFA6;
+    color: var(--color-c5);
     text-align: center;
     font-weight: 500;
     font-size: 1rem;
@@ -136,7 +153,7 @@ tr:hover {
 
 .mobile__row--gray{
     background-color: #c9c9ce27;
-    color: #fff;
+    color: var(--color-c3);
 }
 
 .col {
@@ -146,6 +163,10 @@ tr:hover {
 @media (max-width: 885px) {
     .table--mobile {
         display: contents;
+    }
+
+    .result {
+        display: none;
     }
 }
 
@@ -159,5 +180,14 @@ tr:hover {
     display: flex;
     justify-content: center;
     text-decoration: none;
+    border: none;
+}
+
+.result {
+    height: 400px;
+    overflow-y: auto;
+}
+
+.search-result {
     border: none;
 }
