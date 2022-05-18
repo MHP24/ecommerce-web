@@ -66,26 +66,26 @@
             <img src="../imgs/msc/edit-profile-picture.jpg" class="img__account" alt="">
             <div class="form">
                 <h3 class="form__title">Edita Tus Datos</h3>
-                <form class="form__product" action="#" method="post">
+                <form class="form__product" action="#" method="post" id="edit-profile">
                     <div class="form__inputs">
                         <div class="form__input">
-                            <label class="input__label">Nombre</label>
-                            <input class="input__input" type="text" placeholder="Ingresar nombre" required>
+                            <label class="input__label" for="input__input--name">Nombre</label>
+                            <input class="input__input" id="input__input--name" name="input__input--name" type="text" placeholder="Ingresar nombre" required>
                         </div>
 
                         <div class="form__input">
-                            <label class="input__label">Email</label>
-                            <input class="input__input" type="email" placeholder="Ingresar Email" required>
+                            <label class="input__label" for="input__input--email">Email</label>
+                            <input class="input__input" id="input__input--email" name="input__input--email" type="email" placeholder="Ingresar Email" required>
                         </div>
 
                         <div class="form__input">
-                            <label class="input__label">Contrase&nacute;a</label>
-                            <input class="input__input" type="password" placeholder="***" required>
+                            <label class="input__label" for="input__input--password">Contrase&nacute;a</label>
+                            <input class="input__input" id="input__input--password" name="input__input--password" type="password" placeholder="***" required>
                         </div>
 
                         <div class="form__input">
-                            <label class="input__label">Confirmar Contrase&nacute;a</label>
-                            <input class="input__input" type="password" placeholder="***" required>
+                            <label class="input__label" for="input__input--password2">Confirmar Contrase&nacute;a</label>
+                            <input class="input__input" id="input__input--password2" name="input__input--password2" type="password" placeholder="***" required>
                         </div>
 
                         <div class="form__input">
@@ -108,6 +108,10 @@
             </figure>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../js/navigation.js"></script>
+    <script src="../js/forms/edit-profile.js"></script>
 </body>
 </html>
