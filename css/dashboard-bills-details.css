@@ -154,6 +154,22 @@
     font-weight: 500;
 }
 
+.summary-bill {
+    width: 100%;
+    margin-top: 1em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2em;
+}
+
+.detail--price {
+    color: var(--color-c4);
+    border: 2px var(--color-c5) solid;
+    padding: 1em;
+    font-weight: 500;
+}
+
 @media (max-width: 720px) {
     .stage--dot {
         height: 40px;
