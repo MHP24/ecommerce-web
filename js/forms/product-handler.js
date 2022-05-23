@@ -3,9 +3,6 @@ $('#product-handler').validate({
         "input__input--id": {
             required: true
         },
-        "input__input--category": {
-            required: true
-        },
         "input__input--name": {
             required: true
         },
@@ -29,9 +26,6 @@ $('#product-handler').validate({
     messages: {
         "input__input--id": {
             required: 'Debe ingresar un ID'
-        },
-        "input__input--category": {
-            required: 'Debe ingresar una categoría'
         },
         "input__input--name": {
             required: 'Debe ingresar un nombre para el producto'

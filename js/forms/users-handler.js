@@ -74,6 +74,31 @@ const validateRut = (fullRut) => {
     return (dv(rut) == digv );
 }
 
+// Generador de contraseña
+const generatePass = () => {
+    let password = '';
+    const uppers = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const lowers = 'abcdefghijklmnopqrstuvwxyz';
+    const numbers = '1234567890';
+    const symbols = '!@#$%^&*()-_=+[]{};:,.<>/?|~ñ';
+    
+    for(let i = 0; i <=9; i++) {
+        let randomLower = Math.floor(Math.random() * lowers.length);
+        password += lowers.charAt(randomLower);
+    }
+
+    let randomUpper = Math.floor(Math.random() * uppers.length);
+    password += uppers.charAt(randomUpper);
+
+    let randomNumber = Math.floor(Math.random() * numbers.length);
+    password += numbers.charAt(randomNumber);
+
+    let randomSymbol = Math.floor(Math.random() * symbols.length);
+    password += symbols.charAt(randomSymbol);
+
+    return password;
+}
+
 // Validadores
 $.validator.addMethod(
     "validateRut",
@@ -124,3 +149,12 @@ $("#input__input--email").rules("add", { validateMail: true });
 $("#input__input--rut").rules("add", { validateRut: true });
 $("#input__input--password").rules("add", { oneNumber: true });
 $("#input__input--password").rules("add", { oneMayus: true });
+
+const generateBtn = document.getElementById('generate-pass');
+generateBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const inputPass = document.getElementById('input__input--password');
+    const password = generatePass();
+    // console.log(password);
+    inputPass.value = password;
+});
