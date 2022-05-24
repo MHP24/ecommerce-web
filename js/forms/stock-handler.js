@@ -9,6 +9,9 @@ $('#stock-handler').validate({
         "input__input--count": {
             required: true,
             number: true
+        },
+        "img__input": {
+            required: true
         }
     },
     messages: {
@@ -22,6 +25,9 @@ $('#stock-handler').validate({
             required: 'Debe ingresar una cantidad',
             number: 'Debe ingresar un número'
         },
+        "img__input": {
+            required: 'Debe seleccionar una imágen'
+        }
     }
 });
 

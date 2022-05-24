@@ -1,15 +1,22 @@
 const cart = document.querySelector('.modalcart');
 
 let products = [];
+let count = 0;
 
 const addToCart  = (e) => {
     let productEvent = e.target.closest('.product');
+    let counterDesk = document.querySelector('.cart__count--mob');
+    let counterMob = document.querySelector('.cart__count--desk');
+
     const product = {
         img: productEvent.querySelector('.img__src').src,
         name: productEvent.querySelector('.description__name').textContent,
         price: productEvent.querySelector('.description__price').textContent,
     }
-    products.push(product) 
+    products.push(product);
+    count++;
+    counterDesk.innerHTML = `<p class="cart__number">${count}</p>`;
+    counterMob.innerHTML = `<p class="cart__number">${count}</p>`;
 }
 
 const add = (btn) => {

@@ -22,6 +22,9 @@ $('#product-handler').validate({
             required: true,
             number: true
         },
+        "img__input": {
+            required: true
+        }
     },
     messages: {
         "input__input--id": {
@@ -45,6 +48,9 @@ $('#product-handler').validate({
         "input__input--discount2": {
             required: 'Debe ingresar un descuento',
             number: 'Debe ingresar un número válido'
+        },
+        "img__input": {
+            required: "Debe seleccionar una imágen"
         }
     }
 });

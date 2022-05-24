@@ -16,6 +16,9 @@ $('#edit-profile').validate({
             minlength : 10,
             equalTo : "#input__input--password",
         },
+        "input__input--img": {
+            required: true
+        }
     },
     messages: {
         "input__input--name": {
@@ -33,6 +36,9 @@ $('#edit-profile').validate({
             required: 'Debe repetir la misma contraseña',
             minlength: 'La mínima cantidad de carácteres de la contraseña es 10',
             equalTo: 'La repetición de contraseña debe coincidir con la contraseña original'
+        },
+        "input__input--img": {
+            required: 'Debe Adjuntar una imágen'
         }
     }
 });

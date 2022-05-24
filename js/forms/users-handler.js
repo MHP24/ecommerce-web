@@ -22,6 +22,12 @@ $('#users-handler').validate({
         "input__input--password": {
             required: true,
             minlength : 10,
+        },
+        "usertype": {
+            required: true
+        },
+        "input__input--profile-picture": {
+            required: true
         }
     },
     messages: {
@@ -47,6 +53,12 @@ $('#users-handler').validate({
         "input__input--password": {
             required: 'Debe ingresar una contraseña',
             minlength: 'La mínima cantidad de carácteres de la contraseña es 10'
+        },
+        "usertype": {
+            required: "Debe seleccionar el tipo de usuario"
+        },
+        "input__input--profile-picture": {
+            required: 'Debe seleccionar una imágen'
         }
     }
 });

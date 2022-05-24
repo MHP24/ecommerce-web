@@ -73,3 +73,12 @@ body {
     color: var(--color-c5);
     font-weight: 500;
 }
+
+.dog {
+    height: 200px;
+    width: 200px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+}

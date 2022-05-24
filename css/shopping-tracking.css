@@ -16,30 +16,40 @@ body {
     background-color: var(--color-c2);
 }
 
+.shop-details {
+    width: 95%;
+    margin: 7rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+}
+
 .tracking {
     width: 100%;
-    margin: 7rem auto;
     display: grid;
     place-items: center;
+
 }
 
 .tracking__title {
     font-family: 'Lavishly Yours', cursive;
     font-size: 2.5rem;
+
 }
 
 .tracking__container {
+    background: none;
     text-align: center;
-    background-color: var(--color-c3);
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 2em;
     align-items: center;
     padding: 1.5em;
-    box-shadow: 1px 7px 15px -16px var(--color-c9);
     border-radius: 5px;
-    border-left: 4px var(--color-c5) solid;
+    box-shadow: none;
+    border: none;
 }
 
 .stages {
@@ -117,5 +127,16 @@ img {
     }
     .stage {
         font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 1130px) {
+    .shop-details {
+        flex-wrap: wrap;
+    }
+
+    .tracking__container {
+        box-shadow: 1px 7px 15px -16px #000000;
+        background-color: var(--color-c3);
     }
 }
