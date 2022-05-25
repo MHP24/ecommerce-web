@@ -111,6 +111,19 @@ body {
     justify-content: space-around;
 }
 
+.product__stock--empty,
+.product__stock {
+    font-weight: 600;
+    font-style: italic;
+}
+
+.product__stock {
+    color: var(--color-c5);
+}
+
+.product__stock--empty {
+    color: var(--color-c7);
+}
 .product__quantity {
     display: flex;
     align-items: center;
@@ -154,6 +167,11 @@ body {
 .product__buy__btn:hover {
     opacity: .8;
     transition: .5s;
+}
+
+.product__buy__btn--empty {
+    background-color: rgb(146, 146, 146);
+    cursor: not-allowed;
 }
 
 @media (max-width: 900px) {
